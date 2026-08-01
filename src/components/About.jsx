@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 const stats = [
   { target: 250, suffix: "+", label: "DSA problems solved" },
   { target: 31, suffix: "+", label: "REST APIs shipped" },
-  { target: 27, suffix: "", label: "Team members led" },
+  { target: 5, suffix: "+", label: "Projects shipped" },
 ];
 
 function Counter({ target, suffix }) {
@@ -68,7 +68,7 @@ export default function About() {
         <div className="about-grid grid grid-cols-1 items-start gap-[clamp(40px,6vw,90px)] lg:grid-cols-[1fr_1.25fr]">
           <div className="about-visual lg:sticky lg:top-[110px]">
             <motion.div
-              className="relative aspect-square w-[min(340px,100%)] overflow-hidden rounded-full bg-ink"
+              className="relative aspect-square w-[min(340px,100%)] overflow-hidden rounded-full bg-paper-2"
               initial={{ scale: 0.85, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true, margin: "-10%" }}
@@ -121,7 +121,7 @@ export default function About() {
               ].map((p, i) => (
                 <motion.div
                   key={p.idx}
-                  className="point grid grid-cols-[44px_1fr] items-start gap-4 rounded-[18px] border border-line bg-paper p-[18px_20px] transition-all duration-[400ms] hover:translate-x-2 hover:border-accent hover:shadow-[8px_8px_0_-2px_var(--color-accent-soft)]"
+                  className="point grid grid-cols-[44px_1fr] items-start gap-4 rounded-[18px] border border-line bg-paper p-[18px_20px] transition-all duration-[400ms] hover:translate-x-2 hover:border-accent hover:shadow-[8px_8px_0_-2px_rgba(66,184,131,0.35)]"
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-10%" }}

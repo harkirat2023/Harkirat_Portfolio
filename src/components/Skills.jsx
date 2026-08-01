@@ -68,7 +68,7 @@ function SkillCard({ group, index }) {
 
   return (
     <motion.article
-      className="skill-card group relative z-[1] overflow-hidden rounded-[18px] border border-line bg-paper p-6 transition-all duration-500 hover:-translate-y-1.5 hover:border-ink hover:shadow-[0_26px_54px_-30px_rgba(25,22,19,0.5)]"
+      className="skill-card group relative z-[1] overflow-hidden rounded-[18px] border border-line bg-paper p-6 transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/50 hover:shadow-[0_26px_54px_-30px_rgba(0,0,0,0.7)]"
       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
@@ -85,19 +85,16 @@ function SkillCard({ group, index }) {
         </div>
         <Wave />
       </div>
-      <div className="tag-marquee" style={{ transform: "translateZ(10px)" }}>
-        <div className="tag-track">
-          <div className="tag-group">
-            {group.tags.map((t) => (
-              <span key={t} className="tag-chip">{t}</span>
-            ))}
-          </div>
-          <div className="tag-group" aria-hidden="true">
-            {group.tags.map((t) => (
-              <span key={t + "-dup"} className="tag-chip">{t}</span>
-            ))}
-          </div>
-        </div>
+      <div className="tag-grid" style={{ transform: "translateZ(10px)" }}>
+        {group.tags.map((t, ti) => (
+          <span
+            key={t}
+            className="tag-chip"
+            style={{ "--cd": `${ti * 0.055}s` }}
+          >
+            {t}
+          </span>
+        ))}
       </div>
     </motion.article>
   );
@@ -180,7 +177,7 @@ export default function Skills() {
 
           <div className="skills-board relative grid grid-cols-1 gap-[18px] md:grid-cols-2" ref={boardRef} onMouseMove={onBoardMouseMove} onMouseLeave={onBoardMouseLeave}>
             <div
-              className="skills-glow pointer-events-none absolute size-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,77,28,0.14),transparent_65%)] blur-[30px]"
+              className="skills-glow pointer-events-none absolute size-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(66,184,131,0.16),transparent_65%)] blur-[30px]"
               ref={glowRef}
               aria-hidden="true"
             />

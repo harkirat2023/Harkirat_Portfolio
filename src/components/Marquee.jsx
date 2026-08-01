@@ -48,7 +48,7 @@ function Row({ items, marker, rev, speed }) {
   return (
     <div
       ref={trackRef}
-      className={`marquee-track marquee-track--${speed} flex w-max py-4 will-change-transform animate-marquee-rev ${
+      className={`marquee-track marquee-track--${speed} flex w-max py-4 will-change-transform ${rev ? "animate-marquee-rev" : "animate-marquee"} ${
         rev ? "border-t border-line" : ""
       }`}
     >

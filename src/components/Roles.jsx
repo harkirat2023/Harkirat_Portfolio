@@ -48,7 +48,7 @@ export default function Roles() {
           {roles.map((r, i) => (
             <motion.article
               key={r.num}
-              className="role-card group relative flex flex-col gap-1.5 overflow-hidden rounded-[18px] border border-line bg-paper p-[26px_30px] transition-all duration-[450ms] hover:-translate-y-1.5 hover:border-ink hover:shadow-[0_28px_54px_-30px_rgba(25,22,19,0.45)]"
+              className="role-card group relative flex flex-col gap-1.5 overflow-hidden rounded-[18px] border border-line bg-paper p-[26px_30px] transition-all duration-[450ms] hover:-translate-y-1.5 hover:border-accent/50 hover:shadow-[0_28px_54px_-30px_rgba(0,0,0,0.7)]"
               variants={reveal(i)}
               initial="hidden"
               whileInView="show"

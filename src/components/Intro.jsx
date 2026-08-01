@@ -57,14 +57,14 @@ export default function Intro({ onDone }) {
         exit={{ opacity: 0, y: -24, transition: { duration: 0.45, ease: EASE } }}
       >
         <motion.p
-          className="intro-kicker mono mb-6 text-[0.7rem] tracking-[0.28em] text-accent-soft"
+          className="intro-kicker mono mb-6 text-[0.7rem] tracking-[0.28em] text-accent"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: EASE, delay: 0.15 }}
         >
           Portfolio — 2026
         </motion.p>
-        <div className="intro-name font-serif font-[620] text-[clamp(2.4rem,9vw,6rem)] leading-none tracking-[-0.02em] text-paper">
+        <div className="intro-name font-serif font-[620] text-[clamp(2.4rem,9vw,6rem)] leading-none tracking-[-0.02em] text-ink">
           {letters.map((l) => (
             <span key={l.ch} className="intro-letter inline-block overflow-hidden">
               <motion.i
@@ -84,7 +84,7 @@ export default function Intro({ onDone }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: EASE, delay: 0.9 }}
         >
-          <span className="intro-count font-serif italic text-[1.6rem] text-paper">
+          <span className="intro-count font-serif italic text-[1.6rem] text-ink">
             {String(count).padStart(3, "0")}
           </span>
           <span className="intro-bar">

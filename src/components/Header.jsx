@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import ThemeToggle from "./ThemeToggle.jsx";
 
 const links = [
   { href: "#about", num: "01", label: "About" },
@@ -17,7 +18,7 @@ const navItem = {
   }),
 };
 
-export default function Header({ scrolled, onOpenMenu }) {
+export default function Header({ scrolled, onOpenMenu, theme, onToggleTheme }) {
   const active = () => {
     const id =
       typeof document !== "undefined"
@@ -40,7 +41,7 @@ export default function Header({ scrolled, onOpenMenu }) {
     >
       <a href="#home" className="group flex items-center gap-2.5 font-serif text-[1.45rem] font-bold tracking-tight">
         <motion.span
-          className="grid size-9 place-items-center rounded-full bg-ink text-paper text-lg transition-all duration-500 group-hover:-rotate-[20deg] group-hover:scale-105 group-hover:bg-accent group-hover:text-ink"
+          className="grid size-9 place-items-center rounded-full bg-paper text-ink ring-1 ring-line text-lg transition-all duration-500 group-hover:-rotate-[20deg] group-hover:scale-105 group-hover:bg-accent group-hover:text-paper"
           whileHover={{ rotate: -20, scale: 1.05 }}
         >
           H
@@ -76,6 +77,7 @@ export default function Header({ scrolled, onOpenMenu }) {
           <span className="btn-label">Download CV</span>
           <svg className="btn-icon size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         </motion.a>
+        <ThemeToggle theme={theme} onToggle={onToggleTheme} />
         <button
           className="menu-toggle flex size-10 flex-col justify-center gap-[5px] p-2.5 lg:hidden"
           id="menuToggle"

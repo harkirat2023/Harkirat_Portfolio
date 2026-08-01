@@ -89,7 +89,7 @@ export default function Projects() {
           {projects.map((p, i) => (
             <motion.article
               key={p.name}
-              className="project group relative grid grid-cols-[84px_1fr] gap-[clamp(20px,3vw,44px)] overflow-hidden rounded-[18px] border border-line bg-paper p-[clamp(28px,4vw,46px)] transition-all duration-500 hover:-translate-y-1.5 hover:border-ink hover:shadow-[0_30px_60px_-32px_rgba(25,22,19,0.5)]"
+              className="project group relative grid grid-cols-[84px_1fr] gap-[clamp(20px,3vw,44px)] overflow-hidden rounded-[18px] border border-line bg-paper p-[clamp(28px,4vw,46px)] transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/50 hover:shadow-[0_30px_60px_-32px_rgba(0,0,0,0.7)]"
               variants={reveal(i * 0.08)}
               initial="hidden"
               whileInView="show"
@@ -113,7 +113,7 @@ export default function Projects() {
                   {p.stack.length > 0 && (
                     <div className="project-stack flex flex-wrap gap-2">
                       {p.stack.map((s) => (
-                        <span key={s} className="rounded-md border border-line bg-paper-2 px-3 py-1.5 font-mono text-[0.64rem] tracking-wide text-ink-soft transition-all duration-300 hover:-translate-y-0.5 hover:border-ink hover:bg-ink hover:text-paper">{s}</span>
+                        <span key={s} className="rounded-md border border-line bg-paper-2 px-3 py-1.5 font-mono text-[0.64rem] tracking-wide text-ink-soft transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent hover:text-paper">{s}</span>
                       ))}
                     </div>
                   )}

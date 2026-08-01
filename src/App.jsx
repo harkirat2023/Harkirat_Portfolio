@@ -18,6 +18,14 @@ export default function App() {
   const [introDone, setIntroDone] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [theme, setTheme] = useState(() => {
+    if (typeof window === "undefined") return "dark";
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved === "light" || saved === "dark") return saved;
+    } catch (e) {}
+    return window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  });
   const progressRef = useRef(null);
 
   useEffect(() => {
@@ -33,6 +41,22 @@ export default function App() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // apply theme class + persist
+  useEffect(() => {
+    const root = document.documentElement;
+    root.classList.toggle("light", theme === "light");
+    try {
+      localStorage.setItem("theme", theme);
+    } catch (e) {}
+  }, [theme]);
+
+  const toggleTheme = () => {
+    const root = document.documentElement;
+    root.classList.add("theme-switching");
+    setTheme((t) => (t === "dark" ? "light" : "dark"));
+    window.setTimeout(() => root.classList.remove("theme-switching"), 500);
+  };
+
   return (
     <>
       <AnimatePresence>{!introDone && <Intro onDone={() => setIntroDone(true)} />}</AnimatePresence>
@@ -41,7 +65,7 @@ export default function App() {
       <div className="scroll-progress fixed left-0 top-0 z-[1200] h-[3px] w-0 bg-accent" ref={progressRef} aria-hidden="true" />
       <Cursor />
 
-      <Header scrolled={scrolled} onOpenMenu={() => setMenuOpen(true)} />
+      <Header scrolled={scrolled} theme={theme} onToggleTheme={toggleTheme} onOpenMenu={() => setMenuOpen(true)} />
       <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
 
       <main>

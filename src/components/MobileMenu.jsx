@@ -23,7 +23,7 @@ export default function MobileMenu({ open, onClose }) {
     <AnimatePresence>
       {open && (
         <motion.div
-          className="mobile-menu fixed inset-0 z-[920] flex flex-col justify-center bg-ink px-[8vw] py-20 text-paper"
+          className="mobile-menu fixed inset-0 z-[920] flex flex-col justify-center bg-paper px-[8vw] py-20 text-ink"
           id="mobileMenu"
           initial={{ clipPath: "inset(0 0 100% 0)" }}
           animate={{ clipPath: "inset(0 0 0% 0)" }}
@@ -63,9 +63,9 @@ export default function MobileMenu({ open, onClose }) {
               <span className="btn-label">Download CV</span>
             </a>
             <div className="flex gap-[22px]">
-              <a className="font-mono text-[0.78rem] text-ink-mute transition-colors hover:text-accent-soft" href="https://www.linkedin.com/in/harkiratse/" target="_blank" rel="noopener">LinkedIn</a>
-              <a className="font-mono text-[0.78rem] text-ink-mute transition-colors hover:text-accent-soft" href="https://github.com/harkirat2023" target="_blank" rel="noopener">GitHub</a>
-              <a className="font-mono text-[0.78rem] text-ink-mute transition-colors hover:text-accent-soft" href="https://leetcode.com/u/Hkkirat_25/" target="_blank" rel="noopener">LeetCode</a>
+              <a className="font-mono text-[0.78rem] text-ink-mute transition-colors hover:text-accent" href="https://www.linkedin.com/in/harkiratse/" target="_blank" rel="noopener">LinkedIn</a>
+              <a className="font-mono text-[0.78rem] text-ink-mute transition-colors hover:text-accent" href="https://github.com/harkirat2023" target="_blank" rel="noopener">GitHub</a>
+              <a className="font-mono text-[0.78rem] text-ink-mute transition-colors hover:text-accent" href="https://leetcode.com/u/Hkkirat_25/" target="_blank" rel="noopener">LeetCode</a>
             </div>
           </motion.div>
         </motion.div>

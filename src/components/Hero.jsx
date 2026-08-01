@@ -18,18 +18,32 @@ const reveal = (d) => ({
 
 export default function Hero() {
   const [wordIndex, setWordIndex] = useState(0);
-  const [swapping, setSwapping] = useState(false);
+  const [typed, setTyped] = useState("");
+  const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
-    const t = setInterval(() => {
-      setSwapping(true);
-      setTimeout(() => {
+    const current = words[wordIndex];
+    let timer;
+
+    if (!deleting) {
+      // typing forward
+      if (typed.length < current.length) {
+        timer = setTimeout(() => setTyped(current.slice(0, typed.length + 1)), 45);
+      } else {
+        // hold at full word, then start deleting
+        timer = setTimeout(() => setDeleting(true), 1800);
+      }
+    } else {
+      // deleting backward
+      if (typed.length > 0) {
+        timer = setTimeout(() => setTyped(current.slice(0, typed.length - 1)), 30);
+      } else {
+        setDeleting(false);
         setWordIndex((i) => (i + 1) % words.length);
-        setSwapping(false);
-      }, 360);
-    }, 2600);
-    return () => clearInterval(t);
-  }, []);
+      }
+    }
+    return () => clearTimeout(timer);
+  }, [typed, deleting, wordIndex]);
 
   return (
     <section className="hero section relative flex min-h-svh flex-col justify-between overflow-hidden pb-[60px] pt-[130px]" id="home">
@@ -97,14 +111,10 @@ export default function Hero() {
               animate={{ y: 0 }}
               transition={{ duration: 1.1, ease: EASE, delay: 0.76 }}
             >
-              <motion.span
-                key={wordIndex}
-                initial={{ y: swapping ? "14%" : 0, opacity: swapping ? 0 : 1 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.36, ease: EASE }}
-              >
-                {words[wordIndex]}
-              </motion.span>
+              <span className="inline-block whitespace-pre">
+                {typed}
+                <span className="caret" aria-hidden="true">|</span>
+              </span>
             </motion.span>
           </span>
         </h1>
