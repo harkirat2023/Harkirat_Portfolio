@@ -364,6 +364,52 @@
   50% { opacity: 0.35; transform: scale(1.45) rotate(40deg); }
 }
 
+/* --- marquee: variable speeds per row --- */
+.marquee-track--a { animation-duration: 28s; }
+.marquee-track--b { animation-duration: 38s; }
+
+/* --- marquee: creative text effects --- */
+.marquee-group .marquee-text {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, var(--color-ink) 0%, var(--color-ink) 50%, var(--color-accent) 50%, var(--color-accent) 100%);
+  background-size: 200% 100%;
+  background-position: 0% 0%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.6s var(--ease);
+}
+.marquee-group span:hover .marquee-text {
+  background-position: -100% 0%;
+}
+.marquee-group .marquee-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.45s var(--ease);
+}
+.marquee-group span:hover .marquee-text::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* --- marquee: subtle bob on the whole section --- */
+.marquee {
+  animation: marqueeBob 7s ease-in-out infinite;
+}
+@keyframes marqueeBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+.marquee:hover { animation-play-state: paused; }
+
 /* --- about: portrait + floating chips --- */
 .about-portrait-wrap { position: relative; }
 .about-chip {
@@ -471,6 +517,8 @@
   will-change: transform;
 }
 .skill-card:nth-child(3n) .tag-track { animation-direction: reverse; animation-duration: 24s; }
+.skill-card:nth-child(3n+1) .tag-track { animation-duration: 26s; }
+.skill-card:nth-child(3n+2) .tag-track { animation-duration: 18s; }
 .tag-group {
   display: flex;
   align-items: center;
@@ -480,6 +528,25 @@
 }
 .skill-card:hover .tag-track { animation-play-state: paused; }
 @keyframes tagScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* --- skills: tag chip individual micro-animations --- */
+.tag-marquee .tag-chip {
+  animation: chipDrift 3.2s ease-in-out infinite;
+  animation-delay: var(--cd, 0s);
+}
+.tag-marquee .tag-chip:nth-child(2n) { --cd: -0.8s; }
+.tag-marquee .tag-chip:nth-child(3n) { --cd: -1.6s; }
+.tag-marquee .tag-chip:nth-child(4n) { --cd: -2.4s; }
+@keyframes chipDrift {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-3px) rotate(1.2deg); }
+}
+.skill-card:hover .tag-marquee .tag-chip { animation-play-state: paused; }
+.skill-card:hover .tag-marquee .tag-chip:hover {
+  animation: none;
+  transform: translateY(-4px) rotate(-2deg) scale(1.12);
+  box-shadow: 0 12px 28px -12px rgba(255, 77, 28, 0.55);
+}
 
 /* --- skills: equalizer waveform (replaces % gauges) --- */
 .skill-wave {
@@ -498,11 +565,11 @@
   transform-origin: bottom;
   transform: scaleY(0.35);
 }
-.skill-wave span:not(.skill-radar):nth-child(1) { height: 42%; animation-duration: 0.78s; }
-.skill-wave span:not(.skill-radar):nth-child(2) { height: 92%; animation-duration: 1.14s; animation-delay: 0.1s; }
-.skill-wave span:not(.skill-radar):nth-child(3) { height: 58%; animation-duration: 0.92s; animation-delay: 0.04s; }
-.skill-wave span:not(.skill-radar):nth-child(4) { height: 100%; animation-duration: 1.28s; animation-delay: 0.16s; }
-.skill-wave span:not(.skill-radar):nth-child(5) { height: 48%; animation-duration: 0.84s; animation-delay: 0.07s; }
+.skill-wave span:not(.skill-radar):nth-child(2) { height: 42%; animation-duration: 0.78s; }
+.skill-wave span:not(.skill-radar):nth-child(3) { height: 92%; animation-duration: 1.14s; animation-delay: 0.1s; }
+.skill-wave span:not(.skill-radar):nth-child(4) { height: 58%; animation-duration: 0.92s; animation-delay: 0.04s; }
+.skill-wave span:not(.skill-radar):nth-child(5) { height: 100%; animation-duration: 1.28s; animation-delay: 0.16s; }
+.skill-wave span:not(.skill-radar):nth-child(6) { height: 48%; animation-duration: 0.84s; animation-delay: 0.07s; }
 @keyframes waveBounce {
   0%, 100% { transform: scaleY(0.35); }
   50% { transform: scaleY(1); }

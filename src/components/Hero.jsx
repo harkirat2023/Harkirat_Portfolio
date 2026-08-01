@@ -66,18 +66,29 @@ export default function Hero() {
         </motion.p>
 
         <h1 className="hero-title font-serif font-[620] text-[clamp(3.4rem,11vw,9.5rem)] leading-[0.98] -tracking-[0.03em]">
-          {["Harkirat", "Singh", "builds"].map((word, i) => (
-            <span key={word} className="line -mb-[0.06em] block overflow-hidden pb-[0.06em]">
-              <motion.span
-                className={`line-inner block ${i === 1 ? "italic text-accent" : ""}`}
-                initial={{ y: "110%" }}
-                animate={{ y: 0 }}
-                transition={{ duration: 1.1, ease: EASE, delay: 0.4 + i * 0.12 }}
-              >
-                {word}
-              </motion.span>
-            </span>
-          ))}
+          {["Harkirat Singh", "builds"].map((line, i) => (
+  <span key={line} className="line -mb-[0.06em] block overflow-hidden pb-[0.06em]">
+    <span className={`line-inner block ${i === 0 ? "italic text-accent" : ""}`}>
+      {line.split("").map((char, charIndex) => (
+        <motion.span
+          key={charIndex}
+          className="inline-block whitespace-pre"
+          initial={{ y: "110%" }}
+          animate={{ y: 0 }}
+          transition={{ 
+            duration: 1.1, 
+            ease: EASE, 
+            // delay: Base delay per line + staggering effect per character
+            delay: 0.4 + (i * 0.12) + (charIndex * 0.03) 
+          }}
+        >
+          {char}
+        </motion.span>
+      ))}
+    </span>
+  </span>
+))}
+
           <span className="line line--swap -mb-[0.06em] block overflow-hidden pb-[0.06em]">
             <motion.span
               className="line-inner block"

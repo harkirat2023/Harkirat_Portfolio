@@ -42,6 +42,7 @@ const reveal = (d) => ({
 function Wave() {
   return (
     <div className="skill-wave shrink-0" aria-hidden="true">
+      <span className="skill-radar" />
       <span /><span /><span /><span /><span />
     </div>
   );
@@ -84,10 +85,19 @@ function SkillCard({ group, index }) {
         </div>
         <Wave />
       </div>
-      <div className="tag-cloud flex flex-wrap gap-2.5">
-        {group.tags.map((t) => (
-          <span key={t} className="tag-chip">{t}</span>
-        ))}
+      <div className="tag-marquee" style={{ transform: "translateZ(10px)" }}>
+        <div className="tag-track">
+          <div className="tag-group">
+            {group.tags.map((t) => (
+              <span key={t} className="tag-chip">{t}</span>
+            ))}
+          </div>
+          <div className="tag-group" aria-hidden="true">
+            {group.tags.map((t) => (
+              <span key={t + "-dup"} className="tag-chip">{t}</span>
+            ))}
+          </div>
+        </div>
       </div>
     </motion.article>
   );
@@ -153,7 +163,7 @@ export default function Skills() {
                 <span className="kicker-pulse relative size-2.5 shrink-0 rounded-full bg-accent">
                   <span className="absolute -inset-[5px] animate-pulse-ring rounded-full border-[1.5px] border-accent" />
                 </span>
-                <span className="mono leading-[1.7] text-ink-mute">Always learning — currently: GenAI &amp; distributed systems</span>
+                <span className="mono leading-[1.7] text-ink-mute">Always learning — currently: GenAI & distributed systems</span>
               </motion.div>
               <motion.div
                 className="skills-total flex flex-wrap gap-[26px]"
@@ -183,4 +193,3 @@ export default function Skills() {
     </section>
   );
 }
-

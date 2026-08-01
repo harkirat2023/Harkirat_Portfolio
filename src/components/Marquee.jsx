@@ -27,7 +27,7 @@ const rowB = [
   "Vercel",
 ];
 
-function Row({ items, marker, rev }) {
+function Row({ items, marker, rev, speed }) {
   const trackRef = useRef(null);
 
   useEffect(() => {
@@ -48,8 +48,8 @@ function Row({ items, marker, rev }) {
   return (
     <div
       ref={trackRef}
-      className={`marquee-track flex w-max py-4 will-change-transform ${
-        rev ? "animate-marquee border-t border-line" : "animate-marquee-rev"
+      className={`marquee-track marquee-track--${speed} flex w-max py-4 will-change-transform animate-marquee-rev ${
+        rev ? "border-t border-line" : ""
       }`}
     >
       <div className="marquee-group flex shrink-0 items-center gap-10 whitespace-nowrap pr-10">
@@ -58,7 +58,7 @@ function Row({ items, marker, rev }) {
             key={item}
             className="flex shrink-0 items-center gap-10"
           >
-            <span className="font-serif text-[clamp(1.4rem,3vw,2.2rem)] font-medium italic text-ink">
+            <span className="marquee-text font-serif text-[clamp(1.4rem,3vw,2.2rem)] font-medium italic">
               {item}
             </span>
             <i className={`not-italic ${rev ? "text-accent-deep" : "text-accent"}`}>{marker}</i>
@@ -72,9 +72,8 @@ function Row({ items, marker, rev }) {
 export default function Marquee() {
   return (
     <div className="marquee overflow-hidden border-y border-line bg-paper-2" aria-hidden="true">
-      <Row items={rowA} marker="*" />
-      <Row items={rowB} marker="◆" rev />
+      <Row items={rowA} marker="*" speed="a" />
+      <Row items={rowB} marker="◆" rev speed="b" />
     </div>
   );
 }
-
