@@ -177,7 +177,7 @@ export default function Skills() {
 
           <div className="skills-board relative grid grid-cols-1 gap-[18px] md:grid-cols-2" ref={boardRef} onMouseMove={onBoardMouseMove} onMouseLeave={onBoardMouseLeave}>
             <div
-              className="skills-glow pointer-events-none absolute size-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(66,184,131,0.16),transparent_65%)] blur-[30px]"
+              className="skills-glow pointer-events-none absolute size-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(59,130,246,0.16),transparent_65%)] blur-[30px]"
               ref={glowRef}
               aria-hidden="true"
             />

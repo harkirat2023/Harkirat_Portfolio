@@ -121,7 +121,7 @@ export default function About() {
               ].map((p, i) => (
                 <motion.div
                   key={p.idx}
-                  className="point grid grid-cols-[44px_1fr] items-start gap-4 rounded-[18px] border border-line bg-paper p-[18px_20px] transition-all duration-[400ms] hover:translate-x-2 hover:border-accent hover:shadow-[8px_8px_0_-2px_rgba(66,184,131,0.35)]"
+                  className="point grid grid-cols-[44px_1fr] items-start gap-4 rounded-[18px] border border-line bg-paper p-[18px_20px] transition-all duration-[400ms] hover:translate-x-2 hover:border-accent hover:shadow-[8px_8px_0_-2px_rgba(59,130,246,0.35)]"
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-10%" }}

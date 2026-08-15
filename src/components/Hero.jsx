@@ -79,7 +79,7 @@ export default function Hero() {
           — Based in Patiala, Punjab · Open to internships
         </motion.p>
 
-        <h1 className="hero-title font-serif font-[620] text-[clamp(3.4rem,11vw,9.5rem)] leading-[0.98] -tracking-[0.03em]">
+        <h1 className="hero-title font-serif font-[620] text-[clamp(3.2rem,10vw,9rem)] leading-[0.98] -tracking-[0.03em]">
           {["Harkirat Singh", "builds"].map((line, i) => (
   <span key={line} className="line -mb-[0.06em] block overflow-hidden pb-[0.06em]">
     <span className={`line-inner block ${i === 0 ? "italic text-accent" : ""}`}>

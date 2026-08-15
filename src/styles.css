@@ -4,16 +4,16 @@
    THEME TOKENS
    ============================================================ */
 @theme {
-  --color-paper: #1a1a1a;
-  --color-paper-2: #1f241f;
-  --color-ink: #E8EDEA;
-  --color-ink-soft: #A9B3AD;
-  --color-ink-mute: #6F7A74;
-  --color-line: rgba(232, 237, 234, 0.12);
-  --color-accent: #42b883;
-  --color-accent-soft: #20382e;
-  --color-accent-deep: #2f9e6e;
-  --color-cyan: #35495e;
+  --color-paper: #09090B;
+  --color-paper-2: #18181B;
+  --color-ink: #FFFFFF;
+  --color-ink-soft: #A1A1AA;
+  --color-ink-mute: #71717A;
+  --color-line: rgba(255, 255, 255, 0.05);
+  --color-accent: #3B82F6;
+  --color-accent-soft: rgba(59, 130, 246, 0.10);
+  --color-accent-deep: #8B5CF6;
+  --color-cyan: #38BDF8;
 
   --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
   --font-sans: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
@@ -52,16 +52,16 @@ html { color-scheme: dark; }
 html.light { color-scheme: light; }
 
 html.light {
-  --color-paper: #F6F7F4;
-  --color-paper-2: #E9EDE8;
-  --color-ink: #161B18;
-  --color-ink-soft: #3F4A44;
-  --color-ink-mute: #66716B;
-  --color-line: rgba(22, 27, 24, 0.12);
-  --color-accent: #149363;
-  --color-accent-soft: #D9F0E5;
-  --color-accent-deep: #0E6E4C;
-  --color-cyan: #2C4A5E;
+  --color-paper: #FAFAFA;
+  --color-paper-2: #F4F4F5;
+  --color-ink: #09090B;
+  --color-ink-soft: #3F3F46;
+  --color-ink-mute: #71717A;
+  --color-line: rgba(9, 9, 11, 0.08);
+  --color-accent: #2563EB;
+  --color-accent-soft: rgba(37, 99, 235, 0.10);
+  --color-accent-deep: #7C3AED;
+  --color-cyan: #0EA5E9;
 }
 
 /* smooth cross-fade while the theme class is applied */
@@ -94,7 +94,7 @@ html.theme-switching *::after {
    COMPONENT HELPERS
    ============================================================ */
 @layer components {
-  .container { @apply mx-auto w-[min(1200px,90%)] px-[clamp(0px,1.5vw,10px)]; }
+  .container { @apply mx-auto w-[min(1200px,90%)] px-[clamp(16px,4vw,40px)]; }
   .section { @apply relative py-[clamp(90px,12vw,150px)]; }
   .mono {
     @apply font-mono text-[0.72rem] uppercase tracking-[0.08em];
@@ -283,10 +283,10 @@ html.light .grain {
 .hero-title .line:nth-child(3) .line-inner { transition-delay: 0.64s; }
 .hero-title .line:nth-child(4) .line-inner { transition-delay: 0.76s; }
 
-.line--swap .line-inner { font-style: italic; font-weight: 500; }
+.line--swap .line-inner { font-style: italic; font-weight: 500; font-size: clamp(1.6rem,6vw,5.25rem); }
 .line--swap .caret {
   display: inline-block;
-  margin-left: 0.05em;
+  margin-left: 15px;
   font-style: normal;
   font-weight: 400;
   color: var(--color-accent);
@@ -552,7 +552,7 @@ html.light .grain {
 .skill-card:hover .tag-grid .tag-chip:hover {
   animation: none;
   transform: translateY(-4px) rotate(-2deg) scale(1.12);
-  box-shadow: 0 12px 28px -12px rgba(66, 184, 131, 0.55);
+  box-shadow: 0 12px 28px -12px rgba(59, 130, 246, 0.55);
 }
 
 /* --- skills: equalizer waveform (replaces % gauges) --- */
@@ -589,7 +589,7 @@ html.light .grain {
   position: absolute;
   inset: -11px;
   border-radius: 50%;
-  border: 1px dashed rgba(66, 184, 131, 0.5);
+  border: 1px dashed rgba(139, 92, 246, 0.5);
   pointer-events: none;
   animation: spinSlow 9s linear infinite;
 }
@@ -601,16 +601,16 @@ html.light .grain {
 }
 .skill-radar::before {
   inset: -6px;
-  border: 1px solid rgba(66, 184, 131, 0.18);
+  border: 1px solid rgba(59, 130, 246, 0.18);
 }
 .skill-radar::after {
   top: -3px;
   left: 50%;
   width: 6px;
   height: 6px;
-  margin-left: -3px;
+  margin-left: 5px;
   background: var(--color-accent);
-  box-shadow: 0 0 12px 2px rgba(66, 184, 131, 0.55);
+  box-shadow: 0 0 12px 2px rgba(59, 130, 246, 0.55);
 }
 
 /* --- skills: rotating conic gradient border on hover --- */
@@ -686,7 +686,7 @@ html.light .grain {
 .project:hover .project-ghost {
   opacity: 1;
   transform: translateX(0);
-  -webkit-text-stroke-color: rgba(66, 184, 131, 0.35);
+  -webkit-text-stroke-color: rgba(139, 92, 246, 0.35);
 }
 .project-points { list-style: none; }
 .project-points li { position: relative; padding-left: 28px; }
@@ -713,7 +713,7 @@ html.light .grain {
   position: absolute;
   inset: -8px;
   border-radius: 50%;
-  border: 1px dashed rgba(66, 184, 131, 0.5);
+  border: 1px dashed rgba(139, 92, 246, 0.5);
   animation: spinSlow 12s linear infinite;
 }
 .journey-bullets li { position: relative; padding-left: 26px; }
