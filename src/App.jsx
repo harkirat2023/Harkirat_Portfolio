@@ -13,6 +13,7 @@ import Journey from "./components/Journey.jsx";
 import Roles from "./components/Roles.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
+import Particles from "./components/Particles.jsx";
 
 export default function App() {
   const [introDone, setIntroDone] = useState(false);
@@ -61,6 +62,18 @@ export default function App() {
     <>
       <AnimatePresence>{!introDone && <Intro onDone={() => setIntroDone(true)} />}</AnimatePresence>
 
+      <Particles
+        className="site-particles fixed inset-0 z-0"
+        particleColors={["#2563EB", "#22D3EE", "#A78BFA"]}
+        particleCount={180}
+        particleSpread={11}
+        speed={0.08}
+        particleBaseSize={82}
+        moveParticlesOnHover={true}
+        particleHoverFactor={0.65}
+        alphaParticles={true}
+        sizeRandomness={1.1}
+      />
       <div className="grain" aria-hidden="true" />
       <div className="scroll-progress fixed left-0 top-0 z-[1200] h-[3px] w-0 bg-accent" ref={progressRef} aria-hidden="true" />
       <Cursor />

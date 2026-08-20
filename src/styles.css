@@ -330,6 +330,26 @@ html.light .grain {
 .m-link span { font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-accent); margin-right: 14px; vertical-align: 4px; }
 .m-link:hover { color: var(--color-accent-deep); padding-left: 14px; }
 
+/* --- site-wide particle atmosphere --- */
+.site-particles {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+.site-particles canvas {
+  filter: saturate(1.15) contrast(1.1);
+}
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+.section.bg-paper-2 {
+  background-color: color-mix(in srgb, var(--color-paper-2) 84%, transparent);
+}
+
 /* --- hero bg squares --- */
 .hero-bg-sq { border: 1.5px solid var(--color-line); pointer-events: none; }
 .hero-bg-sq::after {

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-
 const words = [
   "RAG Based Systems",
   "SaaS Applications",
@@ -50,26 +49,26 @@ export default function Hero() {
   return (
     <section className="hero section relative flex min-h-svh flex-col justify-between overflow-hidden pb-[60px] pt-[130px]" id="home">
       <motion.span
-        className="hero-bg-sq sq-1 animate-float absolute right-[6%] top-[18%]"
+        className="hero-bg-sq sq-1 animate-float absolute right-[6%] top-[18%] z-[1]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4, duration: 1 }}
       />
       <motion.span
-        className="hero-bg-sq sq-2 animate-float absolute bottom-[26%] left-[4%]"
+        className="hero-bg-sq sq-2 animate-float absolute bottom-[26%] left-[4%] z-[1]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.6, duration: 1 }}
         style={{ animationDelay: "-4s" }}
       />
       <motion.span
-        className="hero-bg-sq sq-3 animate-float absolute right-[16%] top-[60%]"
+        className="hero-bg-sq sq-3 animate-float absolute right-[16%] top-[60%] z-[1]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.8, duration: 1 }}
         style={{ animationDelay: "-8s" }}
       />
-      <span className="absolute left-1/2 top-[20%] h-[60vh] w-px rotate-[24deg] bg-gradient-to-b from-line to-transparent" aria-hidden="true" />
+      <span className="absolute left-1/2 top-[20%] z-[1] h-[60vh] w-px rotate-[24deg] bg-gradient-to-b from-line to-transparent" aria-hidden="true" />
 
       <div className="container relative z-10">
         <motion.p
