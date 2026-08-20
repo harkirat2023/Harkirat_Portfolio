@@ -6,7 +6,7 @@ const roles = [
     title: "Joint Secretary",
     org: "IETE Students Forum, TIET",
     date: "May 2025 — May 2026",
-    desc: "Coordinated 10+ tech events and workshops, growing club membership by 40%.",
+    desc: "Coordinated 10+ technology events and workshops, helping grow club membership by 40%.",
     link: "https://www.linkedin.com/posts/harkiratse_leadership-studentlife-campusinvolvement-share-7327374129072930818-bD6r/",
     linkLabel: "Read story",
   },
@@ -15,14 +15,14 @@ const roles = [
     title: "Student Ambassador",
     org: "LetsUpgrade EdTech Pvt. Ltd.",
     date: "August 2024",
-    desc: "Led social outreach boosting referrals by 20%, onboarded 45+ students, drove 300+ campus web visits.",
+    desc: "Promoted skill-building workshops, onboarded 45+ students, and helped increase referral engagement by 20%.",
   },
   {
     num: "03",
     title: "Creative Content Head",
     org: "Vyom Hostel, TIET",
     date: "Jan 2026 — May 2026",
-    desc: "Led content strategy and digital campaigns, growing student engagement through data-driven social planning.",
+    desc: "Shaped the creative content direction for Vyom Hostel across the semester, bringing a stronger editorial voice to student communication.",
   },
 ];
 

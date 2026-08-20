@@ -9,22 +9,22 @@ const skillGroups = [
   },
   {
     cat: "Frontend & Backend",
-    tagline: "The product layer, end to end.",
+    tagline: "Interfaces, services, and live connections.",
     tags: ["React.js", "Next.js", "Node.js", "Express.js", "FastAPI", "REST APIs", "WebSockets", "JWT · OAuth"],
   },
   {
     cat: "Databases & Caching",
-    tagline: "Where the data lives.",
+    tagline: "Reliable storage for useful decisions.",
     tags: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "ChromaDB"],
   },
   {
     cat: "AI & Machine Learning",
-    tagline: "Intelligence baked into products.",
+    tagline: "Models that explain more than they predict.",
     tags: ["Scikit-learn", "NLP", "LangChain", "RAG", "Prompt Engineering", "Vector Databases", "SHAP"],
   },
   {
     cat: "Core Computer Science",
-    tagline: "The theory behind the builds.",
+    tagline: "The foundations underneath the features.",
     tags: ["Data Structures & Algorithms", "OOPS", "DBMS", "Operating Systems", "Computer Networks"],
   },
   {
@@ -147,7 +147,7 @@ export default function Skills() {
               whileInView="show"
               viewport={{ once: true, margin: "-10%" }}
             >
-              Six core clusters, twenty-five-plus technologies — the toolkit I use to go from idea to deployed product.
+              A practical toolkit for moving from a problem statement to a deployed product, with equal attention to algorithms, APIs, data, and the user-facing experience.
             </motion.p>
             <div className="skills-intro-foot flex flex-col gap-[26px]">
               <motion.div

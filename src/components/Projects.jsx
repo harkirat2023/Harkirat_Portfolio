@@ -6,13 +6,13 @@ const projects = [
     tag: "Full-Stack · ML",
     role: "Inventory & B2C Retail Management Platform",
     points: [
-      "Full-stack retail platform — 20+ modules, 30+ REST APIs, JWT role-based auth.",
-      "Random Forest demand forecasting that automates weekly inventory restocking.",
-      "QR/barcode scanning, low-stock alerts & automated PDF invoicing.",
+      "Designed a full-stack retail workflow spanning 20+ modules, 30+ REST APIs, and JWT-based role authentication.",
+      "Added Random Forest demand forecasting to turn sales history into weekly restocking decisions.",
+      "Connected QR/barcode scanning, low-stock alerts, PDF invoicing, Redis caching, and responsive dashboards into one platform.",
     ],
     stack: ["Next.js", "TypeScript", "FastAPI", "PostgreSQL", "scikit-learn", "Redis"],
     links: [
-      { label: "Live Site", url: "https://khataboxapp.vercel.app" },
+      { label: "Website", url: "https://khataboxapp.vercel.app" },
       { label: "GitHub", url: "https://github.com/harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform" },
     ],
   },
@@ -21,46 +21,56 @@ const projects = [
     tag: "GenAI · Healthcare",
     role: "ML-Based Symptom Intelligence System",
     points: [
-      "AI symptom checker — 3-model ensemble at ~89% accuracy with SHAP explainability.",
-      "LangChain RAG assistant reasoning over 12 medical documents for context-aware guidance.",
-      "31 REST APIs powering auth, dashboards, prediction history & PDF/CSV reports.",
+      "Built a symptom intelligence workflow combining disease prediction, severity analysis, and personalised recommendations.",
+      "Used a three-model ensemble with SHAP explanations, reaching approximately 89% prediction accuracy.",
+      "Added a LangChain RAG assistant over 12 medical documents alongside authentication, history, dashboards, and PDF/CSV reporting.",
     ],
     stack: ["Next.js", "FastAPI", "MongoDB", "scikit-learn", "LangChain", "ChromaDB"],
-    links: [{ label: "GitHub", url: "https://github.com/harkirat2023/Symptom-Scope-AI" }],
+    links: [
+      { label: "GitHub", url: "https://github.com/harkirat2023/Symptom-Scope-AI" },
+      { label: "Website", url: "https://symptom-scope-ai.vercel.app" }
+    ],
   },
   {
     name: "IntelliMoney",
     tag: "AI · FinTech",
     role: "AI-Powered Financial Health Scoring Platform",
     points: [
-      "Financial analytics platform — expense tracking, budgeting & personalised health scoring.",
-      "NLP expense categorisation via TF-IDF + Logistic Regression.",
-      "JWT-secured FastAPI + MongoDB powering real-time spending dashboards.",
+      "Created an expense and budgeting platform that turns spending patterns into a personalised financial health score.",
+      "Automated expense categorisation with TF-IDF and Logistic Regression, then surfaced the results through interactive dashboards.",
+      "Built secure FastAPI and MongoDB services with JWT authentication for scalable financial data management.",
     ],
     stack: ["Python", "React.js", "FastAPI", "MongoDB", "scikit-learn", "NLP"],
-    links: [{ label: "GitHub", url: "https://github.com/harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform" }],
+    links: [{ label: "GitHub", url: "https://github.com/harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform" },
+    { label: "Website", url: "https://intellimoney.vercel.app" }
+    ],
   },
   {
-    name: "Mood Music",
-    tag: "ML · Music",
+    name: "Moodify",
+    tag: "ML · Python · NLP",
     role: "Mood-Based Music Recommendation System",
     points: [
       "Recommendation engine that maps a listener's mood to fitting songs.",
       "Trains on audio & lyric features to build mood-aware playlists.",
     ],
-    stack: [],
-    links: [{ label: "GitHub", url: "https://github.com/harkirat2023/Mood-Music_Recommendation-System" }],
+    stack: ["Python", "React.js", "FastAPI", "TF+IDF", "NLP"],
+    links: [{ label: "GitHub", url: "https://github.com/harkirat2023/Mood-Music_Recommendation-System" },
+      {label: "Website", url: "https://mood-music-recommendation-system.vercel.app"}
+    ],
   },
   {
-    name: "ML Lab — UML501",
-    tag: "Coursework",
-    role: "Machine Learning Implementations · TIET",
+    name: "VisionMark",
+    tag: "OpenCV · Python · ",
+    role: "OpenCV Based Smart Attendance Management System",
     points: [
       "Hands-on ML implementations from preprocessing to model evaluation.",
       "Algorithms, notebooks & experiments documented end to end.",
     ],
     stack: [],
-    links: [{ label: "GitHub", url: "https://github.com/harkirat2023/UML501-MACHINE_LEARNING-102303854" }],
+    links: [{ label: "GitHub", url: "https://github.com/harkirat2023/UML501-MACHINE_LEARNING-102303854" },
+      {label: "Website", url: "https://visionmark-hazel.vercel.app/"}
+
+    ],
   },
 ];
 

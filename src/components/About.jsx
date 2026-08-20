@@ -102,7 +102,7 @@ export default function About() {
               whileInView="show"
               viewport={{ once: true, margin: "-10%" }}
             >
-              An aspiring software engineer with hands-on experience building <strong className="font-[620]">AI-powered platforms</strong> and <strong className="font-[620]">real-time analytics systems</strong>.
+              I am a computer engineering student who likes taking an idea from a messy problem statement to a <strong className="font-[620]">working, intelligent product</strong>.
             </motion.p>
             <motion.p
               className="mb-[30px] max-w-[560px] text-[1.02rem] text-ink-soft"
@@ -111,13 +111,13 @@ export default function About() {
               whileInView="show"
               viewport={{ once: true, margin: "-10%" }}
             >
-              Proficient in <strong className="font-semibold text-ink">FastAPI, Next.js, Node.js, PostgreSQL, MySQL</strong> and <strong className="font-semibold text-ink">REST API design</strong>. Comfortable with TypeScript, CI/CD pipelines, Docker basics, and cloud deployment via Vercel and Railway with GitHub Actions. Passionate about building systems at the intersection of AI, distributed systems, and real-world impact.
+              My strongest work sits at the intersection of <strong className="font-semibold text-ink">machine learning and software engineering</strong>: FastAPI services, Next.js interfaces, secure REST APIs, and data systems backed by PostgreSQL or MongoDB. I enjoy the product details too, from explainable predictions and RAG assistants to dashboards that make a decision easier to act on.
             </motion.p>
             <div className="about-points mb-[34px] flex flex-col gap-[18px]">
               {[
-                { idx: "A", title: "Engineering focus", text: "machine learning + software systems, applied to products people actually use." },
-                { idx: "B", title: "Leadership", text: "organised events for 450+ participants and led a team of 27 as Joint Secretary of IETE." },
-                { idx: "C", title: "Curiosity", text: "250+ DSA problems, 5 shipped projects, and a habit of learning by building." },
+                { idx: "A", title: "Build with purpose", text: "from inventory forecasting to financial health scoring, I turn models into features with a clear user benefit." },
+                { idx: "B", title: "Lead with intent", text: "organised events for 450+ participants and led a 27-member team as Joint Secretary of IETE." },
+                { idx: "C", title: "Keep learning", text: "250+ DSA problems, hands-on ML work, and a habit of learning by shipping." },
               ].map((p, i) => (
                 <motion.div
                   key={p.idx}

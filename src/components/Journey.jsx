@@ -7,9 +7,20 @@ const items = [
     title: "Summer Project Intern",
     org: "Experiential Learning Centre, TIET",
     bullets: [
-      "Built a passive, continuous authentication system for mobile banking using behavioral biometrics.",
-      "Implemented a Split Federated Learning architecture processing activations locally to keep raw sensor data on-device.",
-      "Processed multi-modal sensor streams — Accelerometer, Gyroscope, Keystroke dynamics and Touch heatmaps — to analyse user interaction patterns.",
+      "Explored passive, continuous authentication for mobile banking using behavioural biometrics.",
+      "Implemented Split Federated Learning so activations could be processed locally while raw sensor data stayed on-device.",
+      "Analysed multi-modal accelerometer, gyroscope, keystroke, and touch-heatmap signals to understand interaction patterns.",
+    ],
+  },
+  {
+    tag: "Internship",
+    date: "July 2024- September 2024",
+    title: "Web Development Intern",
+    org: "Extion Infotech",
+    bullets: [
+      " Completed an intensive AICTE program focused on modern full-stack web development practices.",
+      "Mastered modern web development workflows, including RESTful API design, and version control using Git/GitHub.",
+  "Participated in technical workshops, implementing industry mentor feedback to debug code and optimize load performance"
     ],
   },
   {
@@ -17,7 +28,7 @@ const items = [
     date: "2023 — 2027",
     title: "Bachelor of Engineering — Computer Engineering",
     org: "Thapar Institute of Engineering and Technology, Patiala",
-    note: "Coursework deep in ML, data systems and software engineering — culminating in the UML501 machine learning lab and multiple shipped products.",
+    note: "Building a foundation across data structures, databases, operating systems, networks, and machine learning while shipping practical software products.",
   },
   {
     tag: "Recognition",

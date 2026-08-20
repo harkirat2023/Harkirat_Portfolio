@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
+
 const words = [
-  "intelligent systems",
-  "AI products",
-  "retail platforms",
-  "real-time analytics",
-  "financial intelligence",
+  "RAG Based Systems",
+  "SaaS Applications",
+  "Smart Inventory Platforms",
+  "Real-time Dashboards",
+  "Financial intelligence AI",
+  "ML-powered engines",
 ];
 
 const EASE = [0.16, 1, 0.3, 1];
@@ -81,11 +83,11 @@ export default function Hero() {
 
         <h1 className="hero-title font-serif font-[620] text-[clamp(3.2rem,10vw,9rem)] leading-[0.98] -tracking-[0.03em]">
           {["Harkirat Singh", "builds"].map((line, i) => (
-  <span key={line} className="line -mb-[0.06em] block overflow-hidden pb-[0.06em]">
+          <span key={line} className="line -mb-[0.06em] block overflow-hidden pb-[0.06em]">
     <span className={`line-inner block ${i === 0 ? "italic text-accent" : ""}`}>
       {line.split("").map((char, charIndex) => (
         <motion.span
-          key={charIndex}
+          key={`${line}-${charIndex}`}
           className="inline-block whitespace-pre"
           initial={{ y: "110%" }}
           animate={{ y: 0 }}
@@ -126,7 +128,7 @@ export default function Hero() {
             initial="hidden"
             animate="show"
           >
-            An aspiring software engineer building <em className="italic text-ink">AI-powered platforms</em> and <em className="italic text-ink">real-time analytics systems</em> at the intersection of intelligence and impact.
+            Computer engineering student building <em className="italic text-ink">AI-powered products</em> and <em className="italic text-ink">data-rich systems</em> that turn complex problems into useful everyday tools.
           </motion.p>
           <motion.div
             className="hero-meta space-y-1 text-left lg:text-right"
@@ -134,8 +136,8 @@ export default function Hero() {
             initial="hidden"
             animate="show"
           >
-            <p className="mono text-ink-mute">BE Computer Engineering · TIET</p>
-            <p className="mono text-ink-mute">2023 — 2027</p>
+            <p className="mono text-ink-mute">B.E. Computer Engineering · TIET</p>
+            <p className="mono text-ink-mute">Patiala, Punjab · 2023 — 2027</p>
           </motion.div>
         </div>
 
