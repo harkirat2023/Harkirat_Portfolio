@@ -1,0 +1,1 @@
+export default function Loading() { return <main className="container case-wrap" aria-label="Loading"><div className="mono">loading signal…</div><div className="rule" style={{ marginTop: "var(--space-8)" }}/><div className="panel" style={{ minHeight: "240px", marginTop: "var(--space-8)" }}/></main>; }

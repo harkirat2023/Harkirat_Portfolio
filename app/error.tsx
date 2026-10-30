@@ -1,0 +1,2 @@
+"use client";
+export default function ErrorPage({ reset }: { error: Error & { digest?: string }; reset: () => void }) { return <main id="content" className="container case-wrap"><p className="mono accent">system error</p><h1 className="display">That signal broke.</h1><p className="intro">The page hit an error. Try loading it again.</p><button className="button button-primary" onClick={reset}>Try again</button></main>; }

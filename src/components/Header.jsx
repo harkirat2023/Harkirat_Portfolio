@@ -4,9 +4,11 @@ import ThemeToggle from "./ThemeToggle.jsx";
 const links = [
   { href: "#about", num: "01", label: "About" },
   { href: "#skills", num: "02", label: "Skills" },
-  { href: "#projects", num: "03", label: "Projects" },
-  { href: "#experience", num: "04", label: "Journey" },
-  { href: "#contact", num: "05", label: "Contact" },
+  { href: "#education", num: "03", label: "Education" },
+  { href: "#projects", num: "04", label: "Projects" },
+  { href: "#experience", num: "05", label: "Experience" },
+  { href: "#certification", num: "06", label: "Certification" },
+  { href: "#contact", num: "07", label: "Contact" },
 ];
 
 const navItem = {

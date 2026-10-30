@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { Camera, Geometry, Mesh, Program, Renderer } from "ogl";
 import "./Particles.css";
 
-const DEFAULT_COLORS = ["#3B82F6", "#22D3EE", "#A78BFA"];
+const DEFAULT_COLORS = ["#3B82F6", "#22D3EE", "#A78BFA", "#FBBF24", "#F472B6", "#FACC15", "#10B981", "#F97316", "#EF4444"];
 
 function hexToRgb(hex) {
   const normalized = hex.replace(/^#/, "");
@@ -58,14 +58,14 @@ const fragment = `
 `;
 
 export default function Particles({
-  particleCount = 140,
+  particleCount = 280,
   particleSpread = 10,
-  speed = 0.1,
+  speed = 5,
   particleColors = DEFAULT_COLORS,
   moveParticlesOnHover = false,
   particleHoverFactor = 1,
   alphaParticles = false,
-  particleBaseSize = 100,
+  particleBaseSize = 200,
   sizeRandomness = 1,
   cameraDistance = 20,
   disableRotation = false,
