@@ -1,0 +1,313 @@
+- generic [ref=f24e2]:
+  - generic [ref=f24e3]:
+    - link "Skip to content" [ref=f24e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=f24e9]:
+      - heading "Navigation Menu" [level=2] [ref=f24e10]
+      - generic [ref=f24e11]:
+        - link "Homepage" [ref=f24e14] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f24e17]:
+          - navigation "Global" [ref=f24e18]:
+            - list [ref=f24e19]:
+              - listitem [ref=f24e20]:
+                - button "Products" [ref=f24e22] [cursor=pointer]
+              - listitem [ref=f24e25]:
+                - button "Developers" [ref=f24e27] [cursor=pointer]
+              - listitem [ref=f24e30]:
+                - button "Businesses" [ref=f24e32] [cursor=pointer]
+              - listitem [ref=f24e35]:
+                - button "Resources" [ref=f24e37] [cursor=pointer]
+              - listitem [ref=f24e40]:
+                - link "Pricing" [ref=f24e41] [cursor=pointer]:
+                  - /url: https://github.com/pricing
+          - generic [ref=f24e42]:
+            - button "Search or jump to, type / to search" [ref=f24e44] [cursor=pointer]
+            - generic [ref=f24e50]:
+              - link "Sign in" [ref=f24e52] [cursor=pointer]:
+                - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fharkirat2023%2FSymptom-Scope-AI
+              - link "Sign up" [ref=f24e55] [cursor=pointer]:
+                - /url: /signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E&source=header-repo&source_repo=harkirat2023%2FSymptom-Scope-AI
+              - button "Appearance settings" [ref=f24e58] [cursor=pointer]
+  - main [ref=f24e65]:
+    - generic "Global navigation menu" [ref=f24e68]:
+      - navigation "Breadcrumbs" [ref=f24e71]:
+        - list [ref=f24e72]:
+          - listitem [ref=f24e73]:
+            - link "harkirat2023" [ref=f24e74] [cursor=pointer]:
+              - /url: /harkirat2023
+          - listitem [ref=f24e76]:
+            - link "Symptom-Scope-AI" [ref=f24e77] [cursor=pointer]:
+              - /url: /harkirat2023/Symptom-Scope-AI
+      - heading "Repository navigation" [level=2] [ref=f24e80]
+      - navigation "Repository" [ref=f24e81]:
+        - list [ref=f24e82]:
+          - listitem [ref=f24e83]:
+            - link "Code" [ref=f24e84] [cursor=pointer]:
+              - /url: /harkirat2023/Symptom-Scope-AI
+          - listitem [ref=f24e89]:
+            - link "Issues" [ref=f24e90] [cursor=pointer]:
+              - /url: /harkirat2023/Symptom-Scope-AI/issues
+          - listitem [ref=f24e96]:
+            - link "Pull requests" [ref=f24e97] [cursor=pointer]:
+              - /url: /harkirat2023/Symptom-Scope-AI/pulls
+          - listitem [ref=f24e102]:
+            - link "Actions" [ref=f24e103] [cursor=pointer]:
+              - /url: /harkirat2023/Symptom-Scope-AI/actions
+          - listitem [ref=f24e108]:
+            - link "Projects" [ref=f24e109] [cursor=pointer]:
+              - /url: /harkirat2023/Symptom-Scope-AI/projects
+          - listitem [ref=f24e114]:
+            - link "Security and quality" [ref=f24e115] [cursor=pointer]:
+              - /url: /harkirat2023/Symptom-Scope-AI/security
+          - listitem [ref=f24e120]:
+            - link "Insights" [ref=f24e121] [cursor=pointer]:
+              - /url: /harkirat2023/Symptom-Scope-AI/pulse
+    - generic [ref=f24e138]:
+      - generic [ref=f24e142]:
+        - generic [ref=f24e145]:
+          - img "harkirat2023" [ref=f24e146]
+          - generic "Symptom-Scope-AI" [ref=f24e147]:
+            - strong [ref=f24e148]:
+              - link "Symptom-Scope-AI" [ref=f24e149] [cursor=pointer]:
+                - /url: /harkirat2023/Symptom-Scope-AI
+          - generic [ref=f24e150]: Public
+        - list [ref=f24e152]:
+          - listitem [ref=f24e153]:
+            - link "You must be signed in to change notification settings" [ref=f24e154] [cursor=pointer]:
+              - /url: /login?return_to=%2Fharkirat2023%2FSymptom-Scope-AI
+              - generic [ref=f24e155]: Notifications
+          - listitem [ref=f24e157]:
+            - link "You must be signed in to fork a repository" [ref=f24e158] [cursor=pointer]:
+              - /url: /login?return_to=%2Fharkirat2023%2FSymptom-Scope-AI
+              - generic [ref=f24e160]:
+                - text: Fork
+                - generic [aria-hidden] [ref=f24e161]: "0"
+                - generic [ref=f24e162]: (0)
+          - listitem [ref=f24e163]:
+            - link "Star (0)" [ref=f24e164] [cursor=pointer]:
+              - /url: /login?return_to=%2Fharkirat2023%2FSymptom-Scope-AI
+              - generic [ref=f24e166]:
+                - text: Star
+                - generic [aria-hidden] [ref=f24e167]: "0"
+                - generic [ref=f24e168]: (0)
+      - generic [ref=f24e169]:
+        - generic [ref=f24e172]:
+          - generic [ref=f24e173]:
+            - generic [ref=f24e174]:
+              - button "main branch" [ref=f24e176] [cursor=pointer]:
+                - generic [ref=f24e177]: main
+              - generic [ref=f24e181]:
+                - link "Go to Branches page" [ref=f24e182] [cursor=pointer]:
+                  - /url: /harkirat2023/Symptom-Scope-AI/branches
+                - link "Go to Tags page" [ref=f24e185] [cursor=pointer]:
+                  - /url: /harkirat2023/Symptom-Scope-AI/tags
+            - generic [ref=f24e188]:
+              - combobox "Go to file" [ref=f24e196]
+              - button "Code" [ref=f24e197] [cursor=pointer]
+          - generic [ref=f24e201]:
+            - generic [ref=f24e203]:
+              - heading "Latest commit" [level=2] [ref=f24e204]
+              - generic [ref=f24e207]:
+                - heading "History" [level=2] [ref=f24e208]
+                - link "37 Commits" [ref=f24e209] [cursor=pointer]:
+                  - /url: /harkirat2023/Symptom-Scope-AI/commits/main/
+            - heading "Folders and files" [level=2] [ref=f24e212]
+            - table "Folders and files" [ref=f24e214]:
+              - rowgroup:
+                - row "Name Last commit message Last commit date":
+                  - columnheader "Name"
+                  - columnheader "Last commit message"
+                  - columnheader "Last commit date"
+              - rowgroup [ref=f24e215]:
+                - row ".github/workflows, (Directory)" [ref=f24e216]:
+                  - cell [ref=f24e217]:
+                    - link ".github/workflows, (Directory)" [ref=f24e224] [cursor=pointer]:
+                      - /url: /harkirat2023/Symptom-Scope-AI/tree/main/.github/workflows
+                      - text: .github/workflows
+                  - cell [ref=f24e225]
+                  - cell [ref=f24e227]
+                - row ".opencode/command, (Directory)" [ref=f24e230]:
+                  - cell [ref=f24e231]:
+                    - link ".opencode/command, (Directory)" [ref=f24e238] [cursor=pointer]:
+                      - /url: /harkirat2023/Symptom-Scope-AI/tree/main/.opencode/command
+                      - text: .opencode/command
+                  - cell [ref=f24e239]
+                  - cell [ref=f24e241]
+                - row ".vscode, (Directory)" [ref=f24e244]:
+                  - cell [ref=f24e245]:
+                    - link ".vscode, (Directory)" [ref=f24e252] [cursor=pointer]:
+                      - /url: /harkirat2023/Symptom-Scope-AI/tree/main/.vscode
+                      - text: .vscode
+                  - cell [ref=f24e253]
+                  - cell [ref=f24e255]
+                - row "backend, (Directory)" [ref=f24e258]:
+                  - cell [ref=f24e259]:
+                    - link "backend, (Directory)" [ref=f24e266] [cursor=pointer]:
+                      - /url: /harkirat2023/Symptom-Scope-AI/tree/main/backend
+                      - text: backend
+                  - cell [ref=f24e267]
+                  - cell [ref=f24e269]
+                - row "docs, (Directory)" [ref=f24e272]:
+                  - cell [ref=f24e273]:
+                    - link "docs, (Directory)" [ref=f24e280] [cursor=pointer]:
+                      - /url: /harkirat2023/Symptom-Scope-AI/tree/main/docs
+                      - text: docs
+                  - cell [ref=f24e281]
+                  - cell [ref=f24e283]
+                - row "frontend, (Directory)" [ref=f24e286]:
+                  - cell [ref=f24e287]:
+                    - link "frontend, (Directory)" [ref=f24e294] [cursor=pointer]:
+                      - /url: /harkirat2023/Symptom-Scope-AI/tree/main/frontend
+                      - text: frontend
+                  - cell [ref=f24e295]
+                  - cell [ref=f24e297]
+                - row "scripts, (Directory)" [ref=f24e300]:
+                  - cell [ref=f24e301]:
+                    - link "scripts, (Directory)" [ref=f24e308] [cursor=pointer]:
+                      - /url: /harkirat2023/Symptom-Scope-AI/tree/main/scripts
+                      - text: scripts
+                  - cell [ref=f24e309]
+                  - cell [ref=f24e311]
+                - row ".gitignore, (File)" [ref=f24e314]:
+                  - cell [ref=f24e315]:
+                    - link ".gitignore, (File)" [ref=f24e322] [cursor=pointer]:
+                      - /url: /harkirat2023/Symptom-Scope-AI/blob/main/.gitignore
+                      - text: .gitignore
+                  - cell [ref=f24e323]
+                  - cell [ref=f24e325]
+                - row "DEPLOYMENT_FIX_REPORT.md, (File)" [ref=f24e328]:
+                  - cell [ref=f24e329]:
+                    - link "DEPLOYMENT_FIX_REPORT.md, (File)" [ref=f24e336] [cursor=pointer]:
+                      - /url: /harkirat2023/Symptom-Scope-AI/blob/main/DEPLOYMENT_FIX_REPORT.md
+                      - text: DEPLOYMENT_FIX_REPORT.md
+                  - cell [ref=f24e337]
+                  - cell [ref=f24e339]
+                - row "SymptomScope_AI_DESIGN.md, (File)" [ref=f24e342]:
+                  - cell [ref=f24e343]:
+                    - link "SymptomScope_AI_DESIGN.md, (File)" [ref=f24e350] [cursor=pointer]:
+                      - /url: /harkirat2023/Symptom-Scope-AI/blob/main/SymptomScope_AI_DESIGN.md
+                      - text: SymptomScope_AI_DESIGN.md
+                  - cell [ref=f24e351]
+                  - cell [ref=f24e353]
+                - row "SymptomScope_AI_PRD.md, (File)" [ref=f24e356]:
+                  - cell [ref=f24e357]:
+                    - link "SymptomScope_AI_PRD.md, (File)" [ref=f24e364] [cursor=pointer]:
+                      - /url: /harkirat2023/Symptom-Scope-AI/blob/main/SymptomScope_AI_PRD.md
+                      - text: SymptomScope_AI_PRD.md
+                  - cell [ref=f24e365]
+                  - cell [ref=f24e367]
+                - row "SymptomScope_AI_TECHSTACK.md, (File)" [ref=f24e370]:
+                  - cell [ref=f24e371]:
+                    - link "SymptomScope_AI_TECHSTACK.md, (File)" [ref=f24e378] [cursor=pointer]:
+                      - /url: /harkirat2023/Symptom-Scope-AI/blob/main/SymptomScope_AI_TECHSTACK.md
+                      - text: SymptomScope_AI_TECHSTACK.md
+                  - cell [ref=f24e379]
+                  - cell [ref=f24e381]
+                - row "boot.sh, (File)" [ref=f24e384]:
+                  - cell [ref=f24e385]:
+                    - link "boot.sh, (File)" [ref=f24e392] [cursor=pointer]:
+                      - /url: /harkirat2023/Symptom-Scope-AI/blob/main/boot.sh
+                      - text: boot.sh
+                  - cell [ref=f24e393]
+                  - cell [ref=f24e395]
+                - row "docker-compose.yml, (File)" [ref=f24e398]:
+                  - cell [ref=f24e399]:
+                    - link "docker-compose.yml, (File)" [ref=f24e406] [cursor=pointer]:
+                      - /url: /harkirat2023/Symptom-Scope-AI/blob/main/docker-compose.yml
+                      - text: docker-compose.yml
+                  - cell [ref=f24e407]
+                  - cell [ref=f24e409]
+                - row "opencode.json, (File)" [ref=f24e412]:
+                  - cell [ref=f24e413]:
+                    - link "opencode.json, (File)" [ref=f24e420] [cursor=pointer]:
+                      - /url: /harkirat2023/Symptom-Scope-AI/blob/main/opencode.json
+                      - text: opencode.json
+                  - cell [ref=f24e421]
+                  - cell [ref=f24e423]
+                - row "package.json, (File)" [ref=f24e426]:
+                  - cell [ref=f24e427]:
+                    - link "package.json, (File)" [ref=f24e434] [cursor=pointer]:
+                      - /url: /harkirat2023/Symptom-Scope-AI/blob/main/package.json
+                      - text: package.json
+                  - cell [ref=f24e435]
+                  - cell [ref=f24e437]
+                - row "render.yaml, (File)" [ref=f24e440]:
+                  - cell [ref=f24e441]:
+                    - link "render.yaml, (File)" [ref=f24e448] [cursor=pointer]:
+                      - /url: /harkirat2023/Symptom-Scope-AI/blob/main/render.yaml
+                      - text: render.yaml
+                  - cell [ref=f24e449]
+                  - cell [ref=f24e451]
+                - row "start.bat, (File)" [ref=f24e454]:
+                  - cell [ref=f24e455]:
+                    - link "start.bat, (File)" [ref=f24e462] [cursor=pointer]:
+                      - /url: /harkirat2023/Symptom-Scope-AI/blob/main/start.bat
+                      - text: start.bat
+                  - cell [ref=f24e463]
+                  - cell [ref=f24e465]
+        - generic [ref=f24e470]:
+          - generic [ref=f24e471]:
+            - heading "About" [level=2] [ref=f24e472]
+            - paragraph [ref=f24e473]: Disease prediction system using Decision Tree & Random Forest (scikit-learn) with confidence scoring. Flask REST API returns predictions, severity & precautions in real time. ML pipeline with Pandas/NumPy, MongoDB for patient logs, and React.js dashboard for symptom input & results.
+            - generic "https://symptom-scope-ai.vercel.app" [ref=f24e477]:
+              - link "symptom-scope-ai.vercel.app" [ref=f24e478] [cursor=pointer]:
+                - /url: https://symptom-scope-ai.vercel.app
+            - generic [ref=f24e479]:
+              - link "Activity" [ref=f24e482] [cursor=pointer]:
+                - /url: /harkirat2023/Symptom-Scope-AI/activity
+              - generic [ref=f24e485]:
+                - heading "Stars" [level=3] [ref=f24e486]
+                - generic [ref=f24e488]:
+                  - strong [ref=f24e491]: "0"
+                  - text: stars
+                - heading "Watchers" [level=3] [ref=f24e492]
+                - generic [ref=f24e494]:
+                  - strong [ref=f24e497]: "0"
+                  - text: watching
+                - heading "Forks" [level=3] [ref=f24e498]
+                - link [ref=f24e500] [cursor=pointer]:
+                  - /url: /harkirat2023/Symptom-Scope-AI/forks
+                  - strong [ref=f24e504]: "0"
+                  - text: forks
+            - link "Report repository" [ref=f24e506] [cursor=pointer]:
+              - /url: /contact/report-content?content_url=https%3A%2F%2Fgithub.com%2Fharkirat2023%2FSymptom-Scope-AI&report=harkirat2023+%28user%29
+          - heading "Releases" [level=2] [ref=f24e508]
+          - heading "Packages" [level=2] [ref=f24e512]
+          - heading "Contributors" [level=2] [ref=f24e515]
+          - heading "Languages" [level=2] [ref=f24e518]
+  - contentinfo [ref=f24e521]:
+    - heading "Footer" [level=2] [ref=f24e522]
+    - generic [ref=f24e523]:
+      - generic [ref=f24e524]:
+        - link "GitHub Homepage" [ref=f24e525] [cursor=pointer]:
+          - /url: https://github.com
+        - generic [ref=f24e528]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=f24e529]:
+        - heading "Footer navigation" [level=3] [ref=f24e530]
+        - list "Footer navigation" [ref=f24e531]:
+          - listitem [ref=f24e532]:
+            - link "Terms" [ref=f24e533] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=f24e534]:
+            - link "Privacy" [ref=f24e535] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=f24e536]:
+            - link "Security" [ref=f24e537] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=f24e538]:
+            - link "Status" [ref=f24e539] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=f24e540]:
+            - link "Community" [ref=f24e541] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=f24e542]:
+            - link "Docs" [ref=f24e543] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=f24e544]:
+            - link "Contact" [ref=f24e545] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=f24e546]:
+            - button "Manage cookies" [ref=f24e548] [cursor=pointer]
+          - listitem [ref=f24e549]:
+            - button "Do not share my personal information" [ref=f24e551] [cursor=pointer]

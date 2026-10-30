@@ -1,0 +1,331 @@
+- generic [ref=f27e2]:
+  - generic [ref=f27e3]:
+    - link "Skip to content" [ref=f27e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=f27e9]:
+      - heading "Navigation Menu" [level=2] [ref=f27e10]
+      - generic [ref=f27e11]:
+        - link "Homepage" [ref=f27e14] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f27e17]:
+          - navigation "Global" [ref=f27e18]:
+            - list [ref=f27e19]:
+              - listitem [ref=f27e20]:
+                - button "Products" [ref=f27e22] [cursor=pointer]
+              - listitem [ref=f27e25]:
+                - button "Developers" [ref=f27e27] [cursor=pointer]
+              - listitem [ref=f27e30]:
+                - button "Businesses" [ref=f27e32] [cursor=pointer]
+              - listitem [ref=f27e35]:
+                - button "Resources" [ref=f27e37] [cursor=pointer]
+              - listitem [ref=f27e40]:
+                - link "Pricing" [ref=f27e41] [cursor=pointer]:
+                  - /url: https://github.com/pricing
+          - generic [ref=f27e42]:
+            - button "Search or jump to, type / to search" [ref=f27e44] [cursor=pointer]
+            - generic [ref=f27e50]:
+              - link "Sign in" [ref=f27e52] [cursor=pointer]:
+                - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fharkirat2023%2FIntelliMoney-AI-Powered-Financial-Health-Scoring-Platform
+              - link "Sign up" [ref=f27e55] [cursor=pointer]:
+                - /url: /signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E&source=header-repo&source_repo=harkirat2023%2FIntelliMoney-AI-Powered-Financial-Health-Scoring-Platform
+              - button "Appearance settings" [ref=f27e58] [cursor=pointer]
+  - main [ref=f27e65]:
+    - generic "Global navigation menu" [ref=f27e68]:
+      - navigation "Breadcrumbs" [ref=f27e71]:
+        - list [ref=f27e72]:
+          - listitem [ref=f27e73]:
+            - link "harkirat2023" [ref=f27e74] [cursor=pointer]:
+              - /url: /harkirat2023
+          - listitem [ref=f27e76]:
+            - link "IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform" [ref=f27e77] [cursor=pointer]:
+              - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform
+      - heading "Repository navigation" [level=2] [ref=f27e80]
+      - navigation "Repository" [ref=f27e81]:
+        - list [ref=f27e82]:
+          - listitem [ref=f27e83]:
+            - link "Code" [ref=f27e84] [cursor=pointer]:
+              - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform
+          - listitem [ref=f27e89]:
+            - link "Issues" [ref=f27e90] [cursor=pointer]:
+              - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/issues
+          - listitem [ref=f27e96]:
+            - link "Pull requests (1)" [ref=f27e97] [cursor=pointer]:
+              - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/pulls
+              - generic [ref=f27e101]: Pull requests
+              - generic [ref=f27e102]:
+                - generic [aria-hidden] [ref=f27e103]: "1"
+                - generic [ref=f27e104]: (1)
+          - listitem [ref=f27e105]:
+            - link "Actions" [ref=f27e106] [cursor=pointer]:
+              - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/actions
+          - listitem [ref=f27e111]:
+            - link "Projects" [ref=f27e112] [cursor=pointer]:
+              - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/projects
+          - listitem [ref=f27e117]:
+            - link "Security and quality" [ref=f27e118] [cursor=pointer]:
+              - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/security
+          - listitem [ref=f27e123]:
+            - link "Insights" [ref=f27e124] [cursor=pointer]:
+              - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/pulse
+    - generic [ref=f27e141]:
+      - generic [ref=f27e145]:
+        - generic [ref=f27e148]:
+          - img "harkirat2023" [ref=f27e149]
+          - generic "IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform" [ref=f27e150]:
+            - strong [ref=f27e151]:
+              - link "IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform" [ref=f27e152] [cursor=pointer]:
+                - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform
+          - generic [ref=f27e153]: Public
+        - list [ref=f27e155]:
+          - listitem [ref=f27e156]:
+            - link "You must be signed in to change notification settings" [ref=f27e157] [cursor=pointer]:
+              - /url: /login?return_to=%2Fharkirat2023%2FIntelliMoney-AI-Powered-Financial-Health-Scoring-Platform
+              - generic [ref=f27e158]: Notifications
+          - listitem [ref=f27e160]:
+            - link "You must be signed in to fork a repository" [ref=f27e161] [cursor=pointer]:
+              - /url: /login?return_to=%2Fharkirat2023%2FIntelliMoney-AI-Powered-Financial-Health-Scoring-Platform
+              - generic [ref=f27e163]:
+                - text: Fork
+                - generic [aria-hidden] [ref=f27e164]: "0"
+                - generic [ref=f27e165]: (0)
+          - listitem [ref=f27e166]:
+            - link "Star (0)" [ref=f27e167] [cursor=pointer]:
+              - /url: /login?return_to=%2Fharkirat2023%2FIntelliMoney-AI-Powered-Financial-Health-Scoring-Platform
+              - generic [ref=f27e169]:
+                - text: Star
+                - generic [aria-hidden] [ref=f27e170]: "0"
+                - generic [ref=f27e171]: (0)
+      - generic [ref=f27e172]:
+        - generic [ref=f27e175]:
+          - generic [ref=f27e176]:
+            - generic [ref=f27e177]:
+              - button "main branch" [ref=f27e179] [cursor=pointer]:
+                - generic [ref=f27e180]: main
+              - generic [ref=f27e184]:
+                - link "Go to Branches page" [ref=f27e185] [cursor=pointer]:
+                  - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/branches
+                - link "Go to Tags page" [ref=f27e188] [cursor=pointer]:
+                  - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/tags
+            - generic [ref=f27e191]:
+              - combobox "Go to file" [ref=f27e199]
+              - button "Code" [ref=f27e200] [cursor=pointer]
+          - generic [ref=f27e204]:
+            - generic [ref=f27e206]:
+              - heading "Latest commit" [level=2] [ref=f27e207]
+              - generic [ref=f27e210]:
+                - heading "History" [level=2] [ref=f27e211]
+                - link "60 Commits" [ref=f27e212] [cursor=pointer]:
+                  - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/commits/main/
+            - heading "Folders and files" [level=2] [ref=f27e215]
+            - table "Folders and files" [ref=f27e217]:
+              - rowgroup:
+                - row "Name Last commit message Last commit date":
+                  - columnheader "Name"
+                  - columnheader "Last commit message"
+                  - columnheader "Last commit date"
+              - rowgroup [ref=f27e218]:
+                - row ".github/workflows, (Directory)" [ref=f27e219]:
+                  - cell [ref=f27e220]:
+                    - link ".github/workflows, (Directory)" [ref=f27e227] [cursor=pointer]:
+                      - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/tree/main/.github/workflows
+                      - text: .github/workflows
+                  - cell [ref=f27e228]
+                  - cell [ref=f27e230]
+                - row ".vscode, (Directory)" [ref=f27e233]:
+                  - cell [ref=f27e234]:
+                    - link ".vscode, (Directory)" [ref=f27e241] [cursor=pointer]:
+                      - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/tree/main/.vscode
+                      - text: .vscode
+                  - cell [ref=f27e242]
+                  - cell [ref=f27e244]
+                - row "backend, (Directory)" [ref=f27e247]:
+                  - cell [ref=f27e248]:
+                    - link "backend, (Directory)" [ref=f27e255] [cursor=pointer]:
+                      - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/tree/main/backend
+                      - text: backend
+                  - cell [ref=f27e256]
+                  - cell [ref=f27e258]
+                - row "docker, (Directory)" [ref=f27e261]:
+                  - cell [ref=f27e262]:
+                    - link "docker, (Directory)" [ref=f27e269] [cursor=pointer]:
+                      - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/tree/main/docker
+                      - text: docker
+                  - cell [ref=f27e270]
+                  - cell [ref=f27e272]
+                - row "frontend, (Directory)" [ref=f27e275]:
+                  - cell [ref=f27e276]:
+                    - link "frontend, (Directory)" [ref=f27e283] [cursor=pointer]:
+                      - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/tree/main/frontend
+                      - text: frontend
+                  - cell [ref=f27e284]
+                  - cell [ref=f27e286]
+                - row "ml, (Directory)" [ref=f27e289]:
+                  - cell [ref=f27e290]:
+                    - link "ml, (Directory)" [ref=f27e297] [cursor=pointer]:
+                      - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/tree/main/ml
+                      - text: ml
+                  - cell [ref=f27e298]
+                  - cell [ref=f27e300]
+                - row "scripts, (Directory)" [ref=f27e303]:
+                  - cell [ref=f27e304]:
+                    - link "scripts, (Directory)" [ref=f27e311] [cursor=pointer]:
+                      - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/tree/main/scripts
+                      - text: scripts
+                  - cell [ref=f27e312]
+                  - cell [ref=f27e314]
+                - row ".dockerignore, (File)" [ref=f27e317]:
+                  - cell [ref=f27e318]:
+                    - link ".dockerignore, (File)" [ref=f27e325] [cursor=pointer]:
+                      - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/blob/main/.dockerignore
+                      - text: .dockerignore
+                  - cell [ref=f27e326]
+                  - cell [ref=f27e328]
+                - row ".gitignore, (File)" [ref=f27e331]:
+                  - cell [ref=f27e332]:
+                    - link ".gitignore, (File)" [ref=f27e339] [cursor=pointer]:
+                      - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/blob/main/.gitignore
+                      - text: .gitignore
+                  - cell [ref=f27e340]
+                  - cell [ref=f27e342]
+                - row "INTELLIMONEY_AUDIT_REPORT.md, (File)" [ref=f27e345]:
+                  - cell [ref=f27e346]:
+                    - link "INTELLIMONEY_AUDIT_REPORT.md, (File)" [ref=f27e353] [cursor=pointer]:
+                      - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/blob/main/INTELLIMONEY_AUDIT_REPORT.md
+                      - text: INTELLIMONEY_AUDIT_REPORT.md
+                  - cell [ref=f27e354]
+                  - cell [ref=f27e356]
+                - row "INTELLIMONEY_WHITEBOARD_SYSTEM_ARCHITECTURE.md, (File)" [ref=f27e359]:
+                  - cell [ref=f27e360]:
+                    - link "INTELLIMONEY_WHITEBOARD_SYSTEM_ARCHITECTURE.md, (File)" [ref=f27e367] [cursor=pointer]:
+                      - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/blob/main/INTELLIMONEY_WHITEBOARD_SYSTEM_ARCHITECTURE.md
+                      - text: INTELLIMONEY_WHITEBOARD_SYSTEM_ARCHITECTURE.md
+                  - cell [ref=f27e368]
+                  - cell [ref=f27e370]
+                - row "IntelliMoney_DESIGN.md, (File)" [ref=f27e373]:
+                  - cell [ref=f27e374]:
+                    - link "IntelliMoney_DESIGN.md, (File)" [ref=f27e381] [cursor=pointer]:
+                      - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/blob/main/IntelliMoney_DESIGN.md
+                      - text: IntelliMoney_DESIGN.md
+                  - cell [ref=f27e382]
+                  - cell [ref=f27e384]
+                - row "IntelliMoney_PRD.md, (File)" [ref=f27e387]:
+                  - cell [ref=f27e388]:
+                    - link "IntelliMoney_PRD.md, (File)" [ref=f27e395] [cursor=pointer]:
+                      - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/blob/main/IntelliMoney_PRD.md
+                      - text: IntelliMoney_PRD.md
+                  - cell [ref=f27e396]
+                  - cell [ref=f27e398]
+                - row "IntelliMoney_TechStack.md, (File)" [ref=f27e401]:
+                  - cell [ref=f27e402]:
+                    - link "IntelliMoney_TechStack.md, (File)" [ref=f27e409] [cursor=pointer]:
+                      - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/blob/main/IntelliMoney_TechStack.md
+                      - text: IntelliMoney_TechStack.md
+                  - cell [ref=f27e410]
+                  - cell [ref=f27e412]
+                - row "docker-compose.yml, (File)" [ref=f27e415]:
+                  - cell [ref=f27e416]:
+                    - link "docker-compose.yml, (File)" [ref=f27e423] [cursor=pointer]:
+                      - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/blob/main/docker-compose.yml
+                      - text: docker-compose.yml
+                  - cell [ref=f27e424]
+                  - cell [ref=f27e426]
+                - row "package-lock.json, (File)" [ref=f27e429]:
+                  - cell [ref=f27e430]:
+                    - link "package-lock.json, (File)" [ref=f27e437] [cursor=pointer]:
+                      - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/blob/main/package-lock.json
+                      - text: package-lock.json
+                  - cell [ref=f27e438]
+                  - cell [ref=f27e440]
+                - row "package.json, (File)" [ref=f27e443]:
+                  - cell [ref=f27e444]:
+                    - link "package.json, (File)" [ref=f27e451] [cursor=pointer]:
+                      - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/blob/main/package.json
+                      - text: package.json
+                  - cell [ref=f27e452]
+                  - cell [ref=f27e454]
+                - row "prompt.md, (File)" [ref=f27e457]:
+                  - cell [ref=f27e458]:
+                    - link "prompt.md, (File)" [ref=f27e465] [cursor=pointer]:
+                      - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/blob/main/prompt.md
+                      - text: prompt.md
+                  - cell [ref=f27e466]
+                  - cell [ref=f27e468]
+                - row "start.sh, (File)" [ref=f27e471]:
+                  - cell [ref=f27e472]:
+                    - link "start.sh, (File)" [ref=f27e479] [cursor=pointer]:
+                      - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/blob/main/start.sh
+                      - text: start.sh
+                  - cell [ref=f27e480]
+                  - cell [ref=f27e482]
+                - row "startup.md, (File)" [ref=f27e485]:
+                  - cell [ref=f27e486]:
+                    - link "startup.md, (File)" [ref=f27e493] [cursor=pointer]:
+                      - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/blob/main/startup.md
+                      - text: startup.md
+                  - cell [ref=f27e494]
+                  - cell [ref=f27e496]
+        - generic [ref=f27e501]:
+          - generic [ref=f27e502]:
+            - heading "About" [level=2] [ref=f27e503]
+            - paragraph [ref=f27e504]: "Smart AI-powered financial analytics: real-time dashboards, secure APIs, scalable MongoDB, and NLP-driven expense categorization with Logistic Regression + TF-IDF for expense tracking, budget monitoring, and financial health scoring."
+            - generic "https://intellimoney.vercel.app" [ref=f27e508]:
+              - link "intellimoney.vercel.app" [ref=f27e509] [cursor=pointer]:
+                - /url: https://intellimoney.vercel.app
+            - generic [ref=f27e510]:
+              - link "Activity" [ref=f27e513] [cursor=pointer]:
+                - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/activity
+              - generic [ref=f27e516]:
+                - heading "Stars" [level=3] [ref=f27e517]
+                - generic [ref=f27e519]:
+                  - strong [ref=f27e522]: "0"
+                  - text: stars
+                - heading "Watchers" [level=3] [ref=f27e523]
+                - generic [ref=f27e525]:
+                  - strong [ref=f27e528]: "0"
+                  - text: watching
+                - heading "Forks" [level=3] [ref=f27e529]
+                - link [ref=f27e531] [cursor=pointer]:
+                  - /url: /harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform/forks
+                  - strong [ref=f27e535]: "0"
+                  - text: forks
+            - link "Report repository" [ref=f27e537] [cursor=pointer]:
+              - /url: /contact/report-content?content_url=https%3A%2F%2Fgithub.com%2Fharkirat2023%2FIntelliMoney-AI-Powered-Financial-Health-Scoring-Platform&report=harkirat2023+%28user%29
+          - heading "Releases" [level=2] [ref=f27e539]
+          - heading "Packages" [level=2] [ref=f27e543]
+          - heading "Contributors" [level=2] [ref=f27e546]
+          - heading "Languages" [level=2] [ref=f27e549]
+  - contentinfo [ref=f27e552]:
+    - heading "Footer" [level=2] [ref=f27e553]
+    - generic [ref=f27e554]:
+      - generic [ref=f27e555]:
+        - link "GitHub Homepage" [ref=f27e556] [cursor=pointer]:
+          - /url: https://github.com
+        - generic [ref=f27e559]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=f27e560]:
+        - heading "Footer navigation" [level=3] [ref=f27e561]
+        - list "Footer navigation" [ref=f27e562]:
+          - listitem [ref=f27e563]:
+            - link "Terms" [ref=f27e564] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=f27e565]:
+            - link "Privacy" [ref=f27e566] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=f27e567]:
+            - link "Security" [ref=f27e568] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=f27e569]:
+            - link "Status" [ref=f27e570] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=f27e571]:
+            - link "Community" [ref=f27e572] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=f27e573]:
+            - link "Docs" [ref=f27e574] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=f27e575]:
+            - link "Contact" [ref=f27e576] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=f27e577]:
+            - button "Manage cookies" [ref=f27e579] [cursor=pointer]
+          - listitem [ref=f27e580]:
+            - button "Do not share my personal information" [ref=f27e582] [cursor=pointer]

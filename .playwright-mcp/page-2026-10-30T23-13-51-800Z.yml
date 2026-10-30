@@ -1,0 +1,202 @@
+- generic [ref=f6e2]:
+  - generic [ref=f6e3]:
+    - link "Skip to content" [ref=f6e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=f6e9]:
+      - heading "Navigation Menu" [level=2] [ref=f6e10]
+      - generic [ref=f6e11]:
+        - link "Homepage" [ref=f6e14] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f6e17]:
+          - navigation "Global" [ref=f6e18]:
+            - list [ref=f6e19]:
+              - listitem [ref=f6e20]:
+                - button "Products" [ref=f6e22] [cursor=pointer]
+              - listitem [ref=f6e25]:
+                - button "Developers" [ref=f6e27] [cursor=pointer]
+              - listitem [ref=f6e30]:
+                - button "Businesses" [ref=f6e32] [cursor=pointer]
+              - listitem [ref=f6e35]:
+                - button "Resources" [ref=f6e37] [cursor=pointer]
+              - listitem [ref=f6e40]:
+                - link "Pricing" [ref=f6e41] [cursor=pointer]:
+                  - /url: https://github.com/pricing
+          - generic [ref=f6e42]:
+            - button "Search or jump to, type / to search" [ref=f6e44] [cursor=pointer]
+            - generic [ref=f6e50]:
+              - link "Sign in" [ref=f6e52] [cursor=pointer]:
+                - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fharkirat2023
+              - link "Sign up" [ref=f6e55] [cursor=pointer]:
+                - /url: /signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E&source=header
+              - button "Appearance settings" [ref=f6e58] [cursor=pointer]
+  - main [ref=f6e64]:
+    - generic [ref=f6e67]:
+      - generic [ref=f6e68]:
+        - generic:
+          - generic:
+            - generic:
+              - img "@harkirat2023"
+            - generic:
+              - strong: harkirat2023
+              - generic:
+                - generic:
+                  - link "Follow":
+                    - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fharkirat2023
+      - navigation "User profile" [ref=f6e71]:
+        - link "Overview" [ref=f6e72] [cursor=pointer]:
+          - /url: /harkirat2023
+        - link "Repositories 21" [ref=f6e75] [cursor=pointer]:
+          - /url: /harkirat2023?tab=repositories
+          - text: Repositories
+          - generic "21" [ref=f6e78]
+        - link "Projects" [ref=f6e79] [cursor=pointer]:
+          - /url: /harkirat2023?tab=projects
+        - link "Packages" [ref=f6e82] [cursor=pointer]:
+          - /url: /harkirat2023?tab=packages
+        - link "Stars 5" [ref=f6e85] [cursor=pointer]:
+          - /url: /harkirat2023?tab=stars
+          - text: Stars
+          - generic "5" [ref=f6e88]
+    - generic [ref=f6e90]:
+      - generic [ref=f6e92]:
+        - generic:
+          - generic:
+            - generic:
+              - img "@harkirat2023"
+            - generic:
+              - generic:
+                - strong: harkirat2023
+            - generic:
+              - generic:
+                - generic:
+                  - link "Follow":
+                    - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fharkirat2023
+        - generic [ref=f6e93]:
+          - generic [ref=f6e94]:
+            - link [ref=f6e96] [cursor=pointer]:
+              - /url: https://avatars.githubusercontent.com/u/133265398?v=4
+              - img "View harkirat2023's full-sized avatar" [ref=f6e97]
+            - heading "Harkirat Singh harkirat2023" [level=1] [ref=f6e99]:
+              - generic [ref=f6e100]: Harkirat Singh
+              - generic [ref=f6e101]: harkirat2023
+          - generic [ref=f6e102]:
+            - link "Follow" [ref=f6e109] [cursor=pointer]:
+              - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fharkirat2023
+            - generic [ref=f6e110]:
+              - generic [ref=f6e111]: B.E. Computer Engineering @ TIET Patiala |Full-Stack Developer with MERN, FastAPI, and Machine Learning | Data Scientist Building AI-powered solutions
+              - generic [ref=f6e114]:
+                - link "0 followers" [ref=f6e115] [cursor=pointer]:
+                  - /url: https://github.com/harkirat2023?tab=followers
+                - text: ·
+                - link "1 following" [ref=f6e118] [cursor=pointer]:
+                  - /url: https://github.com/harkirat2023?tab=following
+              - list [ref=f6e119]:
+                - 'listitem "Organization: Thapar Institute of Engineering and Technology" [ref=f6e120]':
+                  - generic [ref=f6e123]: Thapar Institute of Engineering and Technology
+                - 'listitem "Home location: Amritsar" [ref=f6e125]':
+                  - generic [ref=f6e128]: Amritsar
+                - listitem [ref=f6e129]:
+                  - img "LinkedIn" [ref=f6e130]
+                  - link "in/harkiratse" [ref=f6e133] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/in/harkiratse/
+                - listitem [ref=f6e134]:
+                  - link "https://www.geeksforgeeks.org/profile/harkirat2026" [ref=f6e137] [cursor=pointer]:
+                    - /url: https://www.geeksforgeeks.org/profile/harkirat2026
+          - button "Block or report user" [ref=f6e139] [cursor=pointer]
+      - generic [ref=f6e144]:
+        - generic [ref=f6e146]:
+          - heading "Popular repositories Loading" [level=2] [ref=f6e147]:
+            - text: Popular repositories
+            - generic: Loading
+            - status
+          - list [ref=f6e149]:
+            - listitem [ref=f6e150]:
+              - generic [ref=f6e152]:
+                - generic [ref=f6e153]:
+                  - link "ASSIGNMENTS" [ref=f6e155] [cursor=pointer]:
+                    - /url: /harkirat2023/ASSIGNMENTS
+                  - generic [ref=f6e156]: Public
+                - paragraph [ref=f6e158]: "These assignments are submitted to PW SKILLS course : Java with system design 2.0(english)"
+                - paragraph [ref=f6e159]:
+                  - generic [ref=f6e160]: Java
+            - listitem [ref=f6e162]:
+              - generic [ref=f6e164]:
+                - generic [ref=f6e165]:
+                  - link "Mood-Music_Recommendation-System" [ref=f6e167] [cursor=pointer]:
+                    - /url: /harkirat2023/Mood-Music_Recommendation-System
+                  - generic [ref=f6e168]: Public
+                - paragraph [ref=f6e170]
+                - paragraph [ref=f6e171]:
+                  - generic [ref=f6e172]: Python
+            - listitem [ref=f6e174]:
+              - generic [ref=f6e176]:
+                - generic [ref=f6e177]:
+                  - link "ELC_App" [ref=f6e179] [cursor=pointer]:
+                    - /url: /harkirat2023/ELC_App
+                  - generic [ref=f6e180]: Public
+                - paragraph [ref=f6e182]: It is a mobile banking App which not only performs all the basic operations of banking app burt also records the behaviour based features that provides the extra laye rof authentication ans securit…
+                - paragraph [ref=f6e183]:
+                  - generic [ref=f6e184]: Java
+            - listitem [ref=f6e186]:
+              - generic [ref=f6e188]:
+                - generic [ref=f6e189]:
+                  - link "UML501-MACHINE_LEARNING-102303854" [ref=f6e191] [cursor=pointer]:
+                    - /url: /harkirat2023/UML501-MACHINE_LEARNING-102303854
+                  - generic [ref=f6e192]: Public
+                - paragraph [ref=f6e194]: This is a reporsitory where I have uploaded all the assignments of MACHINE LEARNING course and *ML Project* in Thapar Institute of Engineering and Technology in my SEMESTER-5 of Btech Computer Engi…
+                - paragraph [ref=f6e195]:
+                  - generic [ref=f6e196]: Jupyter Notebook
+            - listitem [ref=f6e198]:
+              - generic [ref=f6e200]:
+                - generic [ref=f6e201]:
+                  - link "JAVA" [ref=f6e203] [cursor=pointer]:
+                    - /url: /harkirat2023/JAVA
+                  - generic [ref=f6e204]: Public
+                - paragraph [ref=f6e206]: PWSkills :- BINARY2.0 Batch Codes written by Harkirat
+                - paragraph [ref=f6e207]:
+                  - generic [ref=f6e208]: Java
+            - listitem [ref=f6e210]:
+              - generic [ref=f6e212]:
+                - generic [ref=f6e213]:
+                  - link "ucs503p-202526odd-codenexus" [ref=f6e215] [cursor=pointer]:
+                    - /url: /harkirat2023/ucs503p-202526odd-codenexus
+                  - generic [ref=f6e216]: Public
+                - paragraph [ref=f6e218]
+                - paragraph [ref=f6e219]:
+                  - generic [ref=f6e220]: HTML
+        - img "Loading" [ref=f6e226]
+  - contentinfo [ref=f6e229]:
+    - heading "Footer" [level=2] [ref=f6e230]
+    - generic [ref=f6e231]:
+      - generic [ref=f6e232]:
+        - link "GitHub Homepage" [ref=f6e233] [cursor=pointer]:
+          - /url: https://github.com
+        - generic [ref=f6e236]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=f6e237]:
+        - heading "Footer navigation" [level=3] [ref=f6e238]
+        - list "Footer navigation" [ref=f6e239]:
+          - listitem [ref=f6e240]:
+            - link "Terms" [ref=f6e241] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=f6e242]:
+            - link "Privacy" [ref=f6e243] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=f6e244]:
+            - link "Security" [ref=f6e245] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=f6e246]:
+            - link "Status" [ref=f6e247] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=f6e248]:
+            - link "Community" [ref=f6e249] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=f6e250]:
+            - link "Docs" [ref=f6e251] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=f6e252]:
+            - link "Contact" [ref=f6e253] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=f6e254]:
+            - button "Manage cookies" [ref=f6e256] [cursor=pointer]
+          - listitem [ref=f6e257]:
+            - button "Do not share my personal information" [ref=f6e259] [cursor=pointer]

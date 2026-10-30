@@ -1,37 +1,231 @@
+export type SkillCluster = {
+  name: string;
+  items: string[];
+};
+
+export type ExperienceItem = {
+  role: string;
+  org: string;
+  date: string;
+  summary: string;
+  bullets: string[];
+  stack: string[];
+};
+
 export type Project = {
-  slug: string; index: string; title: string; thesis: string; role: "solo build" | "analysis project" | "team build"; year: string; stack: string[];
-  outcomes: { label: string; value: string }[]; problem: string[];
+  slug: string;
+  index: string;
+  title: string;
+  thesis: string;
+  status?: string;
+  stack: string[];
+  outcomes: { label: string; value: string }[];
+  problem: string[];
   architecture: { layers: { name: string; nodes: { id: string; label: string; note: string }[] }[] };
-  decisions: { decision: string; why: string; tradeoff: string }[]; result: string[]; next: string[];
-  links?: { live?: string; github?: string }; glyph: "symptomscope" | "khatabox" | "intellimoney" | "supplychain" | "churnsight";
+  result: string[];
+  glyph: "symptomscope" | "khatabox" | "intellimoney" | "supplychain" | "churnsight";
+  links?: { live?: string; github?: string };
 };
 
 export const profile = {
-  name: "Harkirat Singh", email: "hkkirat25@gmail.com", phone: "+91 88476 54698", location: "Patiala, India",
-  linkedin: "https://www.linkedin.com/in/harkiratse/", github: "https://github.com/harkirat2023", resume: "/harkirat-singh-resume.pdf",
-  availability: "Open to AI / full-stack roles · 2027",
+  name: "Harkirat Singh",
+  role: "Computer Engineering student at Thapar Institute of Engineering and Technology",
+  location: "Patiala, India",
+  email: "hkkirat25@gmail.com",
+  phone: "+91 88476 54698",
+  linkedin: "https://www.linkedin.com/in/harkiratse/",
+  github: "https://github.com/harkirat2023",
+  resumeLinks: [
+    { label: "Universal résumé", href: "/assets/UNIVERSAL%20(1).pdf" },
+    { label: "Analytics résumé", href: "/assets/Non-Technical-Harkirat.pdf" },
+  ],
 };
 
-export const skills = [
-  { name: "Languages", items: ["Java", "Python", "JavaScript", "TypeScript", "SQL"] },
-  { name: "CS Fundamentals", items: ["DSA", "OOP", "DBMS", "Operating Systems", "Computer Networks"] },
-  { name: "Web & Realtime", items: ["Next.js", "FastAPI", "REST design", "JWT", "WebSockets"] },
-  { name: "Generative AI", items: ["LangChain", "Prompt Engineering", "Vector DBs", "RAG", "Agent tool-calling"] },
-  { name: "Data & Infra", items: ["MySQL", "PostgreSQL", "MongoDB", "Redis"] },
+export const stats = [
+  { value: "05", label: "projects" },
+  { value: "180K+", label: "orders analysed" },
+  { value: "27", label: "team members coordinated" },
+  { value: "40%", label: "membership growth" },
 ];
 
-export const experience = [
-  { role: "AI Intern", org: "XTRAGRAD Technologies", date: "Aug 2026", summary: "Building exam-proctoring intelligence from webcam and audio streams.", bullets: ["Tracked face, head pose, multiple people, and external devices with OpenCV, streamed through FastAPI.", "Designed progressive warnings, risk scoring, violation timelines, and a live examiner view.", "Automated post-session reports so reviewers can focus on high-risk sessions."], stack: ["Python", "OpenCV", "FastAPI", "MongoDB", "JWT"] },
-  { role: "Summer Project Intern", org: "Experiential Learning Centre, TIET", date: "Jun – Jul 2025", summary: "Explored passive, continuous authentication for mobile banking.", bullets: ["Kept raw sensor signals on-device in a Split Federated Learning architecture.", "Combined accelerometer, gyroscope, keystroke, and touch-heatmap signals into a behavioural profile."], stack: ["Python", "Split Federated Learning", "Sensor Fusion"] },
-  { role: "Joint Secretary", org: "IETE Students Forum, TIET", date: "May 2025 – May 2026", summary: "Ran a 27-person team across technical events for 450+ participants.", bullets: ["Standardised budgets, timelines, and task allocation across concurrent projects.", "Used engagement data to choose events to repeat; membership grew 40%."], stack: ["Leadership", "Operations"] },
+export const siteCopy = {
+  hero: {
+    headline: ["I build systems that", "notice things."],
+    description: "I build full-stack software, AI systems, and analytics workflows that turn complex signals into decisions people can inspect.",
+    collageTitle: "Make the\nsignal useful.",
+  },
+  sections: {
+    about: { index: "01", kicker: "about", title: "How I approach a system." },
+    capabilities: { index: "02", kicker: "capabilities", title: "Tools, grouped by the work they support." },
+    experience: { index: "03", kicker: "experience", title: "Experience, in context." },
+    work: { index: "04", kicker: "selected work", title: "Five projects. Different signals, same curiosity." },
+    recognition: { index: "05", kicker: "education · certifications", title: "Learning and recognition." },
+  },
+  contact: {
+    headline: "Let’s talk about systems that need to work.",
+    description: "For conversations about AI, full-stack engineering, or analytics, email is the most direct route.",
+  },
+};
+
+export const skills: SkillCluster[] = [
+  { name: "Programming", items: ["Python", "Java", "JavaScript", "TypeScript", "SQL"] },
+  { name: "Analytics", items: ["Pandas", "NumPy", "Excel", "Data cleaning", "Data validation", "Exploratory analysis", "Statistical analysis", "Data interpretation"] },
+  { name: "Business intelligence", items: ["Power BI", "Tableau", "Data visualisation", "Dashboard development", "KPI analysis"] },
+  { name: "AI & machine learning", items: ["LangChain", "Prompt engineering", "Vector databases", "RAG", "Tool calling", "XGBoost", "SHAP", "TF-IDF", "Logistic Regression"] },
+  { name: "Web & systems", items: ["Next.js", "React", "FastAPI", "REST APIs", "WebSockets", "JWT", "OpenCV", "Object-oriented programming", "Data structures & algorithms", "DBMS", "Operating systems", "Computer networks"] },
+  { name: "Data & tools", items: ["MySQL", "PostgreSQL", "MongoDB", "Redis", "Git", "GitHub", "GitHub Actions", "Docker", "Vercel", "Render"] },
+  { name: "Professional", items: ["Analytical problem solving", "Communication", "Cross-functional collaboration", "Leadership", "Adaptability"] },
+];
+
+export const featuredSkills = ["Python", "TypeScript", "Next.js", "FastAPI", "OpenCV", "LangChain", "RAG", "Power BI", "SQL", "PostgreSQL", "MongoDB", "Docker"];
+
+export const experience: ExperienceItem[] = [
+  {
+    role: "AI Intern",
+    org: "XTRAGRAD Technologies Pvt. Ltd.",
+    date: "Aug 1 – Aug 30, 2026",
+    summary: "I spent one month building an online exam-proctoring system that detects abnormal activity.",
+    bullets: [
+      "I used OpenCV to analyse webcam and audio streams for faces, head movement, multiple people, and external devices.",
+      "I built risk-scoring and violation tracking with progressive warnings, examiner monitoring, violation timelines, and session reports.",
+    ],
+    stack: ["Python", "OpenCV", "FastAPI", "MongoDB", "REST APIs", "JWT"],
+  },
+  {
+    role: "Summer Project Intern",
+    org: "Experiential Learning Centre, TIET",
+    date: "Jun – Jul 2025",
+    summary: "I worked on passive, continuous authentication for mobile banking using behavioural signals.",
+    bullets: [
+      "I implemented a Split Federated Learning design that processes activations locally and keeps raw sensor data on-device.",
+      "I analysed accelerometer, gyroscope, keystroke, and touch-heatmap signals to study interaction patterns.",
+    ],
+    stack: ["Python", "Split Federated Learning", "Sensor data"],
+  },
+];
+
+export const leadership = [
+  {
+    role: "Joint Secretary",
+    org: "IETE Students Forum, TIET",
+    date: "May 2025 – May 2026",
+    description: "I coordinated a 27-member executive team across 10+ technical events and student initiatives for 450+ participants. Membership grew by 40%.",
+  },
+  {
+    role: "Student Ambassador",
+    org: "LetsUpgrade EdTech Pvt. Ltd.",
+    date: "Aug 2024",
+    description: "I supported outreach for skill-building workshops and used referral engagement data to improve campaign conversion by 20%.",
+  },
 ];
 
 export const projects: Project[] = [
-  { slug: "symptomscope", index: "01", title: "SymptomScope AI", thesis: "A health triage workflow that pairs an explainable prediction with a grounded assistant.", role: "solo build", year: "Year not listed", stack: ["Next.js", "FastAPI", "MongoDB", "scikit-learn", "LangChain", "ChromaDB"], outcomes: [{ value: "3-model", label: "ensemble" }, { value: "~89%", label: "prediction accuracy" }, { value: "12", label: "medical documents" }], problem: ["A symptom score needs to show how it reached its recommendation. A conversational layer also needs a boundary between useful guidance and a case that should be escalated."], architecture: { layers: [{ name: "Client", nodes: [{ id: "ui", label: "Next.js", note: "Symptom flow, history, dashboard, and reports." }] }, { name: "Service", nodes: [{ id: "api", label: "FastAPI", note: "Coordinates prediction and assistant requests." }, { id: "ensemble", label: "ML ensemble", note: "Combines three prediction models with SHAP explanations." }, { id: "agent", label: "RAG assistant", note: "Retrieves from the medical document set through LangChain." }] }, { name: "Data", nodes: [{ id: "chroma", label: "ChromaDB", note: "Stores retrieved document vectors." }, { id: "mongo", label: "MongoDB", note: "Stores authenticated user history." }] }] }, decisions: [{ decision: "Keep prediction and assistant as separate steps.", why: "The ensemble produces a score while retrieval provides grounded context.", tradeoff: "The user moves through a more explicit workflow instead of receiving one opaque answer." }, { decision: "Expose SHAP explanations with the score.", why: "A prediction is more useful when its contributing signals can be inspected.", tradeoff: "The explanation adds detail to the result view." }, { decision: "Retrieve from a bounded medical document set.", why: "The assistant needs a defined source for its responses.", tradeoff: "Coverage stays limited to the indexed documents." }], result: ["Combines a three-model ensemble, SHAP explanations, and a RAG assistant over 12 medical documents.", "Includes authentication, history, dashboards, and PDF/CSV reporting."], next: ["Evaluate escalation thresholds with clinical review.", "Expand the retrieval corpus only with traceable sources."], links: { live: "https://symptom-scope-ai.vercel.app", github: "https://github.com/harkirat2023/Symptom-Scope-AI" }, glyph: "symptomscope" },
-  { slug: "khata-box", index: "02", title: "KhataBox", thesis: "A retail platform that connects stock decisions, billing, and realtime updates.", role: "solo build", year: "Year not listed", stack: ["Next.js", "TypeScript", "FastAPI", "PostgreSQL", "scikit-learn", "Redis"], outcomes: [{ value: "20+", label: "modules" }, { value: "30+", label: "REST APIs" }, { value: "Random Forest", label: "demand forecast" }], problem: ["Retail workflows spread inventory, customer orders, and billing across disconnected tools. KhataBox brings those operations into one platform."], architecture: { layers: [{ name: "Client", nodes: [{ id: "next", label: "Next.js", note: "Retail dashboard and customer-facing workflows." }] }, { name: "Service", nodes: [{ id: "api", label: "FastAPI", note: "REST endpoints and role-aware workflows." }, { id: "socket", label: "Socket.IO", note: "Pushes stock changes to connected clients." }] }, { name: "Data", nodes: [{ id: "db", label: "PostgreSQL", note: "Persists product and order records." }, { id: "redis", label: "Redis", note: "Caches and distributes stock updates." }] }] }, decisions: [{ decision: "Separate REST operations from stock broadcasts.", why: "Most operations need a durable request/response path while stock changes need to reach open clients.", tradeoff: "Realtime clients must reconcile after reconnect." }, { decision: "Use PostgreSQL for the retail records.", why: "Orders and inventory require durable relational data.", tradeoff: "Schema changes need deliberate migrations." }, { decision: "Use a Random Forest for weekly demand forecasts.", why: "Sales history can inform restocking decisions.", tradeoff: "Forecasts support staff decisions rather than replace them." }], result: ["Connected QR/barcode scanning, low-stock alerts, and PDF invoicing.", "Added role-based JWT authentication, Redis caching, and responsive dashboards."], next: ["Measure forecast quality against realised demand.", "Add an explicit reconciliation view for reconnecting realtime clients."], links: { live: "https://khataboxapp.vercel.app", github: "https://github.com/harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform" }, glyph: "khatabox" },
-  { slug: "intellimoney", index: "03", title: "IntelliMoney", thesis: "An expense platform that turns transaction patterns into a financial health score.", role: "solo build", year: "Year not listed", stack: ["Python", "React", "FastAPI", "MongoDB", "scikit-learn", "NLP"], outcomes: [{ value: "TF-IDF", label: "text features" }, { value: "Logistic Regression", label: "categoriser" }, { value: "JWT", label: "authentication" }], problem: ["Spending data is difficult to act on when categories and summaries require manual work. IntelliMoney automates categorisation and brings the results into a budgeting workflow."], architecture: { layers: [{ name: "Input", nodes: [{ id: "receipt", label: "Transactions", note: "Expense records enter the platform." }] }, { name: "Service", nodes: [{ id: "classify", label: "Categoriser", note: "TF-IDF and Logistic Regression assign categories." }, { id: "api", label: "FastAPI", note: "Serves authenticated financial workflows." }] }, { name: "Data", nodes: [{ id: "mongo", label: "MongoDB", note: "Stores user financial data." }, { id: "ui", label: "Dashboard", note: "Displays budgets and financial health." }] }] }, decisions: [{ decision: "Automate categorisation with TF-IDF and Logistic Regression.", why: "Text features provide a practical way to map expense descriptions to categories.", tradeoff: "Ambiguous descriptions still need user correction." }, { decision: "Keep financial services behind authenticated APIs.", why: "Budget records are user-specific data.", tradeoff: "The frontend depends on token lifecycle handling." }, { decision: "Present scores through interactive dashboards.", why: "Users need to inspect patterns rather than receive a single static score.", tradeoff: "The score remains a summary of the underlying transactions." }], result: ["Built expense categorisation, budgeting, and personalised financial health scoring.", "Added dashboards and secure FastAPI/MongoDB services."], next: ["Add a correction loop to improve category quality.", "Explain score movement alongside individual budget changes."], links: { live: "https://intellimoney.vercel.app", github: "https://github.com/harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform" }, glyph: "intellimoney" },
-  { slug: "supply-chain-otif", index: "04", title: "Supply Chain Control Tower", thesis: "An analytics project that turns operational data into an OTIF view for decisions.", role: "analysis project", year: "Year not listed", stack: ["Excel", "SQL", "Power BI", "Analytics"], outcomes: [{ value: "OTIF", label: "delivery KPI" }, { value: "SQL", label: "data analysis" }, { value: "Power BI", label: "visualisation" }], problem: ["Supply-chain performance is hard to inspect when source data and delivery measures are disconnected. The control tower frames the data around operational KPIs."], architecture: { layers: [{ name: "Input", nodes: [{ id: "source", label: "Excel / SQL", note: "Operational data is prepared and queried." }] }, { name: "Model", nodes: [{ id: "model", label: "KPI layer", note: "Structures on-time-in-full measures." }] }, { name: "Output", nodes: [{ id: "bi", label: "Power BI", note: "Presents the KPI view for analysis." }] }] }, decisions: [{ decision: "Center the analysis on OTIF.", why: "The measure combines on-time and in-full delivery performance.", tradeoff: "A single KPI needs supporting breakdowns to explain misses." }, { decision: "Use SQL to structure the analysis.", why: "Queryable transformations make the source logic inspectable.", tradeoff: "Data quality issues remain visible and need handling." }, { decision: "Present the output in Power BI.", why: "A visual KPI layer helps compare operational patterns.", tradeoff: "The dashboard is only as reliable as its source data." }], result: ["Structured a supply-chain KPI analysis around OTIF.", "Built a Power BI view from Excel and SQL data."], next: ["Add clear data-quality checks to the ingestion path.", "Separate late and incomplete delivery drivers in the KPI breakdown."], glyph: "supplychain" },
-  { slug: "churnsight", index: "05", title: "ChurnSight", thesis: "An in-progress churn analysis project pairing a model with feature explanations.", role: "analysis project", year: "Building", stack: ["Python", "XGBoost", "SHAP", "Streamlit"], outcomes: [{ value: "XGBoost", label: "model" }, { value: "SHAP", label: "explanations" }, { value: "Streamlit", label: "interface" }], problem: ["A churn score alone does not explain which subscriber signals deserve attention. ChurnSight is being built to pair classification with interpretable feature contributions."], architecture: { layers: [{ name: "Input", nodes: [{ id: "data", label: "Subscribers", note: "Subscriber records provide model features." }] }, { name: "Model", nodes: [{ id: "xgb", label: "XGBoost", note: "Estimates churn risk from the prepared features." }, { id: "shap", label: "SHAP", note: "Explains feature contributions to predictions." }] }, { name: "Output", nodes: [{ id: "streamlit", label: "Streamlit", note: "Presents model outputs for inspection." }] }] }, decisions: [{ decision: "Pair XGBoost with SHAP.", why: "The model score needs feature-level context for review.", tradeoff: "Explanations describe model behaviour, not causal drivers." }, { decision: "Use Streamlit for the analysis interface.", why: "It provides a direct way to inspect model outputs during development.", tradeoff: "The project remains an analysis tool rather than a production system." }, { decision: "Keep the project marked as in progress.", why: "The source résumé says it is being built.", tradeoff: "No shipped-product claim is made." }], result: ["Building an explainable churn analysis workflow.", "Uses XGBoost, SHAP, and Streamlit."], next: ["Validate the model against a held-out dataset.", "Inspect explanation stability across subscriber segments."], glyph: "churnsight" },
+  {
+    slug: "symptomscope", index: "01", title: "SymptomScope AI",
+    thesis: "I built a symptom checker that combines disease prediction, severity scoring, and AI-assisted recovery guidance.",
+    stack: ["Next.js", "TypeScript", "Python", "FastAPI", "MongoDB", "Clerk", "LangChain", "ChromaDB", "Groq"],
+    outcomes: [
+      { value: "3 models", label: "Decision Tree · Random Forest · Naive Bayes" },
+      { value: "RAG", label: "recovery plans and guidance" },
+      { value: "Tool calling", label: "with context memory and approval-based actions" },
+    ],
+    problem: ["I built a symptom checker that predicts conditions and scores severity, then pairs those results with personalised recovery plans and medical guidance."],
+    architecture: { layers: [
+      { name: "Interface", nodes: [{ id: "next", label: "Next.js", note: "TypeScript application for the symptom checker." }] },
+      { name: "Prediction & assistant", nodes: [{ id: "models", label: "Decision Tree · Random Forest · Naive Bayes", note: "Models used for disease prediction and severity scoring." }, { id: "rag", label: "Groq · LangChain RAG", note: "Generates structured recovery plans and medical guidance." }] },
+      { name: "Knowledge", nodes: [{ id: "chroma", label: "ChromaDB · TF-IDF", note: "Medical knowledge base and embeddings described in the résumé." }] },
+    ] },
+    result: ["I developed a Groq AI agent with tool calling, context memory, and approval-based health actions.", "I built a RAG medical knowledge base using ChromaDB and TF-IDF embeddings."],
+    links: { live: "https://symptom-scope-ai.vercel.app", github: "https://github.com/harkirat2023/Symptom-Scope-AI" },
+    glyph: "symptomscope",
+  },
+  {
+    slug: "khata-box", index: "02", title: "KhataBox",
+    thesis: "I built a retail platform for inventory, point-of-sale billing, credit, orders, and multiple stores.",
+    stack: ["Python", "TypeScript", "Next.js", "FastAPI", "PostgreSQL", "SQLAlchemy", "Redis", "Socket.IO", "JWT"],
+    outcomes: [
+      { value: "Inventory", label: "with QR scanning and low-stock alerts" },
+      { value: "POS & Khata", label: "billing, credit, and receipts" },
+      { value: "Live analytics", label: "sales, inventory, orders, and profit" },
+    ],
+    problem: ["KhataBox brings retail inventory, point-of-sale billing, credit records, orders, and multi-store management into one full-stack platform."],
+    architecture: { layers: [
+      { name: "Interface", nodes: [{ id: "next", label: "Next.js · Shadcn UI", note: "Retail dashboards and responsive interfaces." }] },
+      { name: "Services", nodes: [{ id: "api", label: "FastAPI · JWT", note: "Backend services and authentication." }, { id: "socket", label: "Socket.IO", note: "Realtime inventory updates." }] },
+      { name: "Data", nodes: [{ id: "postgres", label: "PostgreSQL · SQLAlchemy", note: "Relational database stack listed in the résumé." }, { id: "redis", label: "Redis", note: "Used with the retail platform." }] },
+    ] },
+    result: ["I added realtime stock tracking, QR scanning, low-stock alerts, automated receipts, and live analytics.", "I built dashboards for sales, inventory, orders, and profit analytics."],
+    links: { live: "https://khataboxapp.vercel.app", github: "https://github.com/harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform" },
+    glyph: "khatabox",
+  },
+  {
+    slug: "intellimoney", index: "03", title: "IntelliMoney",
+    thesis: "I built an AI-powered financial platform for expense tracking, budgets, insights, and health scoring.",
+    stack: ["Python", "TypeScript", "React", "FastAPI", "MongoDB", "LangChain", "Groq", "OpenCV"],
+    outcomes: [
+      { value: "TF-IDF", label: "expense categorisation" },
+      { value: "Receipt OCR", label: "automated extraction" },
+      { value: "AI Copilot", label: "tool calls with user-confirmed actions" },
+    ],
+    problem: ["IntelliMoney combines expense tracking and budgeting with automated categorisation, receipt extraction, and financial insights."],
+    architecture: { layers: [
+      { name: "Interface", nodes: [{ id: "react", label: "React · TypeScript", note: "Client interface for financial workflows." }] },
+      { name: "AI & analysis", nodes: [{ id: "ocr", label: "OpenCV · receipt OCR", note: "Receipt text extraction described in the résumé." }, { id: "categoriser", label: "TF-IDF · Logistic Regression", note: "Automated expense categorisation." }, { id: "copilot", label: "LangChain · Groq", note: "AI Copilot with tool calling and user-confirmed actions." }] },
+      { name: "Service & data", nodes: [{ id: "api", label: "FastAPI", note: "Backend API stack listed in the résumé." }, { id: "mongo", label: "MongoDB", note: "Database stack listed in the résumé." }] },
+    ] },
+    result: ["I built expense tracking, budgeting, financial insights, and financial health scoring.", "I used TF-IDF and Logistic Regression for expense categories, with OCR-based receipt extraction."],
+    links: { live: "https://intellimoney.vercel.app", github: "https://github.com/harkirat2023/IntelliMoney-AI-Powered-Financial-Health-Scoring-Platform" },
+    glyph: "intellimoney",
+  },
+  {
+    slug: "supply-chain-otif", index: "04", title: "Supply Chain Control Tower",
+    thesis: "I analysed delivery performance across regions and made the operational KPIs easier to inspect.",
+    stack: ["Excel", "SQL", "Power BI", "Python"],
+    outcomes: [
+      { value: "180K+", label: "orders across 23 regions" },
+      { value: "40.9%", label: "on-time delivery" },
+      { value: "14%", label: "perfect order rate" },
+    ],
+    problem: ["I analysed order and delivery data to make bottlenecks, SLA breaches, and fulfilment gaps easier to inspect."],
+    architecture: { layers: [
+      { name: "Source", nodes: [{ id: "excel", label: "Excel data", note: "Order data used in the analysis." }, { id: "python", label: "Python", note: "Listed analysis technology." }] },
+      { name: "Analysis", nodes: [{ id: "sql", label: "SQL · KPI model", note: "Structured delivery and fulfilment measures." }] },
+      { name: "Dashboard", nodes: [{ id: "powerbi", label: "Power BI", note: "Interactive regional drill-downs, SLA heatmaps, and 36-month trends." }] },
+    ] },
+    result: ["I developed on-time delivery, OTIF, SLA breach, Perfect Order, and shipping-variance KPIs.", "The analysis showed 57.3% SLA breach and a 14% Perfect Order Rate."],
+    glyph: "supplychain",
+  },
+  {
+    slug: "churnsight", index: "05", title: "ChurnSight",
+    thesis: "I’m building a churn forecasting workflow that pairs model outputs with SHAP explanations.",
+    status: "In progress",
+    stack: ["Python", "XGBoost", "SHAP", "Streamlit"],
+    outcomes: [
+      { value: "7,000+", label: "subscriber records" },
+      { value: "XGBoost", label: "forecasting and simulation" },
+      { value: "SHAP", label: "model explanations" },
+    ],
+    problem: ["I’m building a churn forecasting and simulation model to estimate subscriber churn probability and quantify lifetime value at risk."],
+    architecture: { layers: [
+      { name: "Input", nodes: [{ id: "subscribers", label: "Subscriber records", note: "The résumé describes a dataset of more than 7,000 subscriber records." }] },
+      { name: "Model", nodes: [{ id: "xgb", label: "XGBoost", note: "Forecasting and simulation model for churn probability." }, { id: "shap", label: "SHAP", note: "Explainability used to identify business-readable drivers." }] },
+      { name: "Interface", nodes: [{ id: "streamlit", label: "Streamlit", note: "Technology listed for the in-progress project." }] },
+    ] },
+    result: ["I’m applying SHAP-based explainability to translate model outputs into business-readable drivers.", "The project is still in progress."],
+    glyph: "churnsight",
+  },
 ];
 
-export const certifications = ["TATA (Forage) — Data Visualisation: Empowering Business with Effective Insights", "BCG X (Forage) — Introduction to Data for Decision Makers", "TATA (Forage) — GenAI Powered Data Analytics"];
+export const certifications = [
+  "TATA (Forage) — Data Visualisation: Empowering Business with Effective Insights",
+  "BCG X (Forage) — Introduction to Data for Decision Makers",
+  "TATA (Forage) — GenAI Powered Data Analytics",
+];
+
+export const education = {
+  institution: "Thapar Institute of Engineering and Technology",
+  degree: "B.E. Computer Engineering",
+  years: "2023–2027",
+  cgpa: "7.23 / 10",
+  secondary: ["Class 12 · CBSE · 81.5% · 2023", "Class 10 · ICSE · 91.2% · 2021"],
+};

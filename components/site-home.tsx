@@ -1,24 +1,167 @@
 "use client";
-import { useEffect, useMemo, useState } from "react";
-import { ArrowDownRight, ArrowUpRight, Check, Copy } from "lucide-react";
-import Link from "next/link";
-import { certifications, experience, profile, projects, skills } from "@/content/site";
 
-function SectionHeading({ index, title, kicker }: { index: string; title: string; kicker: string }) { return <div className="section-head"><div className="section-index mono"><span className="accent">{index}</span> — {kicker}</div><h2 className="display section-heading">{title}</h2></div>; }
-function CopyAction({ value, children }: { value: string; children: React.ReactNode }) { const [copied, setCopied] = useState(false); async function copy() { try { await navigator.clipboard.writeText(value); } catch { const area = document.createElement("textarea"); area.value = value; document.body.append(area); area.select(); document.execCommand("copy"); area.remove(); } setCopied(true); window.setTimeout(() => setCopied(false), 1600); } return <button onClick={copy} aria-label={`Copy ${value}`}><span aria-live="polite">{copied ? "copied ✓" : children}</span>{copied ? <Check size={16}/> : <Copy size={16}/>}</button>; }
-function Glyph({ kind }: { kind: string }) { return <svg className="glyph" viewBox="0 0 420 240" role="presentation" aria-hidden="true"><path d="M55 120H150M150 120L230 65M150 120L230 175M230 65H345M230 175H345" fill="none" strokeWidth="1.5"/><path className="signal" d="M55 120H150L230 65H345" fill="none" strokeWidth="2"/><circle cx="55" cy="120" r="7" fill="var(--bg-inset)" stroke="var(--accent)"/><circle cx="150" cy="120" r="7" fill="var(--bg-inset)" stroke="var(--line-strong)"/><circle cx="230" cy="65" r="7" fill="var(--bg-inset)" stroke="var(--line-strong)"/><circle cx="230" cy="175" r="7" fill="var(--bg-inset)" stroke="var(--line-strong)"/><circle cx="345" cy="120" r="7" fill="var(--bg-inset)" stroke="var(--accent)"/><text x="30" y="155">{kind === "symptomscope" ? "symptoms" : kind === "khatabox" ? "orders" : kind === "intellimoney" ? "receipts" : kind === "supplychain" ? "source" : "signals"}</text><text x="132" y="150">model</text><text x="215" y="38">decision</text><text x="330" y="155">output</text></svg>; }
+import { useEffect, useMemo, useState } from "react";
+import { ArrowDown, ArrowDownRight, ArrowUpRight, Check, Copy, ExternalLink } from "lucide-react";
+import Link from "next/link";
+import { certifications, education, experience, featuredSkills, leadership, profile, projects, skills, siteCopy, stats } from "@/content/site";
+
+function SectionHeading({ index, title, kicker }: { index: string; title: string; kicker: string }) {
+  return <div className="section-head reveal"><div className="section-index mono"><span className="accent">{index}</span><span aria-hidden="true"> / </span>{kicker}</div><h2 className="section-heading">{title}</h2></div>;
+}
+
+function CopyAction({ value, children }: { value: string; children: React.ReactNode }) {
+  const [copied, setCopied] = useState(false);
+  async function copy() {
+    try { await navigator.clipboard.writeText(value); }
+    catch {
+      const area = document.createElement("textarea"); area.value = value; area.setAttribute("readonly", "");
+      area.style.position = "fixed"; area.style.opacity = "0"; document.body.append(area); area.select();
+      document.execCommand("copy"); area.remove();
+    }
+    setCopied(true); window.setTimeout(() => setCopied(false), 1600);
+  }
+  return <button className="copy-action" onClick={copy} aria-label={`Copy ${children}`}><span aria-live="polite">{copied ? "Copied" : children}</span>{copied ? <Check size={16} aria-hidden="true"/> : <Copy size={16} aria-hidden="true"/>}</button>;
+}
+
+const glyphLabels: Record<string, [string, string, string, string]> = {
+  symptomscope: ["symptoms", "models", "RAG", "guidance"],
+  khatabox: ["stock", "retail", "updates", "stores"],
+  intellimoney: ["receipt", "categorise", "copilot", "insight"],
+  supplychain: ["orders", "KPIs", "regions", "dashboard"],
+  churnsight: ["records", "XGBoost", "SHAP", "risk"],
+};
+
+function ProjectGlyph({ kind }: { kind: string }) {
+  const labels = glyphLabels[kind] ?? glyphLabels.symptomscope;
+  return <svg className="glyph" viewBox="0 0 430 250" role="img" aria-label={`${labels.join(" to ")} system diagram`}>
+    <path className="glyph-track" d="M50 122H145L215 65H300L375 122M215 65V180H300L375 122"/>
+    <path className="glyph-signal" d="M50 122H145L215 65H300L375 122"/>
+    {[50, 145, 215, 300, 375].map((x, i) => <g key={x}><circle cx={x} cy={i === 2 ? 65 : 122} r="7"/><text x={x} y={i === 2 ? 43 : 151} textAnchor="middle">{labels[Math.min(i, 3)]}</text></g>)}
+    <circle className="glyph-pulse" r="4"><animateMotion dur="4s" repeatCount="indefinite" path="M50 122H145L215 65H300L375 122"/></circle>
+  </svg>;
+}
 
 export function SiteHome() {
-  const [filter, setFilter] = useState(""); const [time, setTime] = useState(""); const [skillFocus, setSkillFocus] = useState("");
-  useEffect(() => { const update = () => setTime(new Intl.DateTimeFormat("en-IN", { timeZone: "Asia/Kolkata", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date())); update(); const timer = window.setInterval(update, 30000); const scroll = () => { const root = document.documentElement; const max = root.scrollHeight - window.innerHeight; root.style.setProperty("--scroll-progress", String(max > 0 ? window.scrollY / max : 0)); }; window.addEventListener("scroll", scroll, { passive: true }); scroll(); return () => { window.clearInterval(timer); window.removeEventListener("scroll", scroll); }; }, []);
-  const visibleProjects = useMemo(() => filter ? projects.filter((project) => project.stack.some((tech) => tech.toLowerCase() === filter.toLowerCase())) : projects, [filter]);
-  return <><main id="content">
-    <section className="container hero" id="top"><div><p className="eyebrow">{"// computer engineering · class of 2027 · patiala, india"}</p><h1 className="display">I build systems that<br/> <em>notice</em> things.</h1><p className="hero-copy">Full-stack engineer working at the seam of computer vision, behavioural signals, and LLM agents — turning messy real-world input into decisions people can audit. Currently shipping exam-proctoring intelligence at XTRAGRAD.</p><div className="hero-actions"><a className="button button-primary" href="#work">Explore the work <ArrowDownRight size={17}/></a><Link className="button button-ghost" href="/resume">Résumé ↗</Link><span className="availability"><i/> {profile.availability}</span></div></div><div className="stats" aria-label="Selected facts"><div className="stat"><strong>05</strong><span className="mono">products</span></div><div className="stat"><strong>180K+</strong><span className="mono">orders analysed</span></div><div className="stat"><strong>27</strong><span className="mono">person team led</span></div><div className="stat"><strong>40%</strong><span className="mono">club growth</span></div></div></section>
-    <section className="section" id="about"><div className="container"><SectionHeading index="01" title="The shortest version of what I actually do." kicker="about"/><div className="bento"><article className="panel thesis"><span className="mono accent">the through-line</span><h3 className="display">Sense noisy input. Build a representation. Make a decision someone can audit.</h3><p>That pattern shows up across proctoring, banking authentication, health triage, and retail systems. I work across the model, service, and interface so each decision has a path people can inspect.</p></article><article className="panel now"><span className="mono">now</span><h3>AI Intern, XTRAGRAD Technologies</h3><p>Exam proctoring and abnormal-activity detection.</p></article><article className="panel study"><span className="mono">studying</span><h3>B.E. Computer Engineering</h3><p>Thapar Institute of Engineering and Technology · 2023 → 2027</p><p className="accent">CGPA 7.23 / 10</p><div className="meter" aria-label="CGPA 7.23 out of 10"><i/></div></article><article className="panel toolbelt"><span className="mono">toolbelt</span><p className="chips" style={{ marginTop: "var(--space-4)" }}>{skills.flatMap((group) => group.items).slice(0, 12).map((skill) => <span key={skill} className="chip">{skill}</span>)}</p></article><article className="panel leadership"><span className="mono">off-screen</span><h3>Joint Secretary · IETE Students Forum</h3><p>Student Ambassador · LetsUpgrade</p></article></div></div></section>
-    <section className="section" id="capabilities"><div className="container"><SectionHeading index="02" title="Tools are only interesting next to the thing they built." kicker="capabilities"/><p className="intro">Select a skill to see projects using it. Hover or focus a skill to isolate its cluster.</p><div className="cluster-grid">{skills.map((cluster) => <article className={`panel cluster${skillFocus && cluster.items.includes(skillFocus) ? " cluster-active" : ""}`} key={cluster.name}><h3>{cluster.name}<span className="mono">{String(cluster.items.length).padStart(2,"0")}</span></h3><div className="chips">{cluster.items.map((skill) => <button key={skill} className="skill-button" aria-pressed={filter === skill} onMouseEnter={() => setSkillFocus(skill)} onMouseLeave={() => setSkillFocus("")} onFocus={() => setSkillFocus(skill)} onBlur={() => setSkillFocus("")} onClick={() => { setFilter(filter === skill ? "" : skill); document.querySelector("#work")?.scrollIntoView({ behavior: "smooth" }); }}>{skill}</button>)}</div></article>)}</div>{skillFocus && <p className="panel skill-evidence" id="skill-evidence"><span className="mono">{skillFocus} · where it was used</span><br/>{projects.filter((project) => project.stack.some((tech) => tech.toLowerCase() === skillFocus.toLowerCase())).map((project) => project.title).join(" · ") || "coursework"}</p>}<ul className="sr-only">{skills.flatMap((cluster) => cluster.items.map((skill) => <li key={skill}>{cluster.name}: {skill}</li>))}</ul></div></section>
-    <section className="section" id="experience"><div className="container"><SectionHeading index="03" title="Where the systems met real users." kicker="experience"/><div className="timeline">{experience.map((item, i) => <details className="timeline-item" key={item.role} open={i === 0}><div className="mono">{item.date}</div><div><summary><h3>{item.role} — <span className="accent">{item.org}</span></h3><p>{item.summary}</p></summary><ul>{item.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul><div className="chips">{item.stack.map((tech) => <span className="chip" key={tech}>{tech}</span>)}</div></div></details>)}</div></div></section>
-    <section className="section" id="work"><div className="container"><SectionHeading index="04" title="Five builds, each with the trade-off I had to accept." kicker="work"/>{filter && <p className="mono">Filtered by {filter} <button className="skill-button" onClick={() => setFilter("")}>clear filter</button></p>}<div className="project-list">{visibleProjects.map((project) => <article className="panel project-card" key={project.slug}><div><span className="mono accent">{project.index} · {project.role} · {project.year}</span><h3>{project.title}</h3><p>{project.thesis}</p><div className="metric-row">{project.outcomes.map((item) => <span className="metric" key={item.label}><b className="accent">{item.value}</b> {item.label}</span>)}</div><div className="chips">{project.stack.map((tech) => <span className="chip" key={tech}>{tech}</span>)}</div><p style={{ marginTop: "var(--space-6)" }}><Link className="accent" href={`/work/${project.slug}`}>Read the case → <ArrowUpRight size={15}/></Link></p></div><div className="project-visual"><Glyph kind={project.glyph}/></div></article>)}</div>{filter && visibleProjects.length === 0 && <p className="panel">nothing matches — clear the filter.</p>}</div></section>
-    <section className="section" id="recognition"><div className="container"><SectionHeading index="05" title="Recognition & education." kicker="recognition"/><div className="recognition-grid"><div><p className="mono">certifications</p><ul className="recognition-list">{certifications.map((item) => <li key={item}>{item}</li>)}</ul></div><div><p className="mono">education</p><ul className="recognition-list"><li>Thapar Institute of Engineering and Technology — B.E. Computer Engineering, 2023–2027 · CGPA 7.23 / 10</li></ul><details><summary className="mono">secondary education ↓</summary><ul className="recognition-list"><li>Class 12 · CBSE · 81.5%</li><li>Class 10 · ICSE · 91.2%</li></ul></details></div></div></div></section>
-    <section className="section" id="contact"><div className="container"><p className="mono accent">06 — contact</p><h2 className="display contact-title">Let’s build something that has to be right.</h2><p className="intro">Open to 2027 AI/full-stack roles and hard internships. I reply within a day.</p><div className="contact-row"><a href={`mailto:${profile.email}`}>{profile.email}</a><CopyAction value={profile.email}>Copy email</CopyAction></div><div className="contact-row"><a href={`tel:${profile.phone.replaceAll(" ","")}`}>{profile.phone}</a><CopyAction value={profile.phone}>Copy number</CopyAction></div><div className="contact-row"><span><a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>　/　<a href={profile.github} target="_blank" rel="noreferrer">GitHub ↗</a></span><span className="mono">Patiala · {time || "--:--"} IST</span></div><div className="contact-row"><Link className="accent" href="/resume">Résumé ↗</Link><a href={`mailto:${profile.email}`}>Write an email ↗</a></div></div></section>
-  </main><footer className="container footer"><span>© 2026 Harkirat Singh</span><span>built with next.js · motion with intent</span><a href="#top">back to top ↑</a></footer></>;
+  const [filter, setFilter] = useState("");
+  const [time, setTime] = useState("");
+  const [skillFocus, setSkillFocus] = useState("");
+  useEffect(() => {
+    const updateTime = () => setTime(new Intl.DateTimeFormat("en-IN", { timeZone: "Asia/Kolkata", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date()));
+    const updateProgress = () => {
+      const root = document.documentElement;
+      const max = root.scrollHeight - window.innerHeight;
+      root.style.setProperty("--scroll-progress", String(max > 0 ? window.scrollY / max : 0));
+    };
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const nodes = Array.from(document.querySelectorAll<HTMLElement>(".reveal"));
+    let observer: IntersectionObserver | undefined;
+    if (!reduceMotion.matches && "IntersectionObserver" in window) {
+      document.documentElement.classList.add("reveal-ready");
+      observer = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer?.unobserve(entry.target);
+          }
+        }
+      }, { rootMargin: "-8% 0px -8% 0px", threshold: 0.05 });
+      nodes.forEach((node) => observer?.observe(node));
+    }
+    updateTime(); updateProgress();
+    const timer = window.setInterval(updateTime, 30_000);
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    return () => { window.clearInterval(timer); window.removeEventListener("scroll", updateProgress); observer?.disconnect(); document.documentElement.classList.remove("reveal-ready"); };
+  }, []);
+
+  const visibleProjects = useMemo(() => filter
+    ? projects.filter((project) => project.stack.some((tech) => tech.toLowerCase() === filter.toLowerCase()))
+    : projects, [filter]);
+  const evidenceProjects = projects.filter((project) => project.stack.some((tech) => tech.toLowerCase() === skillFocus.toLowerCase()));
+  const goToWork = () => document.querySelector("#work")?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
+
+  return <>
+    <main id="content">
+      <section className="container hero" id="top">
+        <div className="hero-copy-wrap">
+          <div className="hero-copy-block">
+            <p className="eyebrow">{`// ${profile.role} · class of 2027 · ${profile.location}`}</p>
+            <h1>{siteCopy.hero.headline[0]}<br/><em>{siteCopy.hero.headline[1]}</em></h1>
+            <p className="hero-copy">{siteCopy.hero.description}</p>
+            <div className="hero-actions">
+              <a className="button button-primary" href="#work">Explore the work <ArrowDownRight size={17} aria-hidden="true"/></a>
+              <Link className="button button-ghost" href="/resume">Résumé <ArrowUpRight size={16} aria-hidden="true"/></Link>
+            </div>
+          </div>
+          <div className="hero-collage" aria-hidden="true">
+            <svg className="collage-thread" viewBox="0 0 620 440" preserveAspectRatio="none"><path d="M25 330 C105 306 83 208 168 223 S195 325 274 261 S340 135 405 160 S433 252 510 190 S559 89 600 107"/></svg>
+            <div className="paper-panel paper-back"><span className="mono">signal / 01</span><span className="paper-grid"/></div>
+            <div className="paper-panel paper-front"><div className="paper-top"><span className="paper-mark">H<span>✳</span></span><span className="mono">system notes · 2026</span></div><div className="paper-core"><span className="mono">perception → decision</span><strong>{siteCopy.hero.collageTitle.split("\n").map((line, index, lines) => <span key={line}>{line}{index < lines.length - 1 && <br/>}</span>)}</strong><div className="paper-flow"><i>input</i><b>→</b><i>model</i><b>→</b><i>action</i></div></div><div className="paper-bottom"><span>Full-stack · AI · analytics</span><span className="paper-stamp">HS</span></div></div>
+            <div className="paper-tag mono">build / inspect / improve ↗</div>
+          </div>
+        </div>
+        <div className="hero-stats" aria-label="Selected résumé facts">{stats.map((item) => <div className="stat reveal" key={item.label}><strong>{item.value}</strong><span className="mono">{item.label}</span></div>)}</div>
+        <a className="scroll-cue mono" href="#about"><ArrowDown size={15} aria-hidden="true"/> scroll to explore</a>
+      </section>
+
+      <section className="section" id="about"><div className="container">
+        <SectionHeading {...siteCopy.sections.about}/>
+        <div className="bento">
+          <article className="panel thesis reveal"><span className="mono accent">the through-line</span><h3>Notice the signal. Represent it clearly. Make the next decision inspectable.</h3><p>That pattern connects my work in proctoring, mobile-banking authentication, health guidance, retail operations, and customer analytics. I’m studying Computer Engineering at TIET while building across software, AI, and data.</p></article>
+          <article className="panel now reveal"><span className="mono">recent experience</span><h3>{experience[0].role}, {experience[0].org}</h3><p>One month in August 2026, working on exam proctoring and abnormal-activity detection.</p></article>
+          <article className="panel study reveal"><span className="mono">studying</span><h3>{education.degree}</h3><p>{education.institution} · {education.years}</p><p className="accent">CGPA {education.cgpa}</p><div className="meter" role="img" aria-label="CGPA 7.23 out of 10"><i/></div></article>
+          <article className="panel toolbelt reveal"><span className="mono">toolbelt</span><div className="chips">{featuredSkills.map((skill) => <span key={skill} className="chip">{skill}</span>)}</div></article>
+          <article className="panel leadership reveal"><span className="mono">outside the coursework</span><h3>{leadership[0].role} · {leadership[0].org}</h3><p>{leadership[0].description}</p><h3 className="leadership-secondary">{leadership[1].role} · {leadership[1].org}</h3><p>{leadership[1].description}</p></article>
+        </div>
+      </div></section>
+
+      <section className="section" id="capabilities"><div className="container">
+        <SectionHeading {...siteCopy.sections.capabilities}/>
+        <p className="intro">Select a technology to find projects that list it in their stack. The full skill list comes from both résumés.</p>
+        <div className="cluster-grid">{skills.map((cluster, groupIndex) => <article className={`panel cluster reveal${skillFocus && cluster.items.includes(skillFocus) ? " cluster-active" : ""}`} key={cluster.name} style={{ "--reveal-order": groupIndex } as React.CSSProperties}>
+          <h3>{cluster.name}<span className="mono">{String(cluster.items.length).padStart(2, "0")}</span></h3>
+          <div className="chips">{cluster.items.map((skill) => <button key={skill} className="skill-button" aria-pressed={filter === skill} aria-describedby={skillFocus === skill ? "skill-evidence" : undefined} onMouseEnter={() => setSkillFocus(skill)} onMouseLeave={() => setSkillFocus("")} onFocus={() => setSkillFocus(skill)} onBlur={() => setSkillFocus("")} onClick={() => { setFilter(filter === skill ? "" : skill); goToWork(); }}>{skill}</button>)}</div>
+        </article>)}</div>
+        {skillFocus && <p className="panel skill-evidence reveal is-visible" id="skill-evidence"><span className="mono">{skillFocus} · projects</span><br/>{evidenceProjects.length ? evidenceProjects.map((project) => project.title).join(" · ") : "Listed as a skill in the résumé."}</p>}
+        <ul className="sr-only">{skills.flatMap((cluster) => cluster.items.map((skill) => <li key={skill}>{cluster.name}: {skill}</li>))}</ul>
+      </div></section>
+
+      <section className="section" id="experience"><div className="container">
+        <SectionHeading {...siteCopy.sections.experience}/>
+        <div className="timeline">{experience.map((item, i) => <details className="timeline-item reveal" key={item.role} open={i === 0}>
+          <summary><span className="mono timeline-date">{item.date}</span><span><h3>{item.role} <span className="accent">— {item.org}</span></h3><span className="summary-copy">{item.summary}</span></span><span className="timeline-plus" aria-hidden="true">+</span></summary>
+          <div className="timeline-body"><ul>{item.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul><div className="chips">{item.stack.map((tech) => <span className="chip" key={tech}>{tech}</span>)}</div></div>
+        </details>)}</div>
+      </div></section>
+
+      <section className="section" id="work"><div className="container">
+        <SectionHeading {...siteCopy.sections.work}/>
+        {filter && <p className="filter-status mono">Showing projects with {filter}<button className="text-button" onClick={() => setFilter("")}>clear filter ×</button></p>}
+        <div className="project-list">{visibleProjects.map((project, i) => <article className="panel project-card reveal" key={project.slug} style={{ "--reveal-order": i } as React.CSSProperties}>
+          <div className="project-copy"><span className="mono project-index">{project.index} <span aria-hidden="true">/</span> {project.status ?? "project"}</span><h3>{project.title}</h3><p>{project.thesis}</p>
+            <div className="metric-row">{project.outcomes.map((item) => <span className="metric" key={item.label}><b>{item.value}</b><small>{item.label}</small></span>)}</div>
+            <div className="chips">{project.stack.slice(0, 6).map((tech) => <span className="chip" key={tech}>{tech}</span>)}</div>
+            <p className="project-cta"><Link href={`/work/${project.slug}`}>Read the case <ArrowUpRight size={16} aria-hidden="true"/></Link></p>
+          </div><div className="project-visual"><ProjectGlyph kind={project.glyph}/></div>
+        </article>)}</div>
+        {filter && visibleProjects.length === 0 && <p className="panel empty-state">No project lists this exact stack item. <button className="text-button" onClick={() => setFilter("")}>Clear the filter</button></p>}
+      </div></section>
+
+      <section className="section" id="recognition"><div className="container">
+        <SectionHeading {...siteCopy.sections.recognition}/>
+        <div className="recognition-grid">
+          <div className="recognition-column"><p className="mono">certifications</p><ul className="recognition-list">{certifications.map((item) => <li className="reveal" key={item}><span>{item}</span><ArrowUpRight size={16} aria-hidden="true"/></li>)}</ul></div>
+          <div className="recognition-column"><p className="mono">education</p><ul className="recognition-list"><li className="reveal"><span><b>{education.institution}</b><br/>{education.degree} · {education.years}<br/>CGPA {education.cgpa}</span><span className="mono">TIET</span></li></ul><details className="secondary-education"><summary className="mono">Secondary education <span aria-hidden="true">＋</span></summary><ul className="recognition-list">{education.secondary.map((item) => <li key={item}>{item}</li>)}</ul></details></div>
+        </div>
+      </div></section>
+
+      <section className="section contact-section" id="contact"><div className="container">
+        <p className="mono accent contact-kicker">06 / contact</p><h2 className="contact-title">{siteCopy.contact.headline}</h2><p className="intro">{siteCopy.contact.description}</p>
+        <div className="contact-row"><a href={`mailto:${profile.email}`}>{profile.email}</a><CopyAction value={profile.email}>Copy email</CopyAction></div>
+        <div className="contact-row"><a href={`tel:${profile.phone.replaceAll(" ", "")}`}>{profile.phone}</a><CopyAction value={profile.phone}>Copy number</CopyAction></div>
+        <div className="contact-row social-row"><span><a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn <ExternalLink size={15} aria-hidden="true"/></a><a href={profile.github} target="_blank" rel="noreferrer">GitHub <ExternalLink size={15} aria-hidden="true"/></a></span><span className="mono">Patiala · {time || "--:--"} IST</span></div>
+        <div className="contact-row"><Link href="/resume">Résumé options <ArrowUpRight size={16} aria-hidden="true"/></Link><a href={`mailto:${profile.email}`}>Write an email <ArrowUpRight size={16} aria-hidden="true"/></a></div>
+      </div></section>
+    </main>
+    <footer className="container footer"><span>© 2026 Harkirat Singh</span><span className="footer-note">Built with Next.js · designed with intention</span><a href="#top">back to top ↑</a></footer>
+  </>;
 }

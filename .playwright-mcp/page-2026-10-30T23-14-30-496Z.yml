@@ -1,0 +1,1290 @@
+- generic [ref=f25e2]:
+  - generic [ref=f25e3]:
+    - link "Skip to content" [ref=f25e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=f25e9]:
+      - heading "Navigation Menu" [level=2] [ref=f25e10]
+      - generic [ref=f25e11]:
+        - link "Homepage" [ref=f25e14] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f25e17]:
+          - navigation "Global" [ref=f25e18]:
+            - list [ref=f25e19]:
+              - listitem [ref=f25e20]:
+                - button "Products" [ref=f25e22] [cursor=pointer]
+              - listitem [ref=f25e25]:
+                - button "Developers" [ref=f25e27] [cursor=pointer]
+              - listitem [ref=f25e30]:
+                - button "Businesses" [ref=f25e32] [cursor=pointer]
+              - listitem [ref=f25e35]:
+                - button "Resources" [ref=f25e37] [cursor=pointer]
+              - listitem [ref=f25e40]:
+                - link "Pricing" [ref=f25e41] [cursor=pointer]:
+                  - /url: https://github.com/pricing
+          - generic [ref=f25e42]:
+            - button "Search or jump to, type / to search" [ref=f25e44] [cursor=pointer]
+            - generic [ref=f25e50]:
+              - link "Sign in" [ref=f25e52] [cursor=pointer]:
+                - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fharkirat2023%2FKhataBox--Inventory-B2C-Retail-Management-Platform
+              - link "Sign up" [ref=f25e55] [cursor=pointer]:
+                - /url: /signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E&source=header-repo&source_repo=harkirat2023%2FKhataBox--Inventory-B2C-Retail-Management-Platform
+              - button "Appearance settings" [ref=f25e58] [cursor=pointer]
+  - main [ref=f25e65]:
+    - generic "Global navigation menu" [ref=f25e68]:
+      - navigation "Breadcrumbs" [ref=f25e71]:
+        - list [ref=f25e72]:
+          - listitem [ref=f25e73]:
+            - link "harkirat2023" [ref=f25e74] [cursor=pointer]:
+              - /url: /harkirat2023
+          - listitem [ref=f25e76]:
+            - link "KhataBox--Inventory-B2C-Retail-Management-Platform" [ref=f25e77] [cursor=pointer]:
+              - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform
+      - heading "Repository navigation" [level=2] [ref=f25e80]
+      - navigation "Repository" [ref=f25e81]:
+        - list [ref=f25e82]:
+          - listitem [ref=f25e83]:
+            - link "Code" [ref=f25e84] [cursor=pointer]:
+              - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform
+          - listitem [ref=f25e89]:
+            - link "Issues" [ref=f25e90] [cursor=pointer]:
+              - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/issues
+          - listitem [ref=f25e96]:
+            - link "Pull requests" [ref=f25e97] [cursor=pointer]:
+              - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/pulls
+          - listitem [ref=f25e102]:
+            - link "Actions" [ref=f25e103] [cursor=pointer]:
+              - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/actions
+          - listitem [ref=f25e108]:
+            - link "Projects" [ref=f25e109] [cursor=pointer]:
+              - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/projects
+          - listitem [ref=f25e114]:
+            - link "Security and quality" [ref=f25e115] [cursor=pointer]:
+              - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/security
+          - listitem [ref=f25e120]:
+            - link "Insights" [ref=f25e121] [cursor=pointer]:
+              - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/pulse
+    - generic [ref=f25e138]:
+      - generic [ref=f25e142]:
+        - generic [ref=f25e145]:
+          - img "harkirat2023" [ref=f25e146]
+          - generic "KhataBox--Inventory-B2C-Retail-Management-Platform" [ref=f25e147]:
+            - strong [ref=f25e148]:
+              - link "KhataBox--Inventory-B2C-Retail-Management-Platform" [ref=f25e149] [cursor=pointer]:
+                - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform
+          - generic [ref=f25e150]: Public
+        - list [ref=f25e152]:
+          - listitem [ref=f25e153]:
+            - link "You must be signed in to change notification settings" [ref=f25e154] [cursor=pointer]:
+              - /url: /login?return_to=%2Fharkirat2023%2FKhataBox--Inventory-B2C-Retail-Management-Platform
+              - generic [ref=f25e155]: Notifications
+          - listitem [ref=f25e157]:
+            - link "You must be signed in to fork a repository" [ref=f25e158] [cursor=pointer]:
+              - /url: /login?return_to=%2Fharkirat2023%2FKhataBox--Inventory-B2C-Retail-Management-Platform
+              - generic [ref=f25e160]:
+                - text: Fork
+                - generic [aria-hidden] [ref=f25e161]: "0"
+                - generic [ref=f25e162]: (0)
+          - listitem [ref=f25e163]:
+            - link "Star (0)" [ref=f25e164] [cursor=pointer]:
+              - /url: /login?return_to=%2Fharkirat2023%2FKhataBox--Inventory-B2C-Retail-Management-Platform
+              - generic [ref=f25e166]:
+                - text: Star
+                - generic [aria-hidden] [ref=f25e167]: "0"
+                - generic [ref=f25e168]: (0)
+      - generic [ref=f25e169]:
+        - generic [ref=f25e172]:
+          - generic [ref=f25e173]:
+            - generic [ref=f25e174]:
+              - button "main branch" [ref=f25e176] [cursor=pointer]:
+                - generic [ref=f25e177]: main
+              - generic [ref=f25e181]:
+                - link "Go to Branches page" [ref=f25e182] [cursor=pointer]:
+                  - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/branches
+                - link "Go to Tags page" [ref=f25e185] [cursor=pointer]:
+                  - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/tags
+            - generic [ref=f25e188]:
+              - combobox "Go to file" [ref=f25e196]
+              - button "Code" [ref=f25e197] [cursor=pointer]
+          - generic [ref=f25e200]:
+            - generic [ref=f25e201]:
+              - generic [ref=f25e203]:
+                - heading "Latest commit" [level=2] [ref=f25e204]
+                - generic [ref=f25e205]:
+                  - generic [ref=f25e207]:
+                    - link [ref=f25e208] [cursor=pointer]:
+                      - /url: /harkirat2023
+                      - img "harkirat2023" [ref=f25e209]
+                    - link "commits by harkirat2023" [ref=f25e210] [cursor=pointer]:
+                      - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/commits?author=harkirat2023
+                      - text: harkirat2023
+                  - generic [ref=f25e211]:
+                    - link "added demo data seeding script and updated .env file for local databa…" [ref=f25e214] [cursor=pointer]:
+                      - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/commit/cc130a9c2fac12382137ac2b305e30c7db93f84d
+                    - button "Open commit details" [ref=f25e215] [cursor=pointer]
+                    - button "success" [ref=f25e218] [cursor=pointer]
+                - generic [ref=f25e221]:
+                  - generic [ref=f25e223]:
+                    - link "Commit cc130a9" [ref=f25e224] [cursor=pointer]:
+                      - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/commit/cc130a9c2fac12382137ac2b305e30c7db93f84d
+                      - text: cc130a9
+                    - text: ·
+                    - generic "Jul 23, 2026, 7:34 PM GMT+5:30" [ref=f25e225]: Jul 23, 20263 months ago
+                  - generic [ref=f25e226]:
+                    - heading "History" [level=2] [ref=f25e227]
+                    - link "82 Commits" [ref=f25e228] [cursor=pointer]:
+                      - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/commits/main/
+              - heading "Folders and files" [level=2] [ref=f25e231]
+              - table "Folders and files" [ref=f25e233]:
+                - rowgroup:
+                  - row "Name Last commit message Last commit date":
+                    - columnheader "Name"
+                    - columnheader "Last commit message"
+                    - columnheader "Last commit date"
+                - rowgroup [ref=f25e234]:
+                  - row [ref=f25e235]:
+                    - cell [ref=f25e236]:
+                      - link ".next, (Directory)" [ref=f25e243] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/tree/main/.next
+                        - text: .next
+                    - cell [ref=f25e244]:
+                      - link "added the dark mode and UI components for the frontend, added the cus…" [ref=f25e247] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/commit/e04f27b5e787865e4b41054e646febf3057eabd6
+                    - cell "Jul 6, 20263 months ago" [ref=f25e248]
+                  - row [ref=f25e250]:
+                    - cell [ref=f25e251]:
+                      - link "assets, (Directory)" [ref=f25e258] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/tree/main/assets
+                        - text: assets
+                    - cell [ref=f25e259]:
+                      - link "working_logic for B2C" [ref=f25e262] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/commit/ef77b11ea81ea3a42f2a6e22ff180678744c3252
+                    - cell "Jul 1, 20264 months ago" [ref=f25e263]
+                  - row [ref=f25e265]:
+                    - cell [ref=f25e266]:
+                      - link "backend, (Directory)" [ref=f25e273] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/tree/main/backend
+                        - text: backend
+                    - cell [ref=f25e274]:
+                      - link "added demo data seeding script and updated .env file for local databa…" [ref=f25e277] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/commit/cc130a9c2fac12382137ac2b305e30c7db93f84d
+                    - cell "Jul 23, 20263 months ago" [ref=f25e278]
+                  - row [ref=f25e280]:
+                    - cell [ref=f25e281]:
+                      - link "config, (Directory)" [ref=f25e288] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/tree/main/config
+                        - text: config
+                    - cell [ref=f25e289]:
+                      - link "working_logic for B2C" [ref=f25e292] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/commit/ef77b11ea81ea3a42f2a6e22ff180678744c3252
+                    - cell "Jul 1, 20264 months ago" [ref=f25e293]
+                  - row [ref=f25e295]:
+                    - cell [ref=f25e296]:
+                      - link "docs, (Directory)" [ref=f25e303] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/tree/main/docs
+                        - text: docs
+                    - cell [ref=f25e304]:
+                      - link "forecasting fix" [ref=f25e307] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/commit/91aa03405785c9adc91a2266a223a689a3f4050b
+                    - cell "Jul 23, 20263 months ago" [ref=f25e308]
+                  - row [ref=f25e310]:
+                    - cell [ref=f25e311]:
+                      - link "frontend, (Directory)" [ref=f25e318] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/tree/main/frontend
+                        - text: frontend
+                    - cell [ref=f25e319]:
+                      - link "added demo data seeding script and updated .env file for local databa…" [ref=f25e322] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/commit/cc130a9c2fac12382137ac2b305e30c7db93f84d
+                    - cell "Jul 23, 20263 months ago" [ref=f25e323]
+                  - row [ref=f25e325]:
+                    - cell [ref=f25e326]:
+                      - link "scripts, (Directory)" [ref=f25e333] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/tree/main/scripts
+                        - text: scripts
+                    - cell [ref=f25e334]:
+                      - link "Authenticaton Problems at backend" [ref=f25e337] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/commit/a61867cefb79e162fa5200e9d3c7c058ecd09533
+                    - cell "Jul 8, 20263 months ago" [ref=f25e338]
+                  - row [ref=f25e340]:
+                    - cell [ref=f25e341]:
+                      - link ".env.example, (File)" [ref=f25e348] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/blob/main/.env.example
+                        - text: .env.example
+                    - cell [ref=f25e349]:
+                      - link "working_logic for B2C" [ref=f25e352] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/commit/ef77b11ea81ea3a42f2a6e22ff180678744c3252
+                    - cell "Jul 1, 20264 months ago" [ref=f25e353]
+                  - row [ref=f25e355]:
+                    - cell [ref=f25e356]:
+                      - link ".gitignore, (File)" [ref=f25e363] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/blob/main/.gitignore
+                        - text: .gitignore
+                    - cell [ref=f25e364]:
+                      - link "Authenticaton Problems at backend" [ref=f25e367] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/commit/a61867cefb79e162fa5200e9d3c7c058ecd09533
+                    - cell "Jul 8, 20263 months ago" [ref=f25e368]
+                  - row [ref=f25e370]:
+                    - cell [ref=f25e371]:
+                      - link "AGENTS.md, (File)" [ref=f25e378] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/blob/main/AGENTS.md
+                        - text: AGENTS.md
+                    - cell [ref=f25e379]:
+                      - link "Order status UI" [ref=f25e382] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/commit/aae8361f48564f701e822408740e27fcb30799d5
+                    - cell "Jul 13, 20263 months ago" [ref=f25e383]
+                  - row [ref=f25e385]:
+                    - cell [ref=f25e386]:
+                      - link "README.md, (File)" [ref=f25e393] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/blob/main/README.md
+                        - text: README.md
+                    - cell [ref=f25e394]:
+                      - link "Authenticaton Problems at backend" [ref=f25e397] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/commit/a61867cefb79e162fa5200e9d3c7c058ecd09533
+                    - cell "Jul 8, 20263 months ago" [ref=f25e398]
+                  - row [ref=f25e400]:
+                    - cell [ref=f25e401]:
+                      - link "Steps.md, (File)" [ref=f25e408] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/blob/main/Steps.md
+                        - text: Steps.md
+                    - cell [ref=f25e409]:
+                      - link "auth probs" [ref=f25e412] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/commit/c08444757a998fa7db69b54b99f819560ac5c7f9
+                    - cell "Jul 8, 20263 months ago" [ref=f25e413]
+                  - row [ref=f25e415]:
+                    - cell [ref=f25e416]:
+                      - link "TODO.md, (File)" [ref=f25e423] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/blob/main/TODO.md
+                        - text: TODO.md
+                    - cell [ref=f25e424]:
+                      - link "added the dark mode and UI components for the frontend, added the cus…" [ref=f25e427] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/commit/e04f27b5e787865e4b41054e646febf3057eabd6
+                    - cell "Jul 6, 20263 months ago" [ref=f25e428]
+                  - row [ref=f25e430]:
+                    - cell [ref=f25e431]:
+                      - link "docker-compose.yml, (File)" [ref=f25e438] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/blob/main/docker-compose.yml
+                        - text: docker-compose.yml
+                    - cell [ref=f25e439]:
+                      - link "all folders added" [ref=f25e442] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/commit/b66f78cac21c25856232ac50774a1a2858cb1eae
+                    - cell "Jun 15, 20264 months ago" [ref=f25e443]
+                  - row [ref=f25e445]:
+                    - cell [ref=f25e446]:
+                      - link "package-lock.json, (File)" [ref=f25e453] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/blob/main/package-lock.json
+                        - text: package-lock.json
+                    - cell [ref=f25e454]:
+                      - link "Updated Docs" [ref=f25e457] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/commit/d6826e6591e920bc85c02d55028396ae4a1eac7b
+                    - cell "Jul 22, 20263 months ago" [ref=f25e458]
+                  - row [ref=f25e460]:
+                    - cell [ref=f25e461]:
+                      - link "vercel.json, (File)" [ref=f25e468] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/blob/main/vercel.json
+                        - text: vercel.json
+                    - cell [ref=f25e469]:
+                      - link "correct vercel configuration" [ref=f25e472] [cursor=pointer]:
+                        - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/commit/16175761173d23fbdfc0b1df1e041631cc20e40d
+                    - cell "Jul 8, 20263 months ago" [ref=f25e473]
+            - generic [ref=f25e476]:
+              - generic [ref=f25e477]:
+                - heading "Repository files navigation" [level=2] [ref=f25e478]
+                - navigation "Repository files" [ref=f25e479]:
+                  - list [ref=f25e480]:
+                    - listitem [ref=f25e481]:
+                      - link "README" [ref=f25e482] [cursor=pointer]:
+                        - /url: "#"
+                - button "Outline" [ref=f25e484] [cursor=pointer]
+              - article [ref=f25e488]:
+                - generic [ref=f25e489]:
+                  - heading "KhataBox — B2B Retail Management Platform" [level=1] [ref=f25e490]
+                  - 'link "Permalink: KhataBox — B2B Retail Management Platform" [ref=f25e491] [cursor=pointer]':
+                    - /url: "#khatabox--b2b-retail-management-platform"
+                - paragraph [ref=f25e494]: KhataBox is a full-stack B2B retail management platform for Indian small-to-medium businesses. It enables shopkeepers to manage inventory, customers, orders, suppliers, and stores from a single dashboard. Customers can browse a product catalog, scan QR codes, place bulk orders with credit limits, and track their order history.
+                - generic [ref=f25e495]:
+                  - heading "Architecture" [level=2] [ref=f25e496]
+                  - 'link "Permalink: Architecture" [ref=f25e497] [cursor=pointer]':
+                    - /url: "#architecture"
+                - region "mermaid rendered output container" [ref=f25e500]:
+                  - generic [ref=f25e501]:
+                    - generic [ref=f25e502]:
+                      - group [ref=f25e503]:
+                        - button "Open dialog" [ref=f25e504] [cursor=pointer]
+                      - button "Copy mermaid code" [ref=f25e507] [cursor=pointer]
+                    - iframe [ref=f25e512]:
+                      - generic [ref=f26e7]:
+                        - button "Zoom in" [ref=f26e8] [cursor=pointer]
+                        - button "Zoom out" [ref=f26e12] [cursor=pointer]
+                        - button "Reset view" [ref=f26e16] [cursor=pointer]
+                        - button "Pan up" [ref=f26e19] [cursor=pointer]
+                        - button "Pan down" [ref=f26e22] [cursor=pointer]
+                        - button "Pan left" [ref=f26e25] [cursor=pointer]
+                        - button "Pan right" [ref=f26e28] [cursor=pointer]
+                  - generic [ref=f25e513]: Loading
+                - generic [ref=f25e518]:
+                  - heading "Tech Stack" [level=2] [ref=f25e519]
+                  - 'link "Permalink: Tech Stack" [ref=f25e520] [cursor=pointer]':
+                    - /url: "#tech-stack"
+                - table [ref=f25e524]:
+                  - rowgroup [ref=f25e525]:
+                    - row [ref=f25e526]:
+                      - columnheader "Layer" [ref=f25e527]
+                      - columnheader "Technology" [ref=f25e528]
+                      - columnheader "Version" [ref=f25e529]
+                  - rowgroup [ref=f25e530]:
+                    - row [ref=f25e531]:
+                      - cell "Frontend Framework" [ref=f25e532]
+                      - cell "Next.js (App Router)" [ref=f25e533]
+                      - cell "16.2.7" [ref=f25e534]
+                    - row [ref=f25e535]:
+                      - cell "UI Library" [ref=f25e536]
+                      - cell "React" [ref=f25e537]
+                      - cell "19.2.4" [ref=f25e538]
+                    - row [ref=f25e539]:
+                      - cell "Styling" [ref=f25e540]
+                      - cell "Tailwind CSS" [ref=f25e541]
+                      - cell "v4" [ref=f25e542]
+                    - row [ref=f25e543]:
+                      - cell "Component Library" [ref=f25e544]
+                      - cell "Shadcn UI (on @base-ui/react)" [ref=f25e545]
+                      - cell "1.5.0" [ref=f25e546]
+                    - row [ref=f25e547]:
+                      - cell "State Management" [ref=f25e548]
+                      - cell "Zustand" [ref=f25e549]
+                      - cell "5.0.14" [ref=f25e550]
+                    - row [ref=f25e551]:
+                      - cell "Server State" [ref=f25e552]
+                      - cell "TanStack Query" [ref=f25e553]
+                      - cell "5.101.0" [ref=f25e554]
+                    - row [ref=f25e555]:
+                      - cell "Auth (Frontend)" [ref=f25e556]
+                      - cell "NextAuth" [ref=f25e557]
+                      - cell "v5 (beta.31)" [ref=f25e558]
+                    - row [ref=f25e559]:
+                      - cell "Charts" [ref=f25e560]
+                      - cell "Recharts" [ref=f25e561]
+                      - cell "3.8.1" [ref=f25e562]
+                    - row [ref=f25e563]:
+                      - cell "Backend Framework" [ref=f25e564]
+                      - cell "FastAPI" [ref=f25e565]
+                      - cell "0.115.6" [ref=f25e566]
+                    - row [ref=f25e567]:
+                      - cell "ORM" [ref=f25e568]
+                      - cell "SQLAlchemy (async)" [ref=f25e569]
+                      - cell "2.0.50" [ref=f25e570]
+                    - row [ref=f25e571]:
+                      - cell "Validation" [ref=f25e572]
+                      - cell "Pydantic" [ref=f25e573]
+                      - cell "2.13.4" [ref=f25e574]
+                    - row [ref=f25e575]:
+                      - cell "Auth (Backend)" [ref=f25e576]
+                      - cell "python-jose + passlib (bcrypt)" [ref=f25e577]
+                      - cell "—" [ref=f25e578]
+                    - row [ref=f25e579]:
+                      - cell "Database" [ref=f25e580]
+                      - cell "PostgreSQL" [ref=f25e581]
+                      - cell "16" [ref=f25e582]
+                    - row [ref=f25e583]:
+                      - cell "Cache / Queue" [ref=f25e584]
+                      - cell "Redis" [ref=f25e585]
+                      - cell "7" [ref=f25e586]
+                    - row [ref=f25e587]:
+                      - cell "ML" [ref=f25e588]
+                      - cell "scikit-learn (RandomForest)" [ref=f25e589]
+                      - cell "1.9.0" [ref=f25e590]
+                    - row [ref=f25e591]:
+                      - cell "QR Code" [ref=f25e592]
+                      - cell "qrcode + Pillow" [ref=f25e593]
+                      - cell "8.2 / 12.2" [ref=f25e594]
+                    - row [ref=f25e595]:
+                      - cell "PDF Generation" [ref=f25e596]
+                      - cell "ReportLab" [ref=f25e597]
+                      - cell "4.5.1" [ref=f25e598]
+                    - row [ref=f25e599]:
+                      - cell "Spreadsheet" [ref=f25e600]
+                      - cell "openpyxl" [ref=f25e601]
+                      - cell "3.1.5" [ref=f25e602]
+                    - row [ref=f25e603]:
+                      - cell "Real-time" [ref=f25e604]
+                      - cell "python-socketio / socket.io-client" [ref=f25e605]
+                      - cell "5.11.0 / 4.8.3" [ref=f25e606]
+                    - row [ref=f25e607]:
+                      - cell "File Storage" [ref=f25e608]
+                      - cell "Cloudflare R2 (S3-compatible)" [ref=f25e609]
+                      - cell "—" [ref=f25e610]
+                    - row [ref=f25e611]:
+                      - cell "Email" [ref=f25e612]
+                      - cell "Resend" [ref=f25e613]
+                      - cell "—" [ref=f25e614]
+                    - row [ref=f25e615]:
+                      - cell "Error Tracking" [ref=f25e616]
+                      - cell "Sentry" [ref=f25e617]
+                      - cell "—" [ref=f25e618]
+                    - row [ref=f25e619]:
+                      - cell "Analytics" [ref=f25e620]
+                      - cell "PostHog" [ref=f25e621]
+                      - cell "—" [ref=f25e622]
+                    - row [ref=f25e623]:
+                      - cell "Deployment (Backend)" [ref=f25e624]
+                      - cell "Railway (Docker)" [ref=f25e625]
+                      - cell "—" [ref=f25e626]
+                    - row [ref=f25e627]:
+                      - cell "Deployment (Frontend)" [ref=f25e628]
+                      - cell "Vercel" [ref=f25e629]
+                      - cell "—" [ref=f25e630]
+                - generic [ref=f25e631]:
+                  - heading "Folder Structure" [level=2] [ref=f25e632]
+                  - 'link "Permalink: Folder Structure" [ref=f25e633] [cursor=pointer]':
+                    - /url: "#folder-structure"
+                - generic [ref=f25e636]:
+                  - code [ref=f25e638]: "KhataBox/ ├── src/ # Next.js frontend │ ├── app/ # App Router pages + layouts │ │ ├── (dashboard)/ # Admin/shopkeeper routes (20 pages) │ │ ├── (customer)/ # Customer route group │ │ ├── api/auth/ # NextAuth route handler │ │ ├── cart/ # Cart page │ │ ├── catalog/ # Public catalog page │ │ ├── customer/ # Customer landing page │ │ ├── login/ # Login page │ │ ├── my-orders/ # Customer order history │ │ ├── receipts/ # Receipt view │ │ ├── register/ # Registration page │ │ └── scan/ # QR scanner page │ ├── components/ # Reusable components │ │ ├── ui/ # Shadcn primitives (15 files) │ │ ├── layout/ # Sidebar, top-nav, bottom-nav │ │ ├── auth/ # RoleGuard + useRole │ │ ├── customers/ # Customer cart components │ │ └── products/ # Product form dialogs │ ├── lib/ # API clients, auth config, utils │ ├── store/ # Zustand stores (cart, customer-cart) │ ├── types/ # TypeScript interfaces (7 files) │ └── test/ # Vitest unit tests (5 files) ├── backend/ # FastAPI backend │ ├── app/ │ │ ├── api/v1/ # 22 route modules │ │ ├── core/ # Database, security, dependencies │ │ ├── ml/ # model.pkl, predict.py, train.py │ │ ├── models/ # 18 SQLAlchemy model tables │ │ ├── schemas/ # 11 Pydantic schema files │ │ ├── services/ # 10 service modules │ │ ├── config.py # Pydantic settings │ │ └── main.py # FastAPI app entrypoint │ ├── alembic/ # 17 database migrations │ ├── tests/ # 3 test files (39+ endpoint tests) │ └── seed_india.py # Demo data seeder ├── config/ # .env.example files ├── docs/ # Documentation └── scripts/ # Start/stop scripts"
+                  - button "Copy code to clipboard" [ref=f25e640] [cursor=pointer]
+                - generic [ref=f25e644]:
+                  - heading "Prerequisites" [level=2] [ref=f25e645]
+                  - 'link "Permalink: Prerequisites" [ref=f25e646] [cursor=pointer]':
+                    - /url: "#prerequisites"
+                - list [ref=f25e649]:
+                  - listitem [ref=f25e650]:
+                    - strong [ref=f25e651]: Node.js
+                    - text: 20+
+                  - listitem [ref=f25e652]:
+                    - strong [ref=f25e653]: Python
+                    - text: 3.11+
+                  - listitem [ref=f25e654]:
+                    - strong [ref=f25e655]: Docker Desktop
+                    - text: (for local PostgreSQL + Redis)
+                  - listitem [ref=f25e656]:
+                    - strong [ref=f25e657]: npm
+                - generic [ref=f25e658]:
+                  - heading "Quick Start (One Command)" [level=2] [ref=f25e659]
+                  - 'link "Permalink: Quick Start (One Command)" [ref=f25e660] [cursor=pointer]':
+                    - /url: "#quick-start-one-command"
+                - generic [ref=f25e663]:
+                  - generic [ref=f25e664]:
+                    - generic [ref=f25e665]: "# From repo root:"
+                    - text: scripts\start-khatabox.bat
+                  - button "Copy code to clipboard" [ref=f25e667] [cursor=pointer]
+                - paragraph [ref=f25e671]: "This handles everything: checks Docker, runs PostgreSQL + Redis, applies 17 migrations, seeds demo data (1500+ orders, 178 seed products), and starts both servers."
+                - generic [ref=f25e672]:
+                  - heading "Manual Setup" [level=2] [ref=f25e673]
+                  - 'link "Permalink: Manual Setup" [ref=f25e674] [cursor=pointer]':
+                    - /url: "#manual-setup"
+                - generic [ref=f25e677]:
+                  - heading "1. Clone and Configure Environment" [level=3] [ref=f25e678]
+                  - 'link "Permalink: 1. Clone and Configure Environment" [ref=f25e679] [cursor=pointer]':
+                    - /url: "#1-clone-and-configure-environment"
+                - generic [ref=f25e682]:
+                  - generic [ref=f25e683]:
+                    - text: git clone <repo-url> && cd KhataBox
+                    - generic [ref=f25e684]: "# Backend environment"
+                    - text: copy backend\.env.example backend\.env
+                    - generic [ref=f25e685]: "# Edit backend\\.env — set DATABASE_URL to your local PostgreSQL:"
+                    - generic [ref=f25e686]: "# DATABASE_URL=postgresql+asyncpg://khatabox:khatabox123@localhost:5432/khatabox"
+                    - generic [ref=f25e687]: "# Frontend environment"
+                    - text: copy .env.example frontend\.env.local
+                  - button "Copy code to clipboard" [ref=f25e689] [cursor=pointer]
+                - generic [ref=f25e693]:
+                  - heading "2. Start Database Services" [level=3] [ref=f25e694]
+                  - 'link "Permalink: 2. Start Database Services" [ref=f25e695] [cursor=pointer]':
+                    - /url: "#2-start-database-services"
+                - generic [ref=f25e698]:
+                  - generic [ref=f25e699]:
+                    - text: docker compose up -d
+                    - generic [ref=f25e700]: "# Starts PostgreSQL on :5432, Redis on :6379"
+                  - button "Copy code to clipboard" [ref=f25e702] [cursor=pointer]
+                - generic [ref=f25e706]:
+                  - heading "3. Backend Setup" [level=3] [ref=f25e707]
+                  - 'link "Permalink: 3. Backend Setup" [ref=f25e708] [cursor=pointer]':
+                    - /url: "#3-backend-setup"
+                - generic [ref=f25e711]:
+                  - generic [ref=f25e712]:
+                    - text: cd backend
+                    - generic [ref=f25e713]: "# Create virtual environment"
+                    - text: python -m venv venv
+                    - generic [ref=f25e714]: "# Windows:"
+                    - text: .\venv\Scripts\activate
+                    - generic [ref=f25e715]: "# Linux/Mac:"
+                    - text: source venv/bin/activate
+                    - generic [ref=f25e716]: "# Install dependencies"
+                    - text: pip install -r requirements.txt
+                    - generic [ref=f25e717]: "# Run migrations (creates 18 tables)"
+                    - text: alembic upgrade head
+                    - generic [ref=f25e718]: "# Seed demo data"
+                    - text: python seed_india.py
+                  - button "Copy code to clipboard" [ref=f25e720] [cursor=pointer]
+                - generic [ref=f25e724]:
+                  - heading "4. Frontend Setup" [level=3] [ref=f25e725]
+                  - 'link "Permalink: 4. Frontend Setup" [ref=f25e726] [cursor=pointer]':
+                    - /url: "#4-frontend-setup"
+                - generic [ref=f25e729]:
+                  - generic [ref=f25e730]: cd frontend npm install
+                  - button "Copy code to clipboard" [ref=f25e732] [cursor=pointer]
+                - generic [ref=f25e736]:
+                  - heading "5. Run Both Servers" [level=3] [ref=f25e737]
+                  - 'link "Permalink: 5. Run Both Servers" [ref=f25e738] [cursor=pointer]':
+                    - /url: "#5-run-both-servers"
+                - generic [ref=f25e741]:
+                  - generic [ref=f25e742]:
+                    - generic [ref=f25e743]: "# Terminal 1 — Backend (from backend/)"
+                    - text: .\venv\Scripts\python.exe -m uvicorn app.main:app --host 0.0.0.0 --port 8002 --reload
+                    - generic [ref=f25e744]: "# Terminal 2 — Frontend (from frontend/)"
+                    - text: npm run dev -- --webpack
+                  - button "Copy code to clipboard" [ref=f25e746] [cursor=pointer]
+                - paragraph [ref=f25e750]:
+                  - text: Open
+                  - link "http://localhost:3000" [ref=f25e751] [cursor=pointer]:
+                    - /url: http://localhost:3000
+                - generic [ref=f25e752]:
+                  - heading "Configuration" [level=2] [ref=f25e753]
+                  - 'link "Permalink: Configuration" [ref=f25e754] [cursor=pointer]':
+                    - /url: "#configuration"
+                - generic [ref=f25e757]:
+                  - heading [level=3] [ref=f25e758]:
+                    - text: Backend (
+                    - code [ref=f25e759]: backend/.env
+                    - text: )
+                  - 'link "Permalink: Backend (backend/.env)" [ref=f25e760] [cursor=pointer]':
+                    - /url: "#backend-backendenv"
+                - table [ref=f25e764]:
+                  - rowgroup [ref=f25e765]:
+                    - row [ref=f25e766]:
+                      - columnheader "Variable" [ref=f25e767]
+                      - columnheader "Required" [ref=f25e768]
+                      - columnheader "Default" [ref=f25e769]
+                      - columnheader "Description" [ref=f25e770]
+                  - rowgroup [ref=f25e771]:
+                    - row [ref=f25e772]:
+                      - cell [ref=f25e773]:
+                        - code [ref=f25e774]: DATABASE_URL
+                      - cell "Yes" [ref=f25e775]
+                      - cell "—" [ref=f25e776]
+                      - cell "PostgreSQL async connection string" [ref=f25e777]
+                    - row [ref=f25e778]:
+                      - cell [ref=f25e779]:
+                        - code [ref=f25e780]: SECRET_KEY
+                      - cell "Yes" [ref=f25e781]
+                      - cell "change-me" [ref=f25e782]
+                      - cell "JWT signing secret" [ref=f25e783]
+                    - row [ref=f25e784]:
+                      - cell [ref=f25e785]:
+                        - code [ref=f25e786]: ALGORITHM
+                      - cell "No" [ref=f25e787]
+                      - cell "HS256" [ref=f25e788]
+                      - cell "JWT algorithm" [ref=f25e789]
+                    - row [ref=f25e790]:
+                      - cell [ref=f25e791]:
+                        - code [ref=f25e792]: ACCESS_TOKEN_EXPIRE_MINUTES
+                      - cell "No" [ref=f25e793]
+                      - cell "30" [ref=f25e794]
+                      - cell "Access token TTL" [ref=f25e795]
+                    - row [ref=f25e796]:
+                      - cell [ref=f25e797]:
+                        - code [ref=f25e798]: REFRESH_TOKEN_EXPIRE_DAYS
+                      - cell "No" [ref=f25e799]
+                      - cell "7" [ref=f25e800]
+                      - cell "Refresh token TTL" [ref=f25e801]
+                    - row [ref=f25e802]:
+                      - cell [ref=f25e803]:
+                        - code [ref=f25e804]: REDIS_URL
+                      - cell "No" [ref=f25e805]
+                      - cell "—" [ref=f25e806]
+                      - cell "Redis connection string" [ref=f25e807]
+                    - row [ref=f25e808]:
+                      - cell [ref=f25e809]:
+                        - code [ref=f25e810]: RESEND_API_KEY
+                      - cell "No" [ref=f25e811]
+                      - cell "—" [ref=f25e812]
+                      - cell "Resend transactional email key" [ref=f25e813]
+                    - row [ref=f25e814]:
+                      - cell [ref=f25e815]:
+                        - code [ref=f25e816]: SENTRY_DSN
+                      - cell "No" [ref=f25e817]
+                      - cell "—" [ref=f25e818]
+                      - cell "Sentry error tracking DSN" [ref=f25e819]
+                    - row [ref=f25e820]:
+                      - cell [ref=f25e821]:
+                        - code [ref=f25e822]: POSTHOG_API_KEY
+                      - cell "No" [ref=f25e823]
+                      - cell "—" [ref=f25e824]
+                      - cell "PostHog analytics key" [ref=f25e825]
+                    - row [ref=f25e826]:
+                      - cell [ref=f25e827]:
+                        - code [ref=f25e828]: POSTHOG_HOST
+                      - cell "No" [ref=f25e829]
+                      - cell [ref=f25e830]:
+                        - link "https://us.i.posthog.com" [ref=f25e831] [cursor=pointer]:
+                          - /url: https://us.i.posthog.com
+                      - cell "PostHog host" [ref=f25e832]
+                    - row [ref=f25e833]:
+                      - cell [ref=f25e834]:
+                        - code [ref=f25e835]: CORS_ORIGINS
+                      - cell "Yes" [ref=f25e836]
+                      - cell [ref=f25e837]:
+                        - link "http://localhost:3000" [ref=f25e838] [cursor=pointer]:
+                          - /url: http://localhost:3000
+                      - cell "Comma-separated allowed origins" [ref=f25e839]
+                    - row [ref=f25e840]:
+                      - cell [ref=f25e841]:
+                        - code [ref=f25e842]: R2_ENDPOINT_URL
+                      - cell "No" [ref=f25e843]
+                      - cell "—" [ref=f25e844]
+                      - cell "Cloudflare R2 S3 endpoint" [ref=f25e845]
+                    - row [ref=f25e846]:
+                      - cell [ref=f25e847]:
+                        - code [ref=f25e848]: R2_ACCESS_KEY_ID
+                      - cell "No" [ref=f25e849]
+                      - cell "—" [ref=f25e850]
+                      - cell "R2 access key" [ref=f25e851]
+                    - row [ref=f25e852]:
+                      - cell [ref=f25e853]:
+                        - code [ref=f25e854]: R2_SECRET_ACCESS_KEY
+                      - cell "No" [ref=f25e855]
+                      - cell "—" [ref=f25e856]
+                      - cell "R2 secret key" [ref=f25e857]
+                    - row [ref=f25e858]:
+                      - cell [ref=f25e859]:
+                        - code [ref=f25e860]: R2_BUCKET_NAME
+                      - cell "No" [ref=f25e861]
+                      - cell "khatabox" [ref=f25e862]
+                      - cell "R2 bucket name" [ref=f25e863]
+                    - row [ref=f25e864]:
+                      - cell [ref=f25e865]:
+                        - code [ref=f25e866]: R2_PUBLIC_URL
+                      - cell "No" [ref=f25e867]
+                      - cell "—" [ref=f25e868]
+                      - cell "R2 public bucket URL" [ref=f25e869]
+                - generic [ref=f25e870]:
+                  - heading [level=3] [ref=f25e871]:
+                    - text: Frontend (
+                    - code [ref=f25e872]: frontend/.env.local
+                    - text: )
+                  - 'link "Permalink: Frontend (frontend/.env.local)" [ref=f25e873] [cursor=pointer]':
+                    - /url: "#frontend-frontendenvlocal"
+                - table [ref=f25e877]:
+                  - rowgroup [ref=f25e878]:
+                    - row [ref=f25e879]:
+                      - columnheader "Variable" [ref=f25e880]
+                      - columnheader "Required" [ref=f25e881]
+                      - columnheader "Description" [ref=f25e882]
+                  - rowgroup [ref=f25e883]:
+                    - row [ref=f25e884]:
+                      - cell [ref=f25e885]:
+                        - code [ref=f25e886]: NEXT_PUBLIC_API_URL
+                      - cell "Yes" [ref=f25e887]
+                      - cell [ref=f25e888]:
+                        - text: "Backend API URL (default:"
+                        - link "http://localhost:8000" [ref=f25e889] [cursor=pointer]:
+                          - /url: http://localhost:8000
+                        - text: )
+                    - row [ref=f25e890]:
+                      - cell [ref=f25e891]:
+                        - code [ref=f25e892]: AUTH_SECRET
+                      - cell "Yes" [ref=f25e893]
+                      - cell "NextAuth JWT encryption secret" [ref=f25e894]
+                    - row [ref=f25e895]:
+                      - cell [ref=f25e896]:
+                        - code [ref=f25e897]: AUTH_URL
+                      - cell "Yes" [ref=f25e898]
+                      - cell "Frontend public URL" [ref=f25e899]
+                - generic [ref=f25e900]:
+                  - heading "Local Development Values" [level=3] [ref=f25e901]
+                  - 'link "Permalink: Local Development Values" [ref=f25e902] [cursor=pointer]':
+                    - /url: "#local-development-values"
+                - list [ref=f25e905]:
+                  - listitem [ref=f25e906]:
+                    - strong [ref=f25e907]: "PostgreSQL:"
+                    - code [ref=f25e908]: postgresql+asyncpg://khatabox:khatabox123@localhost:5432/khatabox
+                  - listitem [ref=f25e909]:
+                    - strong [ref=f25e910]: "Redis:"
+                    - code [ref=f25e911]: redis://localhost:6379/0
+                  - listitem [ref=f25e912]:
+                    - strong [ref=f25e913]: "CORS Origins:"
+                    - code [ref=f25e914]: http://localhost:3000,http://localhost:8002
+                - generic [ref=f25e915]:
+                  - heading "Running Locally" [level=2] [ref=f25e916]
+                  - 'link "Permalink: Running Locally" [ref=f25e917] [cursor=pointer]':
+                    - /url: "#running-locally"
+                - generic [ref=f25e920]:
+                  - heading "Via the Start Script (Recommended)" [level=3] [ref=f25e921]
+                  - 'link "Permalink: Via the Start Script (Recommended)" [ref=f25e922] [cursor=pointer]':
+                    - /url: "#via-the-start-script-recommended"
+                - generic [ref=f25e925]:
+                  - generic [ref=f25e926]: scripts\start-khatabox.bat
+                  - button "Copy code to clipboard" [ref=f25e928] [cursor=pointer]
+                - paragraph [ref=f25e932]: This auto-detects whether you're using a local Docker database or a remote Neon database. It checks Docker, applies migrations, seeds data if empty, and starts both servers with one command.
+                - generic [ref=f25e933]:
+                  - heading "Manual Start" [level=3] [ref=f25e934]
+                  - 'link "Permalink: Manual Start" [ref=f25e935] [cursor=pointer]':
+                    - /url: "#manual-start"
+                - table [ref=f25e939]:
+                  - rowgroup [ref=f25e940]:
+                    - row [ref=f25e941]:
+                      - columnheader "Service" [ref=f25e942]
+                      - columnheader "Command" [ref=f25e943]
+                      - columnheader "URL" [ref=f25e944]
+                  - rowgroup [ref=f25e945]:
+                    - row [ref=f25e946]:
+                      - cell "Backend" [ref=f25e947]
+                      - cell [ref=f25e948]:
+                        - code [ref=f25e949]: cd backend; python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8002
+                      - cell [ref=f25e950]:
+                        - link "http://localhost:8002" [ref=f25e951] [cursor=pointer]:
+                          - /url: http://localhost:8002
+                    - row [ref=f25e952]:
+                      - cell "Backend Docs" [ref=f25e953]
+                      - cell "(auto)" [ref=f25e954]
+                      - cell [ref=f25e955]:
+                        - link "http://localhost:8002/docs" [ref=f25e956] [cursor=pointer]:
+                          - /url: http://localhost:8002/docs
+                    - row [ref=f25e957]:
+                      - cell "Frontend" [ref=f25e958]
+                      - cell [ref=f25e959]:
+                        - code [ref=f25e960]: cd frontend; npm run dev -- --webpack
+                      - cell [ref=f25e961]:
+                        - link "http://localhost:3000" [ref=f25e962] [cursor=pointer]:
+                          - /url: http://localhost:3000
+                    - row [ref=f25e963]:
+                      - cell "Health Check" [ref=f25e964]
+                      - cell "(auto)" [ref=f25e965]
+                      - cell [ref=f25e966]:
+                        - link "http://localhost:8002/health" [ref=f25e967] [cursor=pointer]:
+                          - /url: http://localhost:8002/health
+                - paragraph [ref=f25e968]:
+                  - strong [ref=f25e969]: "Note:"
+                  - text: Use
+                  - code [ref=f25e970]: "--webpack"
+                  - text: flag (not Turbopack) to avoid a path-encoding bug with spaces in Windows project paths.
+                - generic [ref=f25e971]:
+                  - heading "Demo Credentials" [level=3] [ref=f25e972]
+                  - 'link "Permalink: Demo Credentials" [ref=f25e973] [cursor=pointer]':
+                    - /url: "#demo-credentials"
+                - table [ref=f25e977]:
+                  - rowgroup [ref=f25e978]:
+                    - row [ref=f25e979]:
+                      - columnheader "Role" [ref=f25e980]
+                      - columnheader "Email" [ref=f25e981]
+                      - columnheader "Password" [ref=f25e982]
+                  - rowgroup [ref=f25e983]:
+                    - row [ref=f25e984]:
+                      - cell "Admin" [ref=f25e985]
+                      - cell [ref=f25e986]:
+                        - link "admin@khatabox.com" [ref=f25e987] [cursor=pointer]:
+                          - /url: mailto:admin@khatabox.com
+                      - cell "Admin@123" [ref=f25e988]
+                    - row [ref=f25e989]:
+                      - cell "Shopkeeper" [ref=f25e990]
+                      - 'cell "{shop_name}@khatabox.com" [ref=f25e991]'
+                      - cell "Shop@123" [ref=f25e992]
+                    - row [ref=f25e993]:
+                      - cell "Customer" [ref=f25e994]
+                      - 'cell "contact.{...}@client.com" [ref=f25e995]'
+                      - cell "customer123" [ref=f25e996]
+                - generic [ref=f25e997]:
+                  - heading "Development Workflow" [level=2] [ref=f25e998]
+                  - 'link "Permalink: Development Workflow" [ref=f25e999] [cursor=pointer]':
+                    - /url: "#development-workflow"
+                - generic [ref=f25e1002]:
+                  - heading "Local → Git → Deploy" [level=3] [ref=f25e1003]
+                  - 'link "Permalink: Local → Git → Deploy" [ref=f25e1004] [cursor=pointer]':
+                    - /url: "#local--git--deploy"
+                - generic [ref=f25e1007]:
+                  - code [ref=f25e1009]: "┌─────────────────────────────────────────────────────────┐ │ 1. Make changes locally │ │ 2. Test with: scripts\\start-khatabox.bat │ │ 3. Run backend tests: cd backend; pytest tests/ -v │ │ 4. Build frontend: cd frontend; npm run build │ │ 5. Commit and push to GitHub │ │ 6. Railway auto-deploys backend (Dockerfile) │ │ 7. Vercel auto-deploys frontend (root dir detected) │ │ 8. Verify on production URLs │ └─────────────────────────────────────────────────────────┘"
+                  - button "Copy code to clipboard" [ref=f25e1011] [cursor=pointer]
+                - generic [ref=f25e1015]:
+                  - heading "Deployment" [level=2] [ref=f25e1016]
+                  - 'link "Permalink: Deployment" [ref=f25e1017] [cursor=pointer]':
+                    - /url: "#deployment"
+                - generic [ref=f25e1020]:
+                  - heading "Backend (Railway)" [level=3] [ref=f25e1021]
+                  - 'link "Permalink: Backend (Railway)" [ref=f25e1022] [cursor=pointer]':
+                    - /url: "#backend-railway"
+                - paragraph [ref=f25e1025]:
+                  - text: The backend is deployed via Docker. Railway auto-detects the
+                  - code [ref=f25e1026]: Dockerfile
+                  - text: at the project root.
+                - paragraph [ref=f25e1027]:
+                  - strong [ref=f25e1028]: "Steps:"
+                - list [ref=f25e1029]:
+                  - listitem [ref=f25e1030]: Push to GitHub
+                  - listitem [ref=f25e1031]: Create a Railway project linked to your repo
+                  - listitem [ref=f25e1032]: "Set these environment variables in Railway dashboard:"
+                - table [ref=f25e1034]:
+                  - rowgroup [ref=f25e1035]:
+                    - row [ref=f25e1036]:
+                      - columnheader "Variable" [ref=f25e1037]
+                      - columnheader "Value" [ref=f25e1038]
+                  - rowgroup [ref=f25e1039]:
+                    - row [ref=f25e1040]:
+                      - cell [ref=f25e1041]:
+                        - code [ref=f25e1042]: DATABASE_URL
+                      - cell [ref=f25e1043]:
+                        - code [ref=f25e1044]: postgresql+asyncpg://user:pass@host:5432/db
+                        - text: (Neon/SUPABASE)
+                    - row [ref=f25e1045]:
+                      - cell [ref=f25e1046]:
+                        - code [ref=f25e1047]: SECRET_KEY
+                      - cell "(generate a random string)" [ref=f25e1048]
+                    - row [ref=f25e1049]:
+                      - cell [ref=f25e1050]:
+                        - code [ref=f25e1051]: CORS_ORIGINS
+                      - cell [ref=f25e1052]:
+                        - code [ref=f25e1053]: https://your-frontend.vercel.app
+                    - row [ref=f25e1054]:
+                      - cell [ref=f25e1055]:
+                        - code [ref=f25e1056]: REDIS_URL
+                      - cell [ref=f25e1057]:
+                        - code [ref=f25e1058]: redis://...
+                        - text: (Upstash or Redis Cloud)
+                    - row [ref=f25e1059]:
+                      - cell [ref=f25e1060]:
+                        - code [ref=f25e1061]: RESEND_API_KEY
+                      - cell "(your Resend API key)" [ref=f25e1062]
+                - list [ref=f25e1063]:
+                  - listitem [ref=f25e1064]:
+                    - text: "Railway builds and deploys — health check endpoint:"
+                    - code [ref=f25e1065]: /health
+                - generic [ref=f25e1066]:
+                  - heading "Frontend (Vercel)" [level=3] [ref=f25e1067]
+                  - 'link "Permalink: Frontend (Vercel)" [ref=f25e1068] [cursor=pointer]':
+                    - /url: "#frontend-vercel"
+                - paragraph [ref=f25e1071]:
+                  - strong [ref=f25e1072]: "Steps:"
+                - list [ref=f25e1073]:
+                  - listitem [ref=f25e1074]: In Vercel, import the same GitHub repo
+                  - listitem [ref=f25e1075]:
+                    - text: "Framework preset:"
+                    - strong [ref=f25e1076]: Next.js
+                    - text: (auto-detected)
+                  - listitem [ref=f25e1077]:
+                    - text: "Root directory:"
+                    - code [ref=f25e1078]: frontend/
+                    - text: (set in Vercel project settings)
+                  - listitem [ref=f25e1079]: "Environment variables:"
+                - table [ref=f25e1081]:
+                  - rowgroup [ref=f25e1082]:
+                    - row [ref=f25e1083]:
+                      - columnheader "Variable" [ref=f25e1084]
+                      - columnheader "Value" [ref=f25e1085]
+                  - rowgroup [ref=f25e1086]:
+                    - row [ref=f25e1087]:
+                      - cell [ref=f25e1088]:
+                        - code [ref=f25e1089]: NEXT_PUBLIC_API_URL
+                      - cell [ref=f25e1090]:
+                        - code [ref=f25e1091]: https://your-backend.railway.app
+                    - row [ref=f25e1092]:
+                      - cell [ref=f25e1093]:
+                        - code [ref=f25e1094]: AUTH_SECRET
+                      - cell "(same as NextAuth secret)" [ref=f25e1095]
+                    - row [ref=f25e1096]:
+                      - cell [ref=f25e1097]:
+                        - code [ref=f25e1098]: AUTH_URL
+                      - cell [ref=f25e1099]:
+                        - code [ref=f25e1100]: https://your-frontend.vercel.app
+                - list [ref=f25e1101]:
+                  - listitem [ref=f25e1102]: Deploy — Vercel auto-detects Next.js 16
+                - generic [ref=f25e1103]:
+                  - heading "Database (Neon)" [level=3] [ref=f25e1104]
+                  - 'link "Permalink: Database (Neon)" [ref=f25e1105] [cursor=pointer]':
+                    - /url: "#database-neon"
+                - list [ref=f25e1108]:
+                  - listitem [ref=f25e1109]: Create a Neon project
+                  - listitem [ref=f25e1110]:
+                    - text: "Get the connection string (asyncpg format):"
+                    - generic [ref=f25e1111]:
+                      - code [ref=f25e1113]: postgresql+asyncpg://user:pass@ep-xxx.us-east-2.aws.neon.tech/khatabox
+                      - button "Copy code to clipboard" [ref=f25e1115] [cursor=pointer]
+                  - listitem [ref=f25e1119]:
+                    - strong [ref=f25e1120]: "Important:"
+                    - text: Neon adds
+                    - code [ref=f25e1121]: "?sslmode=require&channel_binding=require"
+                    - text: to the URL automatically. The backend strips these parameters before connecting (asyncpg rejects them; SSL is auto-enabled).
+                  - listitem [ref=f25e1122]:
+                    - text: "Run migrations against Neon:"
+                    - generic [ref=f25e1123]:
+                      - generic [ref=f25e1124]:
+                        - text: cd backend $env:DATABASE_URL=
+                        - generic [ref=f25e1125]: "\"postgresql+asyncpg://...\""
+                        - generic [ref=f25e1126]: "# Windows"
+                        - text: alembic upgrade head python seed_india.py
+                      - button "Copy code to clipboard" [ref=f25e1128] [cursor=pointer]
+                - generic [ref=f25e1132]:
+                  - heading "Verifying Deployed Version" [level=3] [ref=f25e1133]
+                  - 'link "Permalink: Verifying Deployed Version" [ref=f25e1134] [cursor=pointer]':
+                    - /url: "#verifying-deployed-version"
+                - paragraph [ref=f25e1137]: "After deployment:"
+                - list [ref=f25e1138]:
+                  - listitem [ref=f25e1139]:
+                    - text: "Backend:"
+                    - code [ref=f25e1140]: https://your-backend.railway.app/docs
+                    - text: — should load Swagger UI
+                  - listitem [ref=f25e1141]:
+                    - text: "Frontend:"
+                    - code [ref=f25e1142]: https://your-frontend.vercel.app
+                    - text: — should load login page
+                  - listitem [ref=f25e1143]:
+                    - text: "Health:"
+                    - code [ref=f25e1144]: https://your-backend.railway.app/health
+                    - text: — should return
+                    - code [ref=f25e1145]: "{\"status\":\"healthy\"}"
+                  - listitem [ref=f25e1146]: Login with demo credentials
+                  - listitem [ref=f25e1147]:
+                    - text: "Test key flows:"
+                    - list [ref=f25e1148]:
+                      - listitem [ref=f25e1149]:
+                        - text: Register a new shopkeeper → auto-redirect to
+                        - code [ref=f25e1150]: /setup-inventory
+                      - listitem [ref=f25e1151]: Browse catalog → add to cart → checkout
+                      - listitem [ref=f25e1152]: Create orders, manage inventory
+                - generic [ref=f25e1153]:
+                  - heading "Known Deployment Notes" [level=2] [ref=f25e1154]
+                  - 'link "Permalink: Known Deployment Notes" [ref=f25e1155] [cursor=pointer]':
+                    - /url: "#known-deployment-notes"
+                - list [ref=f25e1158]:
+                  - listitem [ref=f25e1159]:
+                    - strong [ref=f25e1160]: "Neon DB URL:"
+                    - text: The auto-added
+                    - code [ref=f25e1161]: sslmode=require
+                    - text: and
+                    - code [ref=f25e1162]: channel_binding=require
+                    - text: query params are stripped by both
+                    - code [ref=f25e1163]: backend/app/core/database.py
+                    - text: and
+                    - code [ref=f25e1164]: backend/alembic/env.py
+                    - text: before engine creation.
+                  - listitem [ref=f25e1165]:
+                    - strong [ref=f25e1166]: "Migrations are idempotent:"
+                    - text: Migration
+                    - code [ref=f25e1167]: 0017_seed_products_table.py
+                    - text: uses
+                    - code [ref=f25e1168]: CREATE TABLE IF NOT EXISTS
+                    - text: — safe to re-run.
+                  - listitem [ref=f25e1169]:
+                    - strong [ref=f25e1170]: "Redis on Railway:"
+                    - text: Use Upstash Redis or Redis Cloud. Set
+                    - code [ref=f25e1171]: REDIS_URL
+                    - text: in Railway env vars.
+                  - listitem [ref=f25e1172]:
+                    - strong [ref=f25e1173]: "Start script auto-detection:"
+                    - code [ref=f25e1174]: scripts/start-khatabox.bat
+                    - text: checks if
+                    - code [ref=f25e1175]: backend/.env
+                    - text: contains
+                    - code [ref=f25e1176]: localhost:5432
+                    - text: — if yes, uses local Docker; if not, skips Docker checks and uses remote DB directly.
+                - generic [ref=f25e1177]:
+                  - heading "Authentication Flow" [level=2] [ref=f25e1178]
+                  - 'link "Permalink: Authentication Flow" [ref=f25e1179] [cursor=pointer]':
+                    - /url: "#authentication-flow"
+                - list [ref=f25e1182]:
+                  - listitem [ref=f25e1183]: "User submits credentials on the login page (role selected: admin/shopkeeper/customer)."
+                  - listitem [ref=f25e1184]:
+                    - text: NextAuth
+                    - code [ref=f25e1185]: authorize
+                    - text: callback sends a POST to
+                    - code [ref=f25e1186]: /api/v1/auth/login
+                    - text: on the FastAPI backend.
+                  - listitem [ref=f25e1187]: Backend validates credentials, returns JWT access token (30 min) and refresh token (7 days).
+                  - listitem [ref=f25e1188]: NextAuth stores tokens in the JWT session strategy.
+                  - listitem [ref=f25e1189]:
+                    - text: Subsequent API calls use
+                    - code [ref=f25e1190]: client-api.ts
+                    - text: which attaches the access token as a Bearer header.
+                  - listitem [ref=f25e1191]:
+                    - text: Backend
+                    - code [ref=f25e1192]: get_current_user
+                    - text: dependency decodes the JWT and loads the user from the database.
+                  - listitem [ref=f25e1193]:
+                    - code [ref=f25e1194]: require_role
+                    - text: dependency enforces role-based access at the endpoint level.
+                - generic [ref=f25e1195]:
+                  - heading "API Summary" [level=2] [ref=f25e1196]
+                  - 'link "Permalink: API Summary" [ref=f25e1197] [cursor=pointer]':
+                    - /url: "#api-summary"
+                - paragraph [ref=f25e1200]:
+                  - text: The backend exposes 22 route modules under
+                  - code [ref=f25e1201]: /api/v1/
+                  - text: ":"
+                - table [ref=f25e1203]:
+                  - rowgroup [ref=f25e1204]:
+                    - row [ref=f25e1205]:
+                      - columnheader "Module" [ref=f25e1206]
+                      - columnheader "Prefix" [ref=f25e1207]
+                      - columnheader "Auth" [ref=f25e1208]
+                      - columnheader "Roles" [ref=f25e1209]
+                  - rowgroup [ref=f25e1210]:
+                    - row [ref=f25e1211]:
+                      - cell "Authentication" [ref=f25e1212]
+                      - cell [ref=f25e1213]:
+                        - code [ref=f25e1214]: /auth
+                      - cell "Public + JWT" [ref=f25e1215]
+                      - cell "all" [ref=f25e1216]
+                    - row [ref=f25e1217]:
+                      - cell "Dashboard" [ref=f25e1218]
+                      - cell [ref=f25e1219]:
+                        - code [ref=f25e1220]: /dashboard
+                      - cell "JWT" [ref=f25e1221]
+                      - cell "admin, shopkeeper" [ref=f25e1222]
+                    - row [ref=f25e1223]:
+                      - cell "Catalog" [ref=f25e1224]
+                      - cell [ref=f25e1225]:
+                        - code [ref=f25e1226]: /catalog
+                      - cell "JWT" [ref=f25e1227]
+                      - cell "all" [ref=f25e1228]
+                    - row [ref=f25e1229]:
+                      - cell "Products" [ref=f25e1230]
+                      - cell [ref=f25e1231]:
+                        - code [ref=f25e1232]: /products
+                      - cell "JWT" [ref=f25e1233]
+                      - cell "admin, shopkeeper" [ref=f25e1234]
+                    - row [ref=f25e1235]:
+                      - cell "Orders" [ref=f25e1236]
+                      - cell [ref=f25e1237]:
+                        - code [ref=f25e1238]: /orders
+                      - cell "JWT" [ref=f25e1239]
+                      - cell "admin, shopkeeper, customer" [ref=f25e1240]
+                    - row [ref=f25e1241]:
+                      - cell "Suppliers" [ref=f25e1242]
+                      - cell [ref=f25e1243]:
+                        - code [ref=f25e1244]: /suppliers
+                      - cell "JWT" [ref=f25e1245]
+                      - cell "admin, shopkeeper" [ref=f25e1246]
+                    - row [ref=f25e1247]:
+                      - cell "Customers" [ref=f25e1248]
+                      - cell [ref=f25e1249]:
+                        - code [ref=f25e1250]: /customers
+                      - cell "JWT" [ref=f25e1251]
+                      - cell "admin, shopkeeper" [ref=f25e1252]
+                    - row [ref=f25e1253]:
+                      - cell "Forecasting" [ref=f25e1254]
+                      - cell [ref=f25e1255]:
+                        - code [ref=f25e1256]: /forecasting
+                      - cell "JWT" [ref=f25e1257]
+                      - cell "admin, shopkeeper" [ref=f25e1258]
+                    - row [ref=f25e1259]:
+                      - cell "Inventory" [ref=f25e1260]
+                      - cell [ref=f25e1261]:
+                        - code [ref=f25e1262]: /inventory
+                      - cell "JWT" [ref=f25e1263]
+                      - cell "admin, shopkeeper" [ref=f25e1264]
+                    - row [ref=f25e1265]:
+                      - cell "Invoices" [ref=f25e1266]
+                      - cell [ref=f25e1267]:
+                        - code [ref=f25e1268]: /invoices
+                      - cell "JWT" [ref=f25e1269]
+                      - cell "admin, shopkeeper" [ref=f25e1270]
+                    - row [ref=f25e1271]:
+                      - cell "Receipts" [ref=f25e1272]
+                      - cell [ref=f25e1273]:
+                        - code [ref=f25e1274]: /receipts
+                      - cell "JWT" [ref=f25e1275]
+                      - cell "admin, shopkeeper" [ref=f25e1276]
+                    - row [ref=f25e1277]:
+                      - cell "Purchase Orders" [ref=f25e1278]
+                      - cell [ref=f25e1279]:
+                        - code [ref=f25e1280]: /purchase-orders
+                      - cell "JWT" [ref=f25e1281]
+                      - cell "admin, shopkeeper" [ref=f25e1282]
+                    - row [ref=f25e1283]:
+                      - cell "QR Codes" [ref=f25e1284]
+                      - cell [ref=f25e1285]:
+                        - code [ref=f25e1286]: /qrcodes
+                      - cell "JWT" [ref=f25e1287]
+                      - cell "admin, shopkeeper" [ref=f25e1288]
+                    - row [ref=f25e1289]:
+                      - cell "Expiry" [ref=f25e1290]
+                      - cell [ref=f25e1291]:
+                        - code [ref=f25e1292]: /expiry
+                      - cell "JWT" [ref=f25e1293]
+                      - cell "admin, shopkeeper" [ref=f25e1294]
+                    - row [ref=f25e1295]:
+                      - cell "Audit" [ref=f25e1296]
+                      - cell [ref=f25e1297]:
+                        - code [ref=f25e1298]: /audit
+                      - cell "JWT" [ref=f25e1299]
+                      - cell "admin" [ref=f25e1300]
+                    - row [ref=f25e1301]:
+                      - cell "Notifications" [ref=f25e1302]
+                      - cell [ref=f25e1303]:
+                        - code [ref=f25e1304]: /notifications
+                      - cell "JWT" [ref=f25e1305]
+                      - cell "all" [ref=f25e1306]
+                    - row [ref=f25e1307]:
+                      - cell "Reports" [ref=f25e1308]
+                      - cell [ref=f25e1309]:
+                        - code [ref=f25e1310]: /reports
+                      - cell "JWT" [ref=f25e1311]
+                      - cell "admin, shopkeeper" [ref=f25e1312]
+                    - row [ref=f25e1313]:
+                      - cell "Stores" [ref=f25e1314]
+                      - cell [ref=f25e1315]:
+                        - code [ref=f25e1316]: /stores
+                      - cell "JWT" [ref=f25e1317]
+                      - cell "admin, shopkeeper" [ref=f25e1318]
+                    - row [ref=f25e1319]:
+                      - cell "Stock Transfers" [ref=f25e1320]
+                      - cell [ref=f25e1321]:
+                        - code [ref=f25e1322]: /transfers
+                      - cell "JWT" [ref=f25e1323]
+                      - cell "admin, shopkeeper" [ref=f25e1324]
+                    - row [ref=f25e1325]:
+                      - cell "Customer Cart" [ref=f25e1326]
+                      - cell [ref=f25e1327]:
+                        - code [ref=f25e1328]: /cart
+                      - cell "JWT" [ref=f25e1329]
+                      - cell "customer" [ref=f25e1330]
+                    - row [ref=f25e1331]:
+                      - cell "Data Management" [ref=f25e1332]
+                      - cell [ref=f25e1333]:
+                        - code [ref=f25e1334]: /data
+                      - cell "JWT" [ref=f25e1335]
+                      - cell "admin" [ref=f25e1336]
+                - generic [ref=f25e1337]:
+                  - heading "Testing" [level=2] [ref=f25e1338]
+                  - 'link "Permalink: Testing" [ref=f25e1339] [cursor=pointer]':
+                    - /url: "#testing"
+                - generic [ref=f25e1342]:
+                  - heading "Backend" [level=3] [ref=f25e1343]
+                  - 'link "Permalink: Backend" [ref=f25e1344] [cursor=pointer]':
+                    - /url: "#backend"
+                - generic [ref=f25e1347]:
+                  - generic [ref=f25e1348]: cd backend pytest tests/ -v
+                  - button "Copy code to clipboard" [ref=f25e1350] [cursor=pointer]
+                - paragraph [ref=f25e1354]: 39+ async tests across 20 endpoint groups using a subprocess Uvicorn server on port 18999.
+                - generic [ref=f25e1355]:
+                  - heading "Frontend" [level=3] [ref=f25e1356]
+                  - 'link "Permalink: Frontend" [ref=f25e1357] [cursor=pointer]':
+                    - /url: "#frontend"
+                - generic [ref=f25e1360]:
+                  - generic [ref=f25e1361]: cd frontend npm test
+                  - button "Copy code to clipboard" [ref=f25e1363] [cursor=pointer]
+                - paragraph [ref=f25e1367]: 5 Vitest unit tests (utils, components, API client, store).
+                - generic [ref=f25e1368]:
+                  - heading "License" [level=2] [ref=f25e1369]
+                  - 'link "Permalink: License" [ref=f25e1370] [cursor=pointer]':
+                    - /url: "#license"
+                - paragraph [ref=f25e1373]: MIT
+        - generic [ref=f25e1376]:
+          - generic [ref=f25e1377]:
+            - heading "About" [level=2] [ref=f25e1378]
+            - paragraph [ref=f25e1379]: Full-stack MERN app with JWT-based role auth for shopkeeper, customer, and admin panels. Features ML demand forecasting (Random Forest on sales history), real-time inventory tracking, low-stock alerts, QR billing, and automated invoice generation.
+            - generic "https://khataboxapp.vercel.app" [ref=f25e1383]:
+              - link "khataboxapp.vercel.app" [ref=f25e1384] [cursor=pointer]:
+                - /url: https://khataboxapp.vercel.app
+            - heading "Resources" [level=3] [ref=f25e1385]
+            - link "Readme" [ref=f25e1387] [cursor=pointer]:
+              - /url: "#readme-ov-file"
+            - generic [ref=f25e1390]:
+              - link "Activity" [ref=f25e1393] [cursor=pointer]:
+                - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/activity
+              - generic [ref=f25e1396]:
+                - heading "Stars" [level=3] [ref=f25e1397]
+                - generic [ref=f25e1399]:
+                  - strong [ref=f25e1402]: "0"
+                  - text: stars
+                - heading "Watchers" [level=3] [ref=f25e1403]
+                - generic [ref=f25e1405]:
+                  - strong [ref=f25e1408]: "0"
+                  - text: watching
+                - heading "Forks" [level=3] [ref=f25e1409]
+                - link [ref=f25e1411] [cursor=pointer]:
+                  - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/forks
+                  - strong [ref=f25e1415]: "0"
+                  - text: forks
+            - link "Report repository" [ref=f25e1417] [cursor=pointer]:
+              - /url: /contact/report-content?content_url=https%3A%2F%2Fgithub.com%2Fharkirat2023%2FKhataBox--Inventory-B2C-Retail-Management-Platform&report=harkirat2023+%28user%29
+          - generic [ref=f25e1418]:
+            - heading [level=2] [ref=f25e1419]:
+              - link "Releases" [ref=f25e1421] [cursor=pointer]:
+                - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/releases
+            - generic [ref=f25e1422]: No releases published
+          - generic [ref=f25e1423]:
+            - heading "Contributors (1)" [level=2] [ref=f25e1424]:
+              - generic [ref=f25e1425]:
+                - link "Contributors" [ref=f25e1426] [cursor=pointer]:
+                  - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/graphs/contributors
+                - generic [aria-hidden] [ref=f25e1427]: "1"
+                - generic [ref=f25e1428]: (1)
+            - list [ref=f25e1429]:
+              - listitem [ref=f25e1430]:
+                - link [ref=f25e1431] [cursor=pointer]:
+                  - /url: /harkirat2023
+                  - img "@harkirat2023" [ref=f25e1432]
+                - generic "harkirat2023 Harkirat Singh" [ref=f25e1433]:
+                  - link [ref=f25e1434] [cursor=pointer]:
+                    - /url: /harkirat2023
+                    - strong [ref=f25e1435]: harkirat2023
+                    - text: Harkirat Singh
+          - generic [ref=f25e1436]:
+            - heading "Languages" [level=2] [ref=f25e1437]
+            - generic [ref=f25e1439]:
+              - 'progressbar "TypeScript: 59.4%" [ref=f25e1440]'
+              - 'progressbar "Python: 39.4%" [ref=f25e1441]'
+              - 'progressbar "CSS: 0.7%" [ref=f25e1442]'
+              - 'progressbar "Batchfile: 0.5%" [ref=f25e1443]'
+              - 'progressbar "JavaScript: 0%"'
+              - 'progressbar "Mako: 0%"'
+            - list [ref=f25e1444]:
+              - listitem [ref=f25e1445]:
+                - link "TypeScript 59.4%" [ref=f25e1446] [cursor=pointer]:
+                  - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/search?l=typescript
+                  - generic [ref=f25e1448]: TypeScript
+                  - generic [ref=f25e1449]: 59.4%
+              - listitem [ref=f25e1450]:
+                - link "Python 39.4%" [ref=f25e1451] [cursor=pointer]:
+                  - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/search?l=python
+                  - generic [ref=f25e1453]: Python
+                  - generic [ref=f25e1454]: 39.4%
+              - listitem [ref=f25e1455]:
+                - link "CSS 0.7%" [ref=f25e1456] [cursor=pointer]:
+                  - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/search?l=css
+                  - generic [ref=f25e1458]: CSS
+                  - generic [ref=f25e1459]: 0.7%
+              - listitem [ref=f25e1460]:
+                - link "Batchfile 0.5%" [ref=f25e1461] [cursor=pointer]:
+                  - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/search?l=batchfile
+                  - generic [ref=f25e1463]: Batchfile
+                  - generic [ref=f25e1464]: 0.5%
+              - listitem [ref=f25e1465]:
+                - link "JavaScript 0%" [ref=f25e1466] [cursor=pointer]:
+                  - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/search?l=javascript
+                  - generic [ref=f25e1468]: JavaScript
+                  - generic [ref=f25e1469]: 0%
+              - listitem [ref=f25e1470]:
+                - link "Mako 0%" [ref=f25e1471] [cursor=pointer]:
+                  - /url: /harkirat2023/KhataBox--Inventory-B2C-Retail-Management-Platform/search?l=mako
+                  - generic [ref=f25e1473]: Mako
+                  - generic [ref=f25e1474]: 0%
+  - contentinfo [ref=f25e1476]:
+    - heading "Footer" [level=2] [ref=f25e1477]
+    - generic [ref=f25e1478]:
+      - generic [ref=f25e1479]:
+        - link "GitHub Homepage" [ref=f25e1480] [cursor=pointer]:
+          - /url: https://github.com
+        - generic [ref=f25e1483]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=f25e1484]:
+        - heading "Footer navigation" [level=3] [ref=f25e1485]
+        - list "Footer navigation" [ref=f25e1486]:
+          - listitem [ref=f25e1487]:
+            - link "Terms" [ref=f25e1488] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=f25e1489]:
+            - link "Privacy" [ref=f25e1490] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=f25e1491]:
+            - link "Security" [ref=f25e1492] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=f25e1493]:
+            - link "Status" [ref=f25e1494] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=f25e1495]:
+            - link "Community" [ref=f25e1496] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=f25e1497]:
+            - link "Docs" [ref=f25e1498] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=f25e1499]:
+            - link "Contact" [ref=f25e1500] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=f25e1501]:
+            - button "Manage cookies" [ref=f25e1503] [cursor=pointer]
+          - listitem [ref=f25e1504]:
+            - button "Do not share my personal information" [ref=f25e1506] [cursor=pointer]

@@ -1,0 +1,82 @@
+- generic [ref=f23e3]:
+  - navigation [ref=f23e4]:
+    - generic [ref=f23e6]:
+      - link [ref=f23e7] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f23e21]:
+        - link "Home" [ref=f23e22] [cursor=pointer]:
+          - /url: /
+        - link "Features" [ref=f23e24] [cursor=pointer]:
+          - /url: /features
+        - link "Connect Bank" [ref=f23e25] [cursor=pointer]:
+          - /url: /connect-bank
+        - link "About" [ref=f23e26] [cursor=pointer]:
+          - /url: /about
+        - link "Contact" [ref=f23e27] [cursor=pointer]:
+          - /url: /contact
+      - generic [ref=f23e28]:
+        - link "Sign In" [ref=f23e29] [cursor=pointer]:
+          - /url: /login
+        - link "Get Started Free" [ref=f23e30] [cursor=pointer]:
+          - /url: /register
+      - button "Open menu" [ref=f23e31]
+  - main [ref=f23e33]:
+    - generic [ref=f23e34]: Loading…
+  - contentinfo [ref=f23e35]:
+    - generic [ref=f23e36]:
+      - generic [ref=f23e37]:
+        - generic [ref=f23e38]:
+          - link [ref=f23e39] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=f23e53]: India's first AI-powered financial intelligence platform. Smart budgeting, real-time insights, and an AI copilot to transform how you manage money.
+          - generic [ref=f23e54]:
+            - generic [ref=f23e55]: Bangalore, Karnataka, India
+            - generic [ref=f23e60]: hello@intellimoney.in
+            - generic [ref=f23e65]: +91 1800-123-4567
+          - generic [ref=f23e69]:
+            - paragraph [ref=f23e70]: Stay updated
+            - generic [ref=f23e71]:
+              - textbox "Your email" [ref=f23e72]
+              - button "Subscribe" [ref=f23e73]
+        - generic [ref=f23e76]:
+          - heading "Product" [level=4] [ref=f23e77]
+          - list [ref=f23e78]:
+            - listitem [ref=f23e79]:
+              - link "Features" [ref=f23e80] [cursor=pointer]:
+                - /url: /features
+            - listitem [ref=f23e81]:
+              - link "How It Works" [ref=f23e82] [cursor=pointer]:
+                - /url: /#how-it-works
+            - listitem [ref=f23e83]:
+              - link "FAQ" [ref=f23e84] [cursor=pointer]:
+                - /url: /#faq
+        - generic [ref=f23e85]:
+          - heading "Resources" [level=4] [ref=f23e86]
+          - list [ref=f23e87]:
+            - listitem [ref=f23e88]:
+              - link "Privacy Policy" [ref=f23e89] [cursor=pointer]:
+                - /url: /privacy
+            - listitem [ref=f23e90]:
+              - link "Terms of Service" [ref=f23e91] [cursor=pointer]:
+                - /url: /terms
+            - listitem [ref=f23e92]:
+              - link "Contact Us" [ref=f23e93] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=f23e94]:
+          - heading "Company" [level=4] [ref=f23e95]
+          - list [ref=f23e96]:
+            - listitem [ref=f23e97]:
+              - link "About Us" [ref=f23e98] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=f23e99]:
+              - link "Contact" [ref=f23e100] [cursor=pointer]:
+                - /url: /contact
+      - generic [ref=f23e101]:
+        - paragraph [ref=f23e102]: © 2026 IntelliMoney. All rights reserved.
+        - generic [ref=f23e103]:
+          - link "Privacy Policy" [ref=f23e104] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms of Service" [ref=f23e105] [cursor=pointer]:
+            - /url: /terms
+          - link "Contact Us" [ref=f23e106] [cursor=pointer]:
+            - /url: /contact
