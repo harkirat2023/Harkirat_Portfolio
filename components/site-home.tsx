@@ -1,9 +1,8 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import { useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
-import { ArrowDown, ArrowDownRight, ArrowUpRight, Check, Copy, ExternalLink } from "lucide-react";
+import { ArrowDown, ArrowDownRight, ArrowUpRight, Check, Copy, ExternalLink, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import { certifications, education, experience, featuredSkills, leadership, profile, projects, skills, siteCopy, stats } from "@/content/site";
 
@@ -170,12 +169,14 @@ export function SiteHome() {
 
   return <>
     <PointerFollower />
-    <main id="content">
+    <main id="content" className="portfolio-main">
+      <svg className="continuity-thread" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M865 0 C845 32 920 48 855 76 C790 104 720 78 710 116 C700 154 800 170 760 205 C720 240 530 180 510 231 C490 282 680 304 645 352 C610 400 360 340 395 416 C430 492 690 490 655 550 C620 610 350 588 385 657 C420 726 735 708 700 778 C665 848 450 817 475 884 C500 951 670 942 630 1000"/></svg>
       <section className="container hero" id="top">
         <div className="hero-copy-wrap">
           <div className="hero-copy-block">
             <p className="eyebrow">{`// ${profile.role} · class of 2027 · ${profile.location}`}</p>
             <h1>{siteCopy.hero.headline[0]}<br/><em>{siteCopy.hero.headline[1]}</em></h1>
+            <p className="hero-highlight"><span>{siteCopy.hero.highlight}</span></p>
             <p className="hero-copy">{siteCopy.hero.description}</p>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">Explore the work <ArrowDownRight size={17} aria-hidden="true"/></a>
@@ -191,13 +192,38 @@ export function SiteHome() {
           </figure>
         </div>
         <div className="hero-stats" aria-label="Selected résumé facts">{stats.map((item) => <div className="stat reveal" key={item.label}><strong>{item.value}</strong><span className="mono">{item.label}</span></div>)}</div>
-        <a className="scroll-cue mono" href="#about"><ArrowDown size={15} aria-hidden="true"/> scroll to explore</a>
+        <a className="scroll-cue mono" href="#featured"><span className="scroll-cue-square"><ArrowDown size={18} aria-hidden="true"/></span> scroll down</a>
       </section>
+
+      <section className="section featured-section" id="featured"><div className="container">
+        <SectionHeading {...siteCopy.featured}/>
+        <div className="featured-layout">
+          <div className="feature-cover reveal" role="img" aria-label="Stylized SymptomScope AI project cover featuring three prediction models">
+            <span className="feature-cover-top mono">HARKIRAT SINGH · SELECTED WORK</span>
+            <div className="feature-cover-mark" aria-hidden="true">S<span>✳</span></div>
+            <div className="feature-cover-core">
+              <span className="mono">HEALTH · MACHINE LEARNING · RAG</span>
+              <strong>SYMPTOM<br/>SCOPE <i>AI</i></strong>
+              <div className="feature-models"><span>DECISION TREE</span><span>RANDOM FOREST</span><span>NAIVE BAYES</span></div>
+            </div>
+            <svg className="cover-scribble" viewBox="0 0 500 180" preserveAspectRatio="none" aria-hidden="true"><path d="M0 140C90 20 135 185 215 95S325 30 360 110s90 20 140-50"/></svg>
+            <span className="feature-cover-bottom mono">01 / 05 · PROJECT STUDY</span>
+          </div>
+          <div className="featured-copy reveal">
+            <span className="mono accent">THE FEATURED PROJECT</span>
+            <h3>{siteCopy.featured.title}</h3>
+            <p>{siteCopy.featured.description}</p>
+            <p className="featured-note">Three prediction models meet a retrieval-based knowledge layer, with context-aware tool actions in the same flow.</p>
+            <div className="chips"><span className="chip">Next.js</span><span className="chip">FastAPI</span><span className="chip">LangChain</span><span className="chip">ChromaDB</span><span className="chip">Groq</span></div>
+            <Link className="button button-primary feature-action" href="/work/symptomscope">{siteCopy.featured.action}<ArrowUpRight size={17} aria-hidden="true"/></Link>
+          </div>
+        </div>
+      </div></section>
 
       <section className="section" id="about"><div className="container">
         <SectionHeading {...siteCopy.sections.about}/>
         <div className="bento">
-          <article className="panel thesis reveal"><span className="mono accent">the through-line</span><h3>Notice the signal. Represent it clearly. Make the next decision inspectable.</h3><p>That pattern connects my work in proctoring, mobile-banking authentication, health guidance, retail operations, and customer analytics. I’m studying Computer Engineering at TIET while building across software, AI, and data.</p></article>
+          <article className="panel thesis reveal"><span className="mono accent">the through-line</span><h3>Notice the signal. Represent it clearly. Make the next decision inspectable.</h3><p>From exam proctoring and mobile-banking authentication to health guidance, retail systems, and customer analytics, my projects explore how software can turn complex inputs into useful next steps.</p></article>
           <article className="panel now reveal"><span className="mono">recent experience</span><h3>{experience[0].role}, {experience[0].org}</h3><p>One month in August 2026, working on exam proctoring and abnormal-activity detection.</p></article>
           <article className="panel study reveal"><span className="mono">studying</span><h3>{education.degree}</h3><p>{education.institution} · {education.years}</p><p className="accent">CGPA {education.cgpa}</p><div className="meter" role="img" aria-label="CGPA 7.23 out of 10"><i/></div></article>
           <article className="panel toolbelt reveal"><span className="mono">toolbelt</span><div className="chips">{featuredSkills.map((skill) => <span key={skill} className="chip">{skill}</span>)}</div></article>
@@ -246,13 +272,13 @@ export function SiteHome() {
       </div></section>
 
       <section className="section contact-section" id="contact"><div className="container">
-        <p className="mono accent contact-kicker">06 / contact</p><h2 className="contact-title">{siteCopy.contact.headline}</h2><p className="intro">{siteCopy.contact.description}</p>
+        <p className="mono accent contact-kicker">07 / contact</p><h2 className="contact-title">{siteCopy.contact.headline}</h2><p className="intro">{siteCopy.contact.description}</p>
         <div className="contact-row"><a href={`mailto:${profile.email}`}>{profile.email}</a><CopyAction value={profile.email}>Copy email</CopyAction></div>
         <div className="contact-row"><a href={`tel:${profile.phone.replaceAll(" ", "")}`}>{profile.phone}</a><CopyAction value={profile.phone}>Copy number</CopyAction></div>
-        <div className="contact-row social-row"><span><a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn <ExternalLink size={15} aria-hidden="true"/></a><a href={profile.github} target="_blank" rel="noreferrer">GitHub <ExternalLink size={15} aria-hidden="true"/></a></span><span className="mono">Patiala · {time || "--:--"} IST</span></div>
+        <div className="contact-row social-row"><span className="social-chips"><a className="social-chip" href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} aria-hidden="true"/><span>LinkedIn</span><ExternalLink size={13} aria-hidden="true"/></a><a className="social-chip" href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={18} aria-hidden="true"/><span>GitHub</span><ExternalLink size={13} aria-hidden="true"/></a><a className="social-chip" href={`mailto:${profile.email}`} aria-label="Email"><Mail size={18} aria-hidden="true"/><span>Email</span><ArrowUpRight size={13} aria-hidden="true"/></a></span><span className="mono">Patiala · {time || "--:--"} IST</span></div>
         <div className="contact-row"><Link href="/resume">Résumé options <ArrowUpRight size={16} aria-hidden="true"/></Link><a href={`mailto:${profile.email}`}>Write an email <ArrowUpRight size={16} aria-hidden="true"/></a></div>
       </div></section>
     </main>
-    <footer className="container footer"><span>© 2026 Harkirat Singh</span><span className="footer-note">Built with Next.js · designed with intention</span><a href="#top">back to top ↑</a></footer>
+    <footer className="container footer"><span>© 2026 Harkirat Singh</span><nav className="footer-nav" aria-label="Footer"><a href="#top">Home</a><a href="#work">Selected work</a><a href="#about">About me</a><a href="#contact">Contact me</a></nav><span className="footer-note">Built with Next.js · designed with intention</span><a href="#top">back to top ↑</a></footer>
   </>;
 }
