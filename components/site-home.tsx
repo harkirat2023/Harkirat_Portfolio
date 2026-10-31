@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
-import { ArrowDown, ArrowDownRight, ArrowUpRight, Check, Copy, ExternalLink, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, ArrowDownRight, ArrowLeft, ArrowUpRight, ArrowRight, Check, Copy, ExternalLink, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import { certifications, education, experience, featuredSkills, leadership, profile, projects, skills, siteCopy, stats } from "@/content/site";
 
@@ -118,6 +118,13 @@ const glyphLabels: Record<string, [string, string, string, string]> = {
   supplychain: ["orders", "KPIs", "regions", "dashboard"],
   churnsight: ["records", "XGBoost", "SHAP", "risk"],
 };
+const projectCoverTitles: Record<string, [string, string]> = {
+  symptomscope: ["SYMPTOM", "SCOPE AI"],
+  khatabox: ["KHATA", "BOX"],
+  intellimoney: ["INTELLI", "MONEY"],
+  supplychain: ["SUPPLY CHAIN", "CONTROL TOWER"],
+  churnsight: ["CHURN", "SIGHT"],
+};
 
 function ProjectGlyph({ kind }: { kind: string }) {
   const labels = glyphLabels[kind] ?? glyphLabels.symptomscope;
@@ -133,12 +140,24 @@ export function SiteHome() {
   const [filter, setFilter] = useState("");
   const [time, setTime] = useState("");
   const [skillFocus, setSkillFocus] = useState("");
+  const [featuredIndex, setFeaturedIndex] = useState(0);
+  const featuredHasChanged = useRef(false);
+  const featuredProject = projects[featuredIndex] ?? projects[0];
   useEffect(() => {
     const updateTime = () => setTime(new Intl.DateTimeFormat("en-IN", { timeZone: "Asia/Kolkata", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date()));
+    let progressFrame = 0;
     const updateProgress = () => {
+      if (progressFrame) return;
+      progressFrame = window.requestAnimationFrame(() => {
+      progressFrame = 0;
       const root = document.documentElement;
       const max = root.scrollHeight - window.innerHeight;
       root.style.setProperty("--scroll-progress", String(max > 0 ? window.scrollY / max : 0));
+      for (const node of document.querySelectorAll<HTMLElement>("[data-parallax]")) {
+        const speed = Number(node.dataset.parallax ?? 0);
+        node.style.setProperty("--parallax-y", `${-window.scrollY * speed}px`);
+      }
+      });
     };
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const nodes = Array.from(document.querySelectorAll<HTMLElement>(".reveal"));
@@ -158,8 +177,14 @@ export function SiteHome() {
     updateTime(); updateProgress();
     const timer = window.setInterval(updateTime, 30_000);
     window.addEventListener("scroll", updateProgress, { passive: true });
-    return () => { window.clearInterval(timer); window.removeEventListener("scroll", updateProgress); observer?.disconnect(); document.documentElement.classList.remove("reveal-ready"); };
+    return () => { window.clearInterval(timer); window.removeEventListener("scroll", updateProgress); if (progressFrame) window.cancelAnimationFrame(progressFrame); observer?.disconnect(); document.documentElement.classList.remove("reveal-ready"); };
   }, []);
+
+  useEffect(() => {
+    if (featuredIndex === 0 && !featuredHasChanged.current) return;
+    featuredHasChanged.current = true;
+    document.querySelectorAll<HTMLElement>(".featured-section .feature-cover, .featured-section .featured-copy").forEach((node) => node.classList.add("is-visible"));
+  }, [featuredIndex]);
 
   const visibleProjects = useMemo(() => filter
     ? projects.filter((project) => project.stack.some((tech) => tech.toLowerCase() === filter.toLowerCase()))
@@ -197,25 +222,30 @@ export function SiteHome() {
 
       <section className="section featured-section" id="featured"><div className="container">
         <SectionHeading {...siteCopy.featured}/>
+        <div className="feature-marquee" aria-hidden="true"><div className="marquee-track"><span>BUILD WHAT MATTERS · READ THE SIGNAL · MAKE IT USEFUL · </span><span>BUILD WHAT MATTERS · READ THE SIGNAL · MAKE IT USEFUL · </span></div></div>
+        <button className="feature-carousel-arrow feature-carousel-previous" type="button" aria-label={`Previous project, ${featuredProject.title}`} aria-controls="featured-project" onClick={() => setFeaturedIndex((index) => (index - 1 + projects.length) % projects.length)}><ArrowLeft size={22} aria-hidden="true"/></button>
+        <button className="feature-carousel-arrow feature-carousel-next" type="button" aria-label={`Next project, ${featuredProject.title}`} aria-controls="featured-project" onClick={() => setFeaturedIndex((index) => (index + 1) % projects.length)}><ArrowRight size={22} aria-hidden="true"/></button>
         <div className="featured-layout">
-          <div className="feature-cover reveal" role="img" aria-label="Stylized SymptomScope AI project cover featuring three prediction models">
+          <div className={`feature-cover feature-cover-${featuredProject.slug} reveal`} key={`cover-${featuredProject.slug}`} aria-hidden="true">
             <span className="feature-cover-top mono">HARKIRAT SINGH · SELECTED WORK</span>
-            <div className="feature-cover-mark" aria-hidden="true">S<span>✳</span></div>
+            <div className="feature-cover-mark" data-parallax="0.075" aria-hidden="true">{featuredProject.index}<span>✳</span></div>
             <div className="feature-cover-core">
-              <span className="mono">HEALTH · MACHINE LEARNING · RAG</span>
-              <strong>SYMPTOM<br/>SCOPE <i>AI</i></strong>
-              <div className="feature-models"><span>DECISION TREE</span><span>RANDOM FOREST</span><span>NAIVE BAYES</span></div>
+              <span className="mono">{featuredProject.category}</span>
+              <strong><span>{projectCoverTitles[featuredProject.glyph][0]}</span><span>{projectCoverTitles[featuredProject.glyph][1]}</span></strong>
+              <div className="feature-models">{featuredProject.outcomes.slice(0, 3).map((item) => <span key={item.label}>{item.value}</span>)}</div>
             </div>
             <svg className="cover-scribble" viewBox="0 0 500 180" preserveAspectRatio="none" aria-hidden="true"><path d="M0 140C90 20 135 185 215 95S325 30 360 110s90 20 140-50"/></svg>
-            <span className="feature-cover-bottom mono">01 / 05 · PROJECT STUDY</span>
+            <span className="feature-cover-bottom mono">{featuredProject.index} / 05 · {featuredProject.status ?? "PROJECT STUDY"}</span>
           </div>
-          <div className="featured-copy reveal">
-            <span className="mono accent">THE FEATURED PROJECT</span>
-            <h3>{siteCopy.featured.title}</h3>
-            <p>{siteCopy.featured.description}</p>
-            <p className="featured-note">Three prediction models meet a retrieval-based knowledge layer, with context-aware tool actions in the same flow.</p>
-            <div className="chips"><span className="chip">Next.js</span><span className="chip">FastAPI</span><span className="chip">LangChain</span><span className="chip">ChromaDB</span><span className="chip">Groq</span></div>
-            <Link className="button button-primary feature-action" href="/work/symptomscope">{siteCopy.featured.action}<ArrowUpRight size={17} aria-hidden="true"/></Link>
+          <div className="featured-copy reveal" id="featured-project" key={`copy-${featuredProject.slug}`}>
+            <span className="sr-only" aria-live="polite">Featured project: {featuredProject.title}</span>
+            <span className="mono accent">{featuredProject.index} / 05 · {featuredProject.status ?? "FEATURED PROJECT"}</span>
+            <h3>{featuredProject.title}</h3>
+            <p>{featuredProject.thesis}</p>
+            <p className="featured-note">{featuredProject.result[0]}</p>
+            <div className="metric-row featured-metrics">{featuredProject.outcomes.map((item) => <span className="metric" key={item.label}><b>{item.value}</b><small>{item.label}</small></span>)}</div>
+            <div className="chips">{featuredProject.stack.slice(0, 5).map((tech) => <span className="chip" key={tech}>{tech}</span>)}</div>
+            <Link className="button button-primary feature-action" href={`/work/${featuredProject.slug}`}>{siteCopy.featured.action}<ArrowUpRight size={17} aria-hidden="true"/></Link>
           </div>
         </div>
       </div></section>
@@ -271,7 +301,7 @@ export function SiteHome() {
         </div>
       </div></section>
 
-      <section className="section contact-section" id="contact"><div className="container">
+      <section className="section contact-section" id="contact"><span className="contact-watermark" data-parallax="0.08" aria-hidden="true">HS</span><div className="container">
         <p className="mono accent contact-kicker">07 / contact</p><h2 className="contact-title">{siteCopy.contact.headline}</h2><p className="intro">{siteCopy.contact.description}</p>
         <div className="contact-row"><a href={`mailto:${profile.email}`}>{profile.email}</a><CopyAction value={profile.email}>Copy email</CopyAction></div>
         <div className="contact-row"><a href={`tel:${profile.phone.replaceAll(" ", "")}`}>{profile.phone}</a><CopyAction value={profile.phone}>Copy number</CopyAction></div>

@@ -24,6 +24,7 @@ export type Project = {
   architecture: { layers: { name: string; nodes: { id: string; label: string; note: string }[] }[] };
   result: string[];
   glyph: "symptomscope" | "khatabox" | "intellimoney" | "supplychain" | "churnsight";
+  category: string;
   links?: { live?: string; github?: string };
 };
 
@@ -57,10 +58,10 @@ export const siteCopy = {
   },
   featured: {
     index: "01",
-    kicker: "featured build · health AI",
-    title: "A clearer next step for health questions.",
-    description: "SymptomScope AI brings symptom prediction, severity scoring, and retrieval-assisted health guidance into one experience.",
-    action: "Explore SymptomScope",
+    kicker: "selected work · one project at a time",
+    title: "Projects built around useful signals.",
+    description: "Five projects across applied AI, full-stack systems, and analytics.",
+    action: "View project",
   },
   sections: {
     about: { index: "02", kicker: "a little about me", title: "Curious about what sits beneath the surface." },
@@ -129,7 +130,7 @@ export const leadership = [
 
 export const projects: Project[] = [
   {
-    slug: "symptomscope", index: "01", title: "SymptomScope AI",
+    slug: "symptomscope", index: "01", title: "SymptomScope AI", category: "HEALTH · MACHINE LEARNING · RAG",
     thesis: "I built a symptom checker that combines disease prediction, severity scoring, and AI-assisted recovery guidance.",
     stack: ["Next.js", "TypeScript", "Python", "FastAPI", "MongoDB", "Clerk", "LangChain", "ChromaDB", "Groq"],
     outcomes: [
@@ -148,7 +149,7 @@ export const projects: Project[] = [
     glyph: "symptomscope",
   },
   {
-    slug: "khata-box", index: "02", title: "KhataBox",
+    slug: "khata-box", index: "02", title: "KhataBox", category: "RETAIL · FULL-STACK SYSTEMS",
     thesis: "I built a retail platform for inventory, point-of-sale billing, credit, orders, and multiple stores.",
     stack: ["Python", "TypeScript", "Next.js", "FastAPI", "PostgreSQL", "SQLAlchemy", "Redis", "Socket.IO", "JWT"],
     outcomes: [
@@ -167,7 +168,7 @@ export const projects: Project[] = [
     glyph: "khatabox",
   },
   {
-    slug: "intellimoney", index: "03", title: "IntelliMoney",
+    slug: "intellimoney", index: "03", title: "IntelliMoney", category: "FINTECH · APPLIED AI",
     thesis: "I built an AI-powered financial platform for expense tracking, budgets, insights, and health scoring.",
     stack: ["Python", "TypeScript", "React", "FastAPI", "MongoDB", "LangChain", "Groq", "OpenCV"],
     outcomes: [
@@ -186,7 +187,7 @@ export const projects: Project[] = [
     glyph: "intellimoney",
   },
   {
-    slug: "supply-chain-otif", index: "04", title: "Supply Chain Control Tower",
+    slug: "supply-chain-otif", index: "04", title: "Supply Chain Control Tower", category: "OPERATIONS · ANALYTICS",
     thesis: "I analysed delivery performance across regions and made the operational KPIs easier to inspect.",
     stack: ["Excel", "SQL", "Power BI", "Python"],
     outcomes: [
@@ -204,7 +205,7 @@ export const projects: Project[] = [
     glyph: "supplychain",
   },
   {
-    slug: "churnsight", index: "05", title: "ChurnSight",
+    slug: "churnsight", index: "05", title: "ChurnSight", category: "CUSTOMER ANALYTICS · IN PROGRESS",
     thesis: "I’m building a churn forecasting workflow that pairs model outputs with SHAP explanations.",
     status: "In progress",
     stack: ["Python", "XGBoost", "SHAP", "Streamlit"],
