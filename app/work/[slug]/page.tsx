@@ -32,30 +32,39 @@ export default async function CaseStudy({ params }: Props) {
   if (!project) notFound();
   const previous = projects[(index + projects.length - 1) % projects.length];
   const next = projects[(index + 1) % projects.length];
+  const watermark = project.category.split(" · ")[0];
 
   return <>
     <SiteHeader/>
     <main id="content" className="container case-wrap">
-      <Link className="mono accent" href="/#work"><ArrowLeft size={14} aria-hidden="true"/> all work</Link>
-      <p className="mono">case study · {project.index} / 05{project.status ? ` · ${project.status}` : ""}</p>
-      <h1>{project.title}</h1>
-      <p className="intro">{project.thesis}</p>
-      <div className="chips case-stack">{project.stack.map((tech) => <span className="chip" key={tech}>{tech}</span>)}</div>
-      <p className="mono case-links">
-        {project.links?.live && <a href={project.links.live} target="_blank" rel="noreferrer">Project <ArrowUpRight size={14} aria-hidden="true"/></a>}
-        {project.links?.github && <a href={project.links.github} target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={14} aria-hidden="true"/></a>}
-        {!project.links?.live && !project.links?.github && <span>Project links not provided</span>}
-      </p>
+      <span className="case-watermark" aria-hidden="true">{watermark}</span>
+      <svg className="case-sweep" viewBox="0 0 1200 900" preserveAspectRatio="none" aria-hidden="true"><path d="M-80 245 C180 120 320 390 540 265 S910 145 1280 300 M-60 700 C190 580 360 810 630 670 S1000 560 1280 710" pathLength="1"/></svg>
+      <Link className="mono accent case-back" href="/#work"><ArrowLeft size={14} aria-hidden="true"/> all work</Link>
+      <header className={`case-hero case-hero-${project.glyph}`}>
+        <span className="case-hero-index mono">{project.index} / 05 · {project.status ?? "PROJECT STUDY"}</span>
+        <span className="case-hero-category mono">{project.category}</span>
+        <h1>{project.title}</h1>
+        <p>{project.thesis}</p>
+        <svg className="case-hero-wave" viewBox="0 0 1000 150" preserveAspectRatio="none" aria-hidden="true"><path d="M0 100 C120 35 180 145 300 90 S480 32 590 91 S770 145 1000 55" pathLength="1"/></svg>
+      </header>
+      <div className="case-overview">
+        <div className="chips case-stack">{project.stack.map((tech) => <span className="chip" key={tech}>{tech}</span>)}</div>
+        <p className="mono case-links">
+          {project.links?.live && <a href={project.links.live} target="_blank" rel="noreferrer">Project <ArrowUpRight size={14} aria-hidden="true"/></a>}
+          {project.links?.github && <a href={project.links.github} target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={14} aria-hidden="true"/></a>}
+          {!project.links?.live && !project.links?.github && <span>Project links not provided</span>}
+        </p>
+      </div>
       <section className="case-section">
-        <p className="mono">Selected facts</p>
+        <h2 className="case-section-title">Selected facts</h2>
         <div className="metric-row">{project.outcomes.map((item) => <span className="metric" key={item.label}><b>{item.value}</b><small>{item.label}</small></span>)}</div>
       </section>
       <section className="case-section">
-        <p className="mono">Overview</p>
-        {project.problem.map((paragraph) => <p className="intro" key={paragraph}>{paragraph}</p>)}
+        <h2 className="case-section-title">Overview</h2>
+        {project.problem.map((paragraph) => <p className="case-description" key={paragraph}>{paragraph}</p>)}
       </section>
       <section className="case-section">
-        <p className="mono">Technologies and components</p>
+        <h2 className="case-section-title">Technologies and components</h2>
         <figure>
           <div className="architecture">{project.architecture.layers.map((layer) => <div className="architecture-layer" key={layer.name}>
             <p className="mono">{layer.name}</p>
@@ -65,7 +74,7 @@ export default async function CaseStudy({ params }: Props) {
         </figure>
       </section>
       <section className="case-section">
-        <p className="mono">What I built</p>
+        <h2 className="case-section-title">What I built</h2>
         <ul className="case-results">{project.result.map((item) => <li key={item}>{item}</li>)}</ul>
       </section>
       <nav className="case-section case-nav" aria-label="Case studies">
