@@ -13,7 +13,8 @@
 - `sitemap.xml` and `robots.txt` use the Vercel-provided deployment host when available. No unconfirmed public domain is hard-coded.
 - `vercel.json` declares Next.js and `.next` as the output directory to override the earlier `dist` output-directory mismatch in the supplied deployment log.
 
-- Final checks: 
-pm run typecheck and 
-pm run lint pass. 
-pm run build compiles and reaches route generation locally, but Next.js then fails during .next filesystem writes on this Windows workspace (UNKNOWN/write errors). The prior Vercel Linux log completed route generation and failed at the dist output-directory check; a fresh Vercel deployment is still needed to confirm the .next override.
+- The supplied reference video was reviewed from extracted frames. Its grayscale editorial layout, oversized condensed type, orange-red hand-drawn path, layered image panels, and dark closing section guide the updated design. The supplied portrait is used in monochrome; reference copy and imagery are not reused.
+- The home hero now pairs original portfolio copy with a grayscale portrait and animated SVG path. Work cards use layered paper-like artwork, staggered scroll reveals, and hover transitions. Nonessential animation is disabled for reduced-motion preferences.
+- A trailing dot and eased ring follow a fine pointer, with a subtle pointer-position tilt on project cards. Coarse pointers and reduced-motion settings disable this decorative cursor and tilt; the native pointer remains available.
+- The repository tracks files in `.next`, Next.js's default generated build directory. The output now uses Next.js's supported `distDir` setting for `.next-build`, which is ignored by Git, and `vercel.json` points to that same directory. This avoids writing build manifests into the tracked directory implicated by the repeated `pages-manifest.json` error.
+- `npm run typecheck`, `npm run lint`, and `npm run build` pass. Three consecutive production builds completed using `.next-build`; a Vercel redeployment is still needed to confirm the deployment configuration in the connected project.

@@ -50,20 +50,20 @@ export const stats = [
 
 export const siteCopy = {
   hero: {
-    headline: ["I build systems that", "notice things."],
-    description: "I build full-stack software, AI systems, and analytics workflows that turn complex signals into decisions people can inspect.",
+    headline: ["I build systems", "from signals."],
+    description: "I’m a computer engineering student working across full-stack software, applied AI, and analytics. I turn complex inputs into tools and insights people can use.",
     collageTitle: "Make the\nsignal useful.",
   },
   sections: {
-    about: { index: "01", kicker: "about", title: "How I approach a system." },
-    capabilities: { index: "02", kicker: "capabilities", title: "Tools, grouped by the work they support." },
-    experience: { index: "03", kicker: "experience", title: "Experience, in context." },
-    work: { index: "04", kicker: "selected work", title: "Five projects. Different signals, same curiosity." },
-    recognition: { index: "05", kicker: "education · certifications", title: "Learning and recognition." },
+    about: { index: "01", kicker: "a little about me", title: "Curious about what sits beneath the surface." },
+    capabilities: { index: "02", kicker: "the toolkit", title: "Tools for finding the useful signal." },
+    experience: { index: "03", kicker: "experience", title: "Where I’ve put ideas to work." },
+    work: { index: "04", kicker: "selected work", title: "A few things I’ve been building." },
+    recognition: { index: "05", kicker: "learning · recognition", title: "Learning, one layer at a time." },
   },
   contact: {
-    headline: "Let’s talk about systems that need to work.",
-    description: "For conversations about AI, full-stack engineering, or analytics, email is the most direct route.",
+    headline: "Have a good problem in mind?",
+    description: "I’m interested in thoughtful conversations about full-stack engineering, applied AI, and analytics.",
   },
 };
 

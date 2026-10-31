@@ -1,3 +1,3 @@
 import type { NextConfig } from "next";
-const nextConfig: NextConfig = { poweredByHeader: false, experimental: { optimizePackageImports: ["lucide-react"] } };
+const nextConfig: NextConfig = { distDir: ".next-build", poweredByHeader: false, experimental: { optimizePackageImports: ["lucide-react"] } };
 export default nextConfig;

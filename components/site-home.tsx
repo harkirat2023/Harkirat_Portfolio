@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useRef } from "react";
+import Image from "next/image";
 import { ArrowDown, ArrowDownRight, ArrowUpRight, Check, Copy, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { certifications, education, experience, featuredSkills, leadership, profile, projects, skills, siteCopy, stats } from "@/content/site";
@@ -21,6 +23,93 @@ function CopyAction({ value, children }: { value: string; children: React.ReactN
     setCopied(true); window.setTimeout(() => setCopied(false), 1600);
   }
   return <button className="copy-action" onClick={copy} aria-label={`Copy ${children}`}><span aria-live="polite">{copied ? "Copied" : children}</span>{copied ? <Check size={16} aria-hidden="true"/> : <Copy size={16} aria-hidden="true"/>}</button>;
+}
+
+function PointerFollower() {
+  const dotRef = useRef<HTMLSpanElement>(null);
+  const ringRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const motionAllowed = window.matchMedia("(pointer: fine) and (prefers-reduced-motion: no-preference)");
+    if (!motionAllowed.matches) return;
+
+    let targetX = -100;
+    let targetY = -100;
+    let ringX = targetX;
+    let ringY = targetY;
+    let frame = 0;
+    let hovering = false;
+    let lastCard: HTMLElement | null = null;
+    const root = document.documentElement;
+    const dot = dotRef.current;
+    const ring = ringRef.current;
+    if (!dot || !ring) return;
+    root.classList.add("has-motion-pointer");
+
+    const animateRing = () => {
+      ringX += (targetX - ringX) * 0.17;
+      ringY += (targetY - ringY) * 0.17;
+      ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%) scale(${hovering ? 1.45 : 1})`;
+      if (Math.abs(targetX - ringX) > 0.2 || Math.abs(targetY - ringY) > 0.2) frame = window.requestAnimationFrame(animateRing);
+      else frame = 0;
+    };
+    const onMove = (event: PointerEvent) => {
+      if (event.pointerType !== "mouse") return;
+      targetX = event.clientX;
+      targetY = event.clientY;
+      dot.style.transform = `translate3d(${targetX}px, ${targetY}px, 0) translate(-50%, -50%)`;
+      const nextHovering = event.target instanceof Element && Boolean(event.target.closest("a, button, summary, [role='button'], .project-card"));
+      const card = event.target instanceof Element ? event.target.closest<HTMLElement>(".project-card") : null;
+      if (lastCard && lastCard !== card) {
+        lastCard.classList.remove("is-tilting");
+        lastCard.style.removeProperty("--tilt-x");
+        lastCard.style.removeProperty("--tilt-y");
+      }
+      if (card) {
+        const bounds = card.getBoundingClientRect();
+        const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+        const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+        card.style.setProperty("--tilt-x", `${(x * 2.6).toFixed(2)}deg`);
+        card.style.setProperty("--tilt-y", `${(-y * 2.2).toFixed(2)}deg`);
+        card.classList.add("is-tilting");
+      }
+      lastCard = card;
+      if (nextHovering !== hovering) {
+        hovering = nextHovering;
+        dot.classList.toggle("is-hovering", hovering);
+        ring.classList.toggle("is-hovering", hovering);
+      }
+      dot.classList.add("is-visible");
+      ring.classList.add("is-visible");
+      if (!frame) frame = window.requestAnimationFrame(animateRing);
+    };
+    const hide = () => {
+      dot.classList.remove("is-visible"); ring.classList.remove("is-visible");
+      lastCard?.classList.remove("is-tilting");
+      lastCard?.style.removeProperty("--tilt-x");
+      lastCard?.style.removeProperty("--tilt-y");
+      lastCard = null;
+    };
+    const press = () => { dot.classList.add("is-pressed"); ring.classList.add("is-pressed"); };
+    const release = () => { dot.classList.remove("is-pressed"); ring.classList.remove("is-pressed"); };
+    window.addEventListener("pointermove", onMove, { passive: true });
+    window.addEventListener("pointerleave", hide);
+    window.addEventListener("pointerdown", press);
+    window.addEventListener("pointerup", release);
+    window.addEventListener("pointercancel", release);
+    return () => {
+      window.removeEventListener("pointermove", onMove);
+      window.removeEventListener("pointerleave", hide);
+      window.removeEventListener("pointerdown", press);
+      window.removeEventListener("pointerup", release);
+      window.removeEventListener("pointercancel", release);
+      hide();
+      if (frame) window.cancelAnimationFrame(frame);
+      root.classList.remove("has-motion-pointer");
+    };
+  }, []);
+
+  return <><span className="motion-pointer-dot" ref={dotRef} aria-hidden="true"/><span className="motion-pointer-ring" ref={ringRef} aria-hidden="true"/></>;
 }
 
 const glyphLabels: Record<string, [string, string, string, string]> = {
@@ -80,6 +169,7 @@ export function SiteHome() {
   const goToWork = () => document.querySelector("#work")?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
 
   return <>
+    <PointerFollower />
     <main id="content">
       <section className="container hero" id="top">
         <div className="hero-copy-wrap">
@@ -92,12 +182,13 @@ export function SiteHome() {
               <Link className="button button-ghost" href="/resume">Résumé <ArrowUpRight size={16} aria-hidden="true"/></Link>
             </div>
           </div>
-          <div className="hero-collage" aria-hidden="true">
-            <svg className="collage-thread" viewBox="0 0 620 440" preserveAspectRatio="none"><path d="M25 330 C105 306 83 208 168 223 S195 325 274 261 S340 135 405 160 S433 252 510 190 S559 89 600 107"/></svg>
-            <div className="paper-panel paper-back"><span className="mono">signal / 01</span><span className="paper-grid"/></div>
-            <div className="paper-panel paper-front"><div className="paper-top"><span className="paper-mark">H<span>✳</span></span><span className="mono">system notes · 2026</span></div><div className="paper-core"><span className="mono">perception → decision</span><strong>{siteCopy.hero.collageTitle.split("\n").map((line, index, lines) => <span key={line}>{line}{index < lines.length - 1 && <br/>}</span>)}</strong><div className="paper-flow"><i>input</i><b>→</b><i>model</i><b>→</b><i>action</i></div></div><div className="paper-bottom"><span>Full-stack · AI · analytics</span><span className="paper-stamp">HS</span></div></div>
-            <div className="paper-tag mono">build / inspect / improve ↗</div>
-          </div>
+          <figure className="hero-portrait" aria-label="Portrait of Harkirat Singh">
+            <div className="portrait-paper" />
+            <Image src="/portrait.jpg" alt="Harkirat Singh outdoors in a white shirt" width={264} height={400} priority />
+            <span className="portrait-caption mono">Harkirat Singh · Patiala</span>
+            <svg className="portrait-doodle" viewBox="0 0 260 450" aria-hidden="true"><path d="M18 400C80 340 4 300 58 258s145 50 157-25-105-69-78-131 98-51 100-86"/><path d="m215 14 22 2-7 20"/></svg>
+            <span className="portrait-square" aria-hidden="true" />
+          </figure>
         </div>
         <div className="hero-stats" aria-label="Selected résumé facts">{stats.map((item) => <div className="stat reveal" key={item.label}><strong>{item.value}</strong><span className="mono">{item.label}</span></div>)}</div>
         <a className="scroll-cue mono" href="#about"><ArrowDown size={15} aria-hidden="true"/> scroll to explore</a>
@@ -136,7 +227,7 @@ export function SiteHome() {
       <section className="section" id="work"><div className="container">
         <SectionHeading {...siteCopy.sections.work}/>
         {filter && <p className="filter-status mono">Showing projects with {filter}<button className="text-button" onClick={() => setFilter("")}>clear filter ×</button></p>}
-        <div className="project-list">{visibleProjects.map((project, i) => <article className="panel project-card reveal" key={project.slug} style={{ "--reveal-order": i } as React.CSSProperties}>
+        <div className="project-list">{visibleProjects.map((project, i) => <article className={`panel project-card reveal project-${project.glyph}`} key={project.slug} style={{ "--reveal-order": i } as React.CSSProperties}>
           <div className="project-copy"><span className="mono project-index">{project.index} <span aria-hidden="true">/</span> {project.status ?? "project"}</span><h3>{project.title}</h3><p>{project.thesis}</p>
             <div className="metric-row">{project.outcomes.map((item) => <span className="metric" key={item.label}><b>{item.value}</b><small>{item.label}</small></span>)}</div>
             <div className="chips">{project.stack.slice(0, 6).map((tech) => <span className="chip" key={tech}>{tech}</span>)}</div>
