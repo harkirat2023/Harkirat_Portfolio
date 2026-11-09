@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ArrowDown, ArrowDownRight, ArrowLeft, ArrowUpRight, ArrowRight, Check, Copy, ExternalLink, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
@@ -111,13 +111,6 @@ function PointerFollower() {
   return <><span className="motion-pointer-dot" ref={dotRef} aria-hidden="true"/><span className="motion-pointer-ring" ref={ringRef} aria-hidden="true"/></>;
 }
 
-const glyphLabels: Record<string, [string, string, string, string]> = {
-  symptomscope: ["symptoms", "models", "RAG", "guidance"],
-  khatabox: ["stock", "retail", "updates", "stores"],
-  intellimoney: ["receipt", "categorise", "copilot", "insight"],
-  supplychain: ["orders", "KPIs", "regions", "dashboard"],
-  churnsight: ["records", "XGBoost", "SHAP", "risk"],
-};
 const projectCoverTitles: Record<string, [string, string]> = {
   symptomscope: ["SYMPTOM", "SCOPE AI"],
   khatabox: ["KHATA", "BOX"],
@@ -125,16 +118,6 @@ const projectCoverTitles: Record<string, [string, string]> = {
   supplychain: ["SUPPLY CHAIN", "CONTROL TOWER"],
   churnsight: ["CHURN", "SIGHT"],
 };
-
-function ProjectGlyph({ kind }: { kind: string }) {
-  const labels = glyphLabels[kind] ?? glyphLabels.symptomscope;
-  return <svg className="glyph" viewBox="0 0 430 250" role="img" aria-label={`${labels.join(" to ")} system diagram`}>
-    <path className="glyph-track" d="M50 122H145L215 65H300L375 122M215 65V180H300L375 122"/>
-    <path className="glyph-signal" d="M50 122H145L215 65H300L375 122"/>
-    {[50, 145, 215, 300, 375].map((x, i) => <g key={x}><circle cx={x} cy={i === 2 ? 65 : 122} r="7"/><text x={x} y={i === 2 ? 43 : 151} textAnchor="middle">{labels[Math.min(i, 3)]}</text></g>)}
-    <circle className="glyph-pulse" r="4"><animateMotion dur="4s" repeatCount="indefinite" path="M50 122H145L215 65H300L375 122"/></circle>
-  </svg>;
-}
 
 export function SiteHome() {
   const [filter, setFilter] = useState("");
@@ -186,11 +169,18 @@ export function SiteHome() {
     document.querySelectorAll<HTMLElement>(".featured-section .feature-cover, .featured-section .featured-copy").forEach((node) => node.classList.add("is-visible"));
   }, [featuredIndex]);
 
-  const visibleProjects = useMemo(() => filter
-    ? projects.filter((project) => project.stack.some((tech) => tech.toLowerCase() === filter.toLowerCase()))
-    : projects, [filter]);
   const evidenceProjects = projects.filter((project) => project.stack.some((tech) => tech.toLowerCase() === skillFocus.toLowerCase()));
   const goToWork = () => document.querySelector("#work")?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
+  const chooseProjectSkill = (skill: string) => {
+    const nextFilter = filter === skill ? "" : skill;
+    if (nextFilter) {
+      const matchingProject = projects.findIndex((project) => project.stack.some((tech) => tech.toLowerCase() === nextFilter.toLowerCase()));
+      if (matchingProject < 0) { setFilter(""); goToWork(); return; }
+      setFeaturedIndex(matchingProject);
+    }
+    setFilter(nextFilter);
+    goToWork();
+  };
 
   return <>
     <PointerFollower />
@@ -217,12 +207,13 @@ export function SiteHome() {
           </figure>
         </div>
         <div className="hero-stats" aria-label="Selected résumé facts">{stats.map((item) => <div className="stat reveal" key={item.label}><strong>{item.value}</strong><span className="mono">{item.label}</span></div>)}</div>
-        <a className="scroll-cue mono" href="#featured"><span className="scroll-cue-square"><ArrowDown size={18} aria-hidden="true"/></span> scroll down</a>
+        <a className="scroll-cue mono" href="#work"><span className="scroll-cue-square"><ArrowDown size={18} aria-hidden="true"/></span> scroll down</a>
       </section>
 
-      <section className="section featured-section" id="featured"><div className="container">
-        <SectionHeading {...siteCopy.featured}/>
-        <div className="feature-marquee" aria-hidden="true"><div className="marquee-track"><span>BUILD WHAT MATTERS · READ THE SIGNAL · MAKE IT USEFUL · </span><span>BUILD WHAT MATTERS · READ THE SIGNAL · MAKE IT USEFUL · </span></div></div>
+      <div className="ticker-belt" aria-hidden="true"><div><span>BUILD WHAT MATTERS</span><span>READ THE SIGNAL</span><span>MAKE IT USEFUL</span><span>BUILD WHAT MATTERS</span><span>READ THE SIGNAL</span><span>MAKE IT USEFUL</span></div></div>
+
+      <section className="section featured-section" id="work"><div className="container">
+        <div className="feature-watermark" aria-hidden="true">{featuredProject.title}</div>
         <button className="feature-carousel-arrow feature-carousel-previous" type="button" aria-label={`Previous project, ${featuredProject.title}`} aria-controls="featured-project" onClick={() => setFeaturedIndex((index) => (index - 1 + projects.length) % projects.length)}><ArrowLeft size={22} aria-hidden="true"/></button>
         <button className="feature-carousel-arrow feature-carousel-next" type="button" aria-label={`Next project, ${featuredProject.title}`} aria-controls="featured-project" onClick={() => setFeaturedIndex((index) => (index + 1) % projects.length)}><ArrowRight size={22} aria-hidden="true"/></button>
         <div className="featured-layout">
@@ -266,7 +257,7 @@ export function SiteHome() {
         <p className="intro">Select a technology to find projects that list it in their stack. The full skill list comes from both résumés.</p>
         <div className="cluster-grid">{skills.map((cluster, groupIndex) => <article className={`panel cluster reveal${skillFocus && cluster.items.includes(skillFocus) ? " cluster-active" : ""}`} key={cluster.name} style={{ "--reveal-order": groupIndex } as React.CSSProperties}>
           <h3>{cluster.name}<span className="mono">{String(cluster.items.length).padStart(2, "0")}</span></h3>
-          <div className="chips">{cluster.items.map((skill) => <button key={skill} className="skill-button" aria-pressed={filter === skill} aria-describedby={skillFocus === skill ? "skill-evidence" : undefined} onMouseEnter={() => setSkillFocus(skill)} onMouseLeave={() => setSkillFocus("")} onFocus={() => setSkillFocus(skill)} onBlur={() => setSkillFocus("")} onClick={() => { setFilter(filter === skill ? "" : skill); goToWork(); }}>{skill}</button>)}</div>
+          <div className="chips">{cluster.items.map((skill) => <button key={skill} className="skill-button" aria-pressed={filter === skill} aria-describedby={skillFocus === skill ? "skill-evidence" : undefined} onMouseEnter={() => setSkillFocus(skill)} onMouseLeave={() => setSkillFocus("")} onFocus={() => setSkillFocus(skill)} onBlur={() => setSkillFocus("")} onClick={() => chooseProjectSkill(skill)}>{skill}</button>)}</div>
         </article>)}</div>
         {skillFocus && <p className="panel skill-evidence reveal is-visible" id="skill-evidence"><span className="mono">{skillFocus} · projects</span><br/>{evidenceProjects.length ? evidenceProjects.map((project) => project.title).join(" · ") : "Listed as a skill in the résumé."}</p>}
         <ul className="sr-only">{skills.flatMap((cluster) => cluster.items.map((skill) => <li key={skill}>{cluster.name}: {skill}</li>))}</ul>
@@ -278,19 +269,6 @@ export function SiteHome() {
           <summary><span className="mono timeline-date">{item.date}</span><span><h3>{item.role} <span className="accent">— {item.org}</span></h3><span className="summary-copy">{item.summary}</span></span><span className="timeline-plus" aria-hidden="true">+</span></summary>
           <div className="timeline-body"><ul>{item.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul><div className="chips">{item.stack.map((tech) => <span className="chip" key={tech}>{tech}</span>)}</div></div>
         </details>)}</div>
-      </div></section>
-
-      <section className="section" id="work"><div className="container">
-        <SectionHeading {...siteCopy.sections.work}/>
-        {filter && <p className="filter-status mono">Showing projects with {filter}<button className="text-button" onClick={() => setFilter("")}>clear filter ×</button></p>}
-        <div className="project-list">{visibleProjects.map((project, i) => <article className={`panel project-card reveal project-${project.glyph}`} key={project.slug} style={{ "--reveal-order": i } as React.CSSProperties}>
-          <div className="project-copy"><span className="mono project-index">{project.index} <span aria-hidden="true">/</span> {project.status ?? "project"}</span><h3>{project.title}</h3><p>{project.thesis}</p>
-            <div className="metric-row">{project.outcomes.map((item) => <span className="metric" key={item.label}><b>{item.value}</b><small>{item.label}</small></span>)}</div>
-            <div className="chips">{project.stack.slice(0, 6).map((tech) => <span className="chip" key={tech}>{tech}</span>)}</div>
-            <p className="project-cta"><Link href={`/work/${project.slug}`}>Read the case <ArrowUpRight size={16} aria-hidden="true"/></Link></p>
-          </div><div className="project-visual"><ProjectGlyph kind={project.glyph}/></div>
-        </article>)}</div>
-        {filter && visibleProjects.length === 0 && <p className="panel empty-state">No project lists this exact stack item. <button className="text-button" onClick={() => setFilter("")}>Clear the filter</button></p>}
       </div></section>
 
       <section className="section" id="recognition"><div className="container">
@@ -309,6 +287,6 @@ export function SiteHome() {
         <div className="contact-row"><Link href="/resume">Résumé options <ArrowUpRight size={16} aria-hidden="true"/></Link><a href={`mailto:${profile.email}`}>Write an email <ArrowUpRight size={16} aria-hidden="true"/></a></div>
       </div></section>
     </main>
-    <footer className="container footer"><span>© 2026 Harkirat Singh</span><nav className="footer-nav" aria-label="Footer"><a href="#top">Home</a><a href="#work">Selected work</a><a href="#about">About me</a><a href="#contact">Contact me</a></nav><span className="footer-note">Built with Next.js · designed with intention</span><a href="#top">back to top ↑</a></footer>
+    <footer className="container footer"><span>© 2026 Harkirat Singh</span><nav className="footer-nav" aria-label="Footer"><a href="#top">Home</a><a href="#work">Selected work</a><a href="#about">About me</a><a href="#contact">Contact me</a></nav><span className="footer-note">Built with Next.js · designed with intention</span><span className="footer-clock"><i className="clock-led" aria-hidden="true"/>Patiala · {time || "--:--"} IST</span><a href="#top">back to top ↑</a></footer>
   </>;
 }
