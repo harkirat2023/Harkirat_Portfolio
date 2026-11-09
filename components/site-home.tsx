@@ -326,7 +326,7 @@ export function SiteHome() {
         <a className="scroll-cue mono" href="#work"><span className="scroll-cue-square"><ArrowDown size={18} aria-hidden="true"/></span> scroll down</a>
       </section>
 
-      <div className="ticker-belt" aria-hidden="true"><div><span>BUILD WHAT MATTERS</span><span>READ THE SIGNAL</span><span>MAKE IT USEFUL</span><span>BUILD WHAT MATTERS</span><span>READ THE SIGNAL</span><span>MAKE IT USEFUL</span></div></div>
+      <div className="ticker-belt" aria-hidden="true"><div>{[0, 1].map((copy) => <div className="ticker-group" key={copy}><span>BUILD WHAT MATTERS</span><span>READ THE SIGNAL</span><span>MAKE IT USEFUL</span></div>)}</div></div>
 
       <section className="section featured-section" id="work"><div className="container">
         <div className="feature-watermark" aria-hidden="true">{featuredProject.title}</div>

@@ -43,16 +43,16 @@ export const profile = {
 };
 
 export const stats = [
-  { value: "05", label: "projects shipped or in progress" },
-  { value: "180K+", label: "orders analysed" },
-  { value: "27", label: "team members coordinated" },
-  { value: "40%", label: "membership growth" },
+  { value: "15+", label: "Projects shipped or in progress" },
+  { value: "180K+", label: "Orders Data analysed" },
+  { value: "27", label: " Member Team coordinated" },
+  { value: "40%", label: "Membership growth" },
 ];
 
 export const siteCopy = {
   hero: {
-    headline: ["I build systems", "from signals."],
-    description: "I’m a computer engineering student who likes the moment a messy input turns into something useful. Some days that is a camera feed, some days a sales table. I build the full-stack tools, AI models, and dashboards that get it there.",
+    headline: ["I build Systems", "from signals."],
+    description: "I specialize in turning chaotic inputs into clear, usable solutions. From extracting intelligence out of live camera feeds to structuring complex sales data, I build the end-to-end full-stack tools, AI models, and dashboards that bridge the gap.",
     highlight: "From raw signals to useful tools.",
     collageTitle: "Make the\nsignal useful.",
   },

@@ -4,8 +4,8 @@
    THEME TOKENS
    ============================================================ */
 @theme {
-  --color-paper: #09090B;
-  --color-paper-2: #18181B;
+  --color-paper: #262b33;
+  --color-paper-2: #1b1f26;
   --color-ink: #FFFFFF;
   --color-ink-soft: #A1A1AA;
   --color-ink-mute: #71717A;
@@ -52,8 +52,8 @@ html { color-scheme: dark; }
 html.light { color-scheme: light; }
 
 html.light {
-  --color-paper: #FAFAFA;
-  --color-paper-2: #F4F4F5;
+  --color-paper: #a19e9e;
+  --color-paper-2: #8888ef;
   --color-ink: #09090B;
   --color-ink-soft: #3F3F46;
   --color-ink-mute: #71717A;

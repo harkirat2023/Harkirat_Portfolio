@@ -1141,9 +1141,10 @@ h1, h2, h3, .section-heading, .contact-title, .project-copy h3, .panel h3, .time
   .reveal, .reveal-ready .reveal:not(.is-visible) { opacity: 1; transform: none; }
 }
 .ticker-belt { overflow: hidden; margin-top: -24px; padding: 14px 0; border-block: 1px solid #090b0e; background: linear-gradient(#0d0f13,#191d23); box-shadow: var(--sink); }
-.ticker-belt > div { display: flex; gap: 48px; width: max-content; animation: skeuo-ticker 34s linear infinite; color: var(--brass2); font: 500 .76rem var(--type-label); white-space: nowrap; }
+.ticker-belt > div { display: flex; width: max-content; animation: skeuo-ticker 34s linear infinite; color: var(--brass2); font: 500 .76rem var(--type-label); white-space: nowrap; }
+.ticker-group { display: flex; flex: none; gap: 48px; padding-right: 48px; }
 .ticker-belt:hover > div { animation-play-state: paused; }
-@keyframes skeuo-ticker { to { transform: translateX(-50%); } }
+@keyframes skeuo-ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .feature-carousel-previous:active { transform: translate(-50%,-50%) scale(.93); }
 .feature-carousel-next:active { transform: translate(50%,-50%) scale(.93); }
 .feature-cover-top, .feature-cover-bottom, .feature-cover-core > .mono, .feature-cover-core strong span:last-child, .feature-cover-core strong i, .case-hero .mono, .panel .mono, .architecture-layer > .mono { color: var(--ink); }
