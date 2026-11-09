@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Command } from "cmdk";
 import { profile, projects } from "@/content/site";
 
-const links = [{ href: "#top", label: "home" }, { href: "#work", label: "work" }, { href: "#about", label: "about me" }, { href: "#experience", label: "experience" }];
+const links = [{ href: "#top", label: "home" }, { href: "#about", label: "about me" }, { href: "#work", label: "work" }, { href: "#experience", label: "experience" }, { href: "#recognition", label: "learning" }];
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false); const [activeSection, setActiveSection] = useState("top"); const [menu, setMenu] = useState(false); const [palette, setPalette] = useState(false); const { theme, resolvedTheme, setTheme } = useTheme();
@@ -22,7 +22,7 @@ export function SiteHeader() {
         const section = document.getElementById(id);
         if (section && section.getBoundingClientRect().top <= window.innerHeight * .34) current = id;
       }
-      setActiveSection(current === "capabilities" || current === "recognition" ? "about" : current);
+      setActiveSection(current === "capabilities" ? "about" : current);
     };
     update(); window.addEventListener("scroll", update, { passive: true });
     return () => window.removeEventListener("scroll", update);

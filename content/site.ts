@@ -43,7 +43,7 @@ export const profile = {
 };
 
 export const stats = [
-  { value: "05", label: "projects" },
+  { value: "05", label: "projects shipped or in progress" },
   { value: "180K+", label: "orders analysed" },
   { value: "27", label: "team members coordinated" },
   { value: "40%", label: "membership growth" },
@@ -52,7 +52,7 @@ export const stats = [
 export const siteCopy = {
   hero: {
     headline: ["I build systems", "from signals."],
-    description: "I’m a computer engineering student working across full-stack software, applied AI, and analytics. I turn complex inputs into tools and insights people can use.",
+    description: "I’m a computer engineering student who likes the moment a messy input turns into something useful. Some days that is a camera feed, some days a sales table. I build the full-stack tools, AI models, and dashboards that get it there.",
     highlight: "From raw signals to useful tools.",
     collageTitle: "Make the\nsignal useful.",
   },
