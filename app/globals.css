@@ -1222,7 +1222,6 @@ h1, h2, h3, .section-heading, .contact-title, .project-copy h3, .panel h3, .time
 .hero-portrait::before, .hero-portrait::after { content: ""; position: absolute; z-index: 4; top: 2%; width: 56px; height: 20px; background: rgba(201,162,75,.58); box-shadow: 0 2px 4px rgba(0,0,0,.3); pointer-events: none; }
 .hero-portrait::before { left: 1%; transform: rotate(-32deg); }
 .hero-portrait::after { right: 0; transform: rotate(32deg); }
-.portrait-initials { position: absolute; z-index: 1; inset: 3% 8% 7% 10%; display: grid; place-items: center; color: var(--brass2); background: linear-gradient(135deg,#59616f,#2e343d); font: 800 4rem var(--type-display); }
 .portrait-caption { z-index: 5; left: 13%; bottom: 2%; color: var(--ink); font-size: .62rem; letter-spacing: .02em; }
 .hero-stats { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px; margin-top: clamp(28px,5vh,52px); border: 0; }
 .stat.lcd { min-height: 90px; padding: 14px 18px; border: 1px solid #0d0f13; border-radius: 14px; background: linear-gradient(#0d0f13,#191d23); box-shadow: var(--sink),0 0 0 4px #333a45,0 0 0 5px #000; }

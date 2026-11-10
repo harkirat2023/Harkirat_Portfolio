@@ -328,8 +328,7 @@ export function SiteHome() {
           </div>
           <figure className="hero-portrait" data-parallax="0.04" aria-label="Portrait of Harkirat Singh">
             <div className="portrait-paper" />
-            <span className="portrait-initials" aria-hidden="true">HS</span>
-            <Image src="/assets/closeup.jpg" alt="Harkirat Singh standing outdoors in a white shirt" width={500} height={400} priority onError={(event) => { event.currentTarget.style.display = "none"; }} />
+            <Image src="/assets/closeup.jpg" alt="Harkirat Singh standing outdoors in a white shirt" width={267} height={320} priority unoptimized />
             <span className="portrait-caption mono">Harkirat Singh · Patiala</span>
             <svg className="portrait-doodle" viewBox="0 0 260 450" aria-hidden="true"><path d="M18 400C80 340 4 300 58 258s145 50 157-25-105-69-78-131 98-51 100-86"/><path d="m215 14 22 2-7 20"/></svg>
             <span className="portrait-square" aria-hidden="true" />
