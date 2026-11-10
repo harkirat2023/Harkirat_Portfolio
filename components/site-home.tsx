@@ -329,7 +329,7 @@ export function SiteHome() {
           <figure className="hero-portrait" data-parallax="0.04" aria-label="Portrait of Harkirat Singh">
             <div className="portrait-paper" />
             <span className="portrait-initials" aria-hidden="true">HS</span>
-            <Image src="/assets/closeup.jpg" alt="Harkirat Singh standing outdoors in a white shirt" width={264} height={400} priority onError={(event) => { event.currentTarget.style.display = "none"; }} />
+            <Image src="/assets/closeup.jpg" alt="Harkirat Singh standing outdoors in a white shirt" width={500} height={400} priority onError={(event) => { event.currentTarget.style.display = "none"; }} />
             <span className="portrait-caption mono">Harkirat Singh · Patiala</span>
             <svg className="portrait-doodle" viewBox="0 0 260 450" aria-hidden="true"><path d="M18 400C80 340 4 300 58 258s145 50 157-25-105-69-78-131 98-51 100-86"/><path d="m215 14 22 2-7 20"/></svg>
             <span className="portrait-square" aria-hidden="true" />
@@ -383,12 +383,12 @@ export function SiteHome() {
 
       <section className="section" id="capabilities"><div className="container">
         <SectionHeading {...siteCopy.sections.capabilities}/>
-        <p className="intro">Select a technology to find projects that list it in their stack. The full skill list comes from both résumés.</p>
-        <div className="cluster-grid">{skills.map((cluster, groupIndex) => <article className={`panel cluster reveal rv-flip${skillFocus && cluster.items.includes(skillFocus) ? " cluster-active" : ""}`} key={cluster.name} style={{ "--reveal-order": groupIndex } as React.CSSProperties}>
+        <p className="intro">Explore the tools and strengths I bring to the work. Select a technology to find related projects.</p>
+        <div className="cluster-grid">{skills.map((cluster, groupIndex) => <article className={`panel cluster reveal rv-flip${cluster.name === "Professional" ? " cluster-professional" : ""}${skillFocus && cluster.items.includes(skillFocus) ? " cluster-active" : ""}`} key={cluster.name} style={{ "--reveal-order": groupIndex } as React.CSSProperties}>
           <h3>{cluster.name}<span className="mono">{String(cluster.items.length).padStart(2, "0")}</span></h3>
-          <div className="chips">{cluster.items.map((skill) => <button key={skill} className="skill-button" aria-pressed={filter === skill} aria-describedby={skillFocus === skill ? "skill-evidence" : undefined} onMouseEnter={() => setSkillFocus(skill)} onMouseLeave={() => setSkillFocus("")} onFocus={() => setSkillFocus(skill)} onBlur={() => setSkillFocus("")} onClick={() => chooseProjectSkill(skill)}>{skill}</button>)}</div>
+          <div className="chips">{cluster.items.map((skill) => <button key={skill} className={`skill-button${cluster.name === "Professional" && ["Analytical problem solving", "Communication", "Adaptability"].includes(skill) ? " skill-button-strength" : ""}`} aria-pressed={filter === skill} aria-describedby={skillFocus === skill && evidenceProjects.length > 0 ? "skill-evidence" : undefined} onMouseEnter={() => setSkillFocus(skill)} onMouseLeave={() => setSkillFocus("")} onFocus={() => setSkillFocus(skill)} onBlur={() => setSkillFocus("")} onClick={() => chooseProjectSkill(skill)}>{skill}</button>)}</div>
         </article>)}</div>
-        {skillFocus && <p className="panel skill-evidence reveal is-visible" id="skill-evidence"><span className="mono">{skillFocus} · projects</span><br/>{evidenceProjects.length ? evidenceProjects.map((project) => project.title).join(" · ") : "Listed as a skill in the résumé."}</p>}
+        {skillFocus && evidenceProjects.length > 0 && <p className="panel skill-evidence reveal is-visible" id="skill-evidence"><span className="mono">{skillFocus} · projects</span><br/>{evidenceProjects.map((project) => project.title).join(" · ")}</p>}
         <ul className="sr-only">{skills.flatMap((cluster) => cluster.items.map((skill) => <li key={skill}>{cluster.name}: {skill}</li>))}</ul>
       </div></section>
 
