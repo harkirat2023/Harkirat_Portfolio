@@ -1,6 +1,8 @@
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
+
 import "./globals.css";
 
 const geist = localFont({ src: "../node_modules/@fontsource-variable/geist/files/geist-latin-wght-normal.woff2", variable: "--font-sans", display: "swap", weight: "100 900", preload: true });

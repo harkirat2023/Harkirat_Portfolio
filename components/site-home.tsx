@@ -13,8 +13,21 @@ function SectionHeading({ index, title, kicker }: { index: string; title: string
 function HeadlineDropIn() {
   const first = siteCopy.hero.headline[0];
   const second = siteCopy.hero.headline[1];
-  const line = (value: string, offset: number) => <span className="headline-line" aria-hidden="true">{Array.from(value).map((letter, index) => <span key={`${letter}-${index}`} style={{ "--letter-delay": `${offset + index * 45}ms` } as React.CSSProperties}>{letter === " " ? "\u00a0" : letter}</span>)}</span>;
-  return <h1 aria-label={`${first} ${second}`}>{line(first, 180)}<br/><em>{line(second, 720)}</em></h1>;
+  const [typedLength, setTypedLength] = useState(0);
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setTypedLength(second.length); return; }
+    let index = 0;
+    let timer = 0;
+    const typeNext = () => {
+      index += 1;
+      setTypedLength(index);
+      if (index < second.length) timer = window.setTimeout(typeNext, 68);
+    };
+    timer = window.setTimeout(typeNext, 540);
+    return () => window.clearTimeout(timer);
+  }, [second]);
+  const line = (value: string) => <span className="headline-line" aria-hidden="true">{Array.from(value).map((letter, index) => <span key={`${letter}-${index}`} style={{ "--letter-delay": `${180 + index * 45}ms` } as React.CSSProperties}>{letter === " " ? "\u00a0" : letter}</span>)}</span>;
+  return <h1 aria-label={`${first} ${second}`}>{line(first)}<br/><em><span className={`typed-phrase${typedLength < second.length ? " is-typing" : ""}`} aria-hidden="true">{second.slice(0, typedLength)}</span></em></h1>;
 }
 
 function SignalLoader() {
@@ -36,7 +49,7 @@ function SignalLoader() {
     return () => { window.cancelAnimationFrame(frame); window.clearTimeout(closeTimer); };
   }, []);
   if (!visible) return null;
-  return <div className={`signal-loader${closing ? " is-closing" : ""}`} aria-hidden="true"><div className="signal-loader-box"><span className="mono">loading signal…</span><div className="signal-loader-meter"><i style={{ width: `${progress}%` }}/></div></div></div>;
+  return <div className={`signal-loader${closing ? " is-closing" : ""}`} aria-hidden="true"><div className="signal-loader-box"><span className="signal-loader-mark">HS</span><span className="signal-loader-name mono">HARKIRAT SINGH · SIGNAL PORTFOLIO</span><span className="mono">loading signal…</span><div className="signal-loader-meter"><i style={{ width: `${progress}%` }}/></div></div></div>;
 }
 
 function Oscilloscope() {
@@ -301,9 +314,9 @@ export function SiteHome() {
     <main id="content" className="portfolio-main">
       <svg className="continuity-thread" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M865 0 C845 32 920 48 855 76 C790 104 720 78 710 116 C700 154 800 170 760 205 C720 240 530 180 510 231 C490 282 680 304 645 352 C610 400 360 340 395 416 C430 492 690 490 655 550 C620 610 350 588 385 657 C420 726 735 708 700 778 C665 848 450 817 475 884 C500 951 670 942 630 1000"/></svg>
       <section className="container hero" id="top">
+        <p className="eyebrow hero-eyebrow">{`// ${profile.role} · class of 2027 · ${profile.location}`}</p>
         <div className="hero-copy-wrap">
           <div className="hero-copy-block">
-            <p className="eyebrow">{`// ${profile.role} · class of 2027 · ${profile.location}`}</p>
             <HeadlineDropIn />
             <p className="hero-highlight"><span>{siteCopy.hero.highlight}</span></p>
             <p className="hero-copy">{siteCopy.hero.description}</p>
@@ -316,7 +329,7 @@ export function SiteHome() {
           <figure className="hero-portrait" data-parallax="0.04" aria-label="Portrait of Harkirat Singh">
             <div className="portrait-paper" />
             <span className="portrait-initials" aria-hidden="true">HS</span>
-            <Image src="/portrait.jpg" alt="Harkirat Singh outdoors in a white shirt" width={264} height={400} priority onError={(event) => { event.currentTarget.style.display = "none"; }} />
+            <Image src="/assets/closeup.jpg" alt="Harkirat Singh standing outdoors in a white shirt" width={264} height={400} priority onError={(event) => { event.currentTarget.style.display = "none"; }} />
             <span className="portrait-caption mono">Harkirat Singh · Patiala</span>
             <svg className="portrait-doodle" viewBox="0 0 260 450" aria-hidden="true"><path d="M18 400C80 340 4 300 58 258s145 50 157-25-105-69-78-131 98-51 100-86"/><path d="m215 14 22 2-7 20"/></svg>
             <span className="portrait-square" aria-hidden="true" />
